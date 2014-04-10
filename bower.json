@@ -1,0 +1,17 @@
+{
+  "name": "bootblank",
+  "version": "1.0.0",
+  "authors": [
+    "Boluge <boluge@gmail.com>"
+  ],
+  "description": "Bootstrap, Wordpress, Thème, Blank",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.0",
+    "bootstrap-sass": "~3.0.2",
+    "modernizr": "~2.7.2",
+    "conditionizr": "~4.3.0",
+    "bootstrap-ie7": "https://github.com/coliff/bootstrap-ie7.git"
+  }
+}
