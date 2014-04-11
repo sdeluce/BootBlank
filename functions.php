@@ -67,6 +67,11 @@ function gkp_prefetch() {
    }
 }
 
+// Minifier le html
+function gkp_html_minify_start()  {
+    ob_start( 'gkp_html_minyfy_finish' );
+}
+
 // Encapsulage des videos
 function standard_wrap_embeds( $html, $url, $args ) {
     if( 'video' == get_post_format( get_the_ID() ) ) {

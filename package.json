@@ -2,7 +2,6 @@
   "name": "bootblank",
   "version": "1.0.0",
   "description": "Thème wordpress Blank",
-  "main": "index.js",
   "dependencies": {
     "grunt": "^0.4.4"
   },
@@ -14,14 +13,6 @@
     "grunt-svgmin": "^0.4.0",
     "load-grunt-tasks": "^0.4.0"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "Wordpress",
-    "Bootstrap",
-    "Blank"
-  ],
   "author": "Stéphane Deluce",
   "license": "MIT"
 }

@@ -3,18 +3,18 @@ module.exports = function (grunt) {
 	require('load-grunt-tasks')(grunt);
 
 	grunt.initConfig({
-		uglify: {
-			options: {
-				compress: {
-					// drop_console: true
-				}
-			},
-			my_target: {
-				files: {
-					// 'dest/output.min.js': ['src/input.js']
-				}
-			}
-		},
+		// uglify: {
+		// 	options: {
+		// 		compress: {
+		// 			// drop_console: true
+		// 		}
+		// 	},
+		// 	my_target: {
+		// 		files: {
+		// 			// 'dest/output.min.js': ['src/input.js']
+		// 		}
+		// 	}
+		// },
 
 		compass: {
 			dist: {
@@ -57,7 +57,7 @@ module.exports = function (grunt) {
 			},
 			js: {
 				files: ['assets/js/*.js','!assets/js/*.min.js'],
-				tasks: ['jshint','uglify','concat'],
+				tasks: ['concat'],
 				options: {
 					spawn: false,
 					livereload: true
@@ -73,5 +73,5 @@ module.exports = function (grunt) {
 			},
 		}
 	});
-	grunt.registerTask('default', ['uglify','compass','imagemin','svgmin']);
+	grunt.registerTask('default', ['compass','imagemin','svgmin']);
 }

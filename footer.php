@@ -1,5 +1,7 @@
+			</div>
+			<!-- /Container -->
 			<!-- footer -->
-			<footer class="footer" role="contentinfo">
+			<footer class="footer col-md-12" role="contentinfo">
 
 				<!-- copyright -->
 				<p class="copyright">
