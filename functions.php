@@ -11,17 +11,14 @@ function bootblank_login_css()  {
 
 function bootblank_main_class() {
   if (is_active_sidebar('sidebar-1')) {
-    // Classes on pages with the sidebar
-    $class = 'col-sm-9';
+    echo 'col-sm-9';
   } else {
     // Classes on full width pages
-    $class = 'col-sm-12';
+    echo 'col-sm-12';
   }
-
-  return $class;
 }
-function roots_sidebar_class() {
-  return 'col-sm-3';
+function bootblank_sidebar_class() {
+  echo 'col-sm-3';
 }
 
 //Deletes empty classes and removes the sub menu class --front--
