@@ -67,10 +67,24 @@ function gkp_prefetch() {
    }
 }
 
-// Minifier le html
-function gkp_html_minify_start()  {
-    ob_start( 'gkp_html_minyfy_finish' );
+/** Début Minification des fichiers HTML **/
+function bootblank_html_minify_start() {
+    ob_start( 'bootblank_html_minyfy_finish' );
 }
+
+function bootblank_html_minyfy_finish( $html ) {
+
+    // Suppression des commentaires HTML, sauf les commentaires conditionnels pour IE
+    $html = preg_replace('/<!--(?!\s*(?:\[if [^\]]+]|<!|>))(?:(?!-->).)*-->/s', '', $html);
+
+    // Suppression des espaces vides
+    $html = str_replace(array("\r\n", "\r", "\n", "\t"), '', $html);
+    while ( stristr($html, '  '))
+        $html = str_replace('  ', ' ', $html);
+
+    return $html;
+}
+/** Fin Minification des fichiers HTML **/
 
 // Encapsulage des videos
 function standard_wrap_embeds( $html, $url, $args ) {
@@ -451,7 +465,7 @@ add_action('init', 'register_bootblank_menu'); // Add BootBlank Menu
 add_action('init', 'create_post_type_bootblank'); // Add our BootBlank Custom Post Type
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'bootblank_pagination'); // Add our HTML5 Pagination
-add_action('get_header', 'gkp_html_minify_start'); // Minifier le html
+add_action('get_header', 'bootblank_html_minify_start'); // Minifier le html
 add_action('wp_head', 'gkp_prefetch'); // Optimisation
 // add_action('wp_enqueue_scripts', 'wpc_dashicons'); // Utilisation de Dashicon WP 3.8
 
