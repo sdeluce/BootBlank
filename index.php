@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<main role="main" class="col-md-8">
+	<main role="main" class="<?php echo $main_col ; ?>">
 		<!-- section -->
 		<section>
 

@@ -4,47 +4,24 @@
 \*------------------------------------*/
 
 // Login override CSS  --Front--
-function foundation_login_css()  {
+function bootblank_login_css()  {
     echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('template_directory') . '/css/login.css?v=1.0.0" />';
     // echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('template_directory') . '/css/login.css?v=1.0.0" />';
 }
 
-// Grilles --Front--
-function grid($col) {
-//  Largeur des sidebars
-    $col_left = 3;
-    $col_right = 3;
+function bootblank_main_class() {
+  if (is_active_sidebar('sidebar-1')) {
+    // Classes on pages with the sidebar
+    $class = 'col-sm-9';
+  } else {
+    // Classes on full width pages
+    $class = 'col-sm-12';
+  }
 
-//  Teste si sidebar ou non
-    if (is_active_sidebar('sidebar-1') && is_active_sidebar('sidebar-2')) {
-        $col_main = 12 - ($col_left + $col_right);
-        $col_left = $col_left;
-        $col_right = $col_right;
-    } else if (is_active_sidebar('sidebar-1')){
-        $col_main = 12 - $col_left;
-        $col_left = $col_left;
-        $col_right = 0;
-    } else if (is_active_sidebar('sidebar-2')){
-        $col_main = 12 - $col_right;
-        $col_left = 0;
-        $col_right = $col_right;
-    } else {
-        $col_main = 12;
-        $col_left = 0;
-        $col_right = 0;
-    }
-
-    switch ($col) {
-        case 'left':
-            echo $col_left;
-            break;
-        case 'main':
-            echo $col_main;
-            break;
-        case 'right':
-            echo $col_right;
-            break;
-    }
+  return $class;
+}
+function roots_sidebar_class() {
+  return 'col-sm-3';
 }
 
 //Deletes empty classes and removes the sub menu class --front--
@@ -54,7 +31,7 @@ function change_submenu_class($menu) {
 }
 
 // Préchargement des pages --front--
-function gkp_prefetch() {
+function bootblank_prefetch() {
     if ( is_single() ) {  ?>
         <!-- Préchargement de la page d\'accueil -->
         <link rel="prefetch" href="<?php echo home_url(); ?>" />
@@ -392,7 +369,7 @@ function remove_thumbnail_dimensions( $html )
 // Custom Gravatar in Settings > Discussion
 function bootblankgravatar ($avatar_defaults)
 {
-    $myavatar = get_template_directory_url() . '/img/gravatar.jpg';
+    $myavatar = get_template_directory_uri() . '/img/gravatar.jpg';
     $avatar_defaults[$myavatar] = "Custom Gravatar";
     return $avatar_defaults;
 }
@@ -456,7 +433,7 @@ function bootblankcomments($comment, $args, $depth)
 \*------------------------------------*/
 
 // Add Actions
-// add_action('login_head', 'foundation_login_css'); // Add Override Login Css
+// add_action('login_head', 'bootblank_login_css'); // Add Override Login Css
 add_action('init', 'bootblank_header_scripts'); // Add Custom Scripts to wp_head
 add_action('wp_print_scripts', 'bootblank_conditional_scripts'); // Add Conditional Page Scripts
 add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
@@ -466,7 +443,7 @@ add_action('init', 'create_post_type_bootblank'); // Add our BootBlank Custom Po
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'bootblank_pagination'); // Add our HTML5 Pagination
 add_action('get_header', 'bootblank_html_minify_start'); // Minifier le html
-add_action('wp_head', 'gkp_prefetch'); // Optimisation
+add_action('wp_head', 'bootblank_prefetch'); // Optimisation
 // add_action('wp_enqueue_scripts', 'wpc_dashicons'); // Utilisation de Dashicon WP 3.8
 
 // Theme support

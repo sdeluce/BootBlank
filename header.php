@@ -12,7 +12,12 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 
+		<?php
+			$main_col = 'col-md-9';
+			$sidebar_col = 'col-md-3';
+		?>
 		<?php wp_head(); ?>
+
 		<script>
 		// conditionizr.com
 		// configure environment tests
@@ -28,21 +33,22 @@
 		<div class="wrapper">
 			<!-- header -->
 			<header class="header clear" role="banner">
-				<!-- logo -->
-				<div class="logo">
-					<a href="<?php echo home_url(); ?>">
-						<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-						<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
-					</a>
+				<div class="container">
+					<!-- logo -->
+					<div class="logo">
+						<a href="<?php echo home_url(); ?>">
+							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
+							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
+						</a>
+					</div>
+					<!-- /logo -->
+
+					<!-- nav -->
+					<nav class="nav" role="navigation">
+						<?php bootblank_nav(); ?>
+					</nav>
+					<!-- /nav -->
 				</div>
-				<!-- /logo -->
-
-				<!-- nav -->
-				<nav class="nav" role="navigation">
-					<?php bootblank_nav(); ?>
-				</nav>
-				<!-- /nav -->
-
 			</header>
 			<!-- /header -->
 			<!-- Container -->
