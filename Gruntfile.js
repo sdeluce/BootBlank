@@ -24,11 +24,21 @@ module.exports = function (grunt) {
 			}
 		},
 
+		svg2png: {
+			all: {
+				// specify files in array format with multiple src-dest mapping
+				files: [
+					// rasterize all SVG files in "img" and its subdirectories to "img/png"
+					{ src: ['assets/svg/**.svg'], dest: 'assets/img/' },
+				]
+			}
+		},
+
 		imagemin: {
 			dynamic: {
 				files: [{
 					expand: true,
-					cwd: 'assets/img/raw/',
+					cwd: 'assets/img/',
 					src: ['**/*.{png,jpg,gif}'],
 					dest: 'img/'
 				}]
@@ -39,7 +49,7 @@ module.exports = function (grunt) {
 			dist: {
 				files: [{
 					expand: true,
-					cwd: 'assets/img/svg',
+					cwd: 'assets/svg/',
 					src: ['**/*.svg'],
 					dest: 'img/',
 					ext: '.svg'
@@ -73,5 +83,5 @@ module.exports = function (grunt) {
 			},
 		}
 	});
-	grunt.registerTask('default', ['compass','imagemin','svgmin']);
+	grunt.registerTask('default', ['compass','svg2png','imagemin','svgmin']);
 }

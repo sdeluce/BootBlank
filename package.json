@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Thème wordpress Blank",
   "dependencies": {
-    "grunt": "^0.4.4"
+    "grunt": "^0.4.4",
+    "grunt-svg2png": "^0.2.1"
   },
   "devDependencies": {
     "grunt-contrib-compass": "^0.7.2",
