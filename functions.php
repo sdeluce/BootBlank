@@ -268,7 +268,7 @@ if (function_exists('register_sidebar'))
 {
     // Define Sidebar Widget Area 1
     register_sidebar(array(
-        'name' => __('Widget Area 1', 'bootblank'),
+        'name' => __('Sidebar Gauche', 'bootblank'),
         'description' => __('Description for this widget-area...', 'bootblank'),
         'id' => 'widget-area-1',
         'before_widget' => '<div id="%1$s" class="%2$s">',
@@ -279,7 +279,7 @@ if (function_exists('register_sidebar'))
 
     // Define Sidebar Widget Area 2
     register_sidebar(array(
-        'name' => __('Widget Area 2', 'bootblank'),
+        'name' => __('Sidebar Droite', 'bootblank'),
         'description' => __('Description for this widget-area...', 'bootblank'),
         'id' => 'widget-area-2',
         'before_widget' => '<div id="%1$s" class="%2$s">',
