@@ -518,8 +518,11 @@ add_action( 'admin_head', 'add_menu_icons_styles' );
 // Create 1 Custom Post type for a Demo, called bootblank
 function create_post_type_bootblank()
 {
-    register_taxonomy_for_object_type('category', 'bootblank'); // Register Taxonomies for Category
+    register_taxonomy_for_object_type('category', 'bootblank');
     register_taxonomy_for_object_type('post_tag', 'bootblank');
+    // Add taxonomy
+    register_taxonomy( 'type', 'bootblank', array( 'hierarchical' => true, 'label' => 'Type', 'query_var' => true, 'rewrite' => true ) );
+register_taxonomy( 'couleur', 'bootblank', array( 'hierarchical' => false, 'label' => 'Couleur', 'query_var' => true, 'rewrite' => true ) );
     register_post_type('bootblank', // Register Custom Post Type
         array(
         'labels' => array(
@@ -613,6 +616,12 @@ function ntp_right_now_content_table_end() {
     }
 }
 add_action('dashboard_glance_items', 'ntp_right_now_content_table_end');
+
+add_action( 'admin_head', 'my_cpt_icon_css' );
+
+function my_cpt_icon_css() {
+    echo '<style type="text/css">#dashboard_right_now li .bootblank:before{content:"\f313"}</style>'."\n";
+}
 /*------------------------------------*\
 	ShortCode Functions
 \*------------------------------------*/
