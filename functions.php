@@ -1,5 +1,21 @@
 <?php
 /*------------------------------------*\
+    Sidebar Class Bootstrap
+\*------------------------------------*/
+function bootblank_main_class() {
+    if ( is_active_sidebar('widget-area-1') && is_active_sidebar('widget-area-2') ) {
+        echo 'col-sm-6';
+    } else if ( is_active_sidebar('widget-area-1') || is_active_sidebar('widget-area-2') ) {
+        echo 'col-sm-9';
+    } else {
+        // Classes on full width pages
+        echo 'col-sm-12';
+    }
+}
+function bootblank_sidebar_class() {
+    echo 'col-sm-3';
+}
+/*------------------------------------*\
 	External Modules/Files
 \*------------------------------------*/
 
@@ -90,20 +106,6 @@ function favicons() {
 <?php
 }
 add_action('wp_head', 'favicons');
-
-function bootblank_main_class() {
-    if ( is_active_sidebar('widget-area-1') && is_active_sidebar('widget-area-2') ) {
-        echo 'col-sm-6';
-    } else if ( is_active_sidebar('widget-area-1') || is_active_sidebar('widget-area-2') ) {
-        echo 'col-sm-9';
-    } else {
-        // Classes on full width pages
-        echo 'col-sm-12';
-    }
-}
-function bootblank_sidebar_class() {
-    echo 'col-sm-3';
-}
 
 /*------------------------------------*\
 	Theme Support
