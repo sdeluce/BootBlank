@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+<?php get_sidebar('left'); ?>
 	<main role="main" class="col-md-9">
 		<!-- section -->
 		<section>

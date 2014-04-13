@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+<?php get_sidebar('left'); ?>
 	<div class="<?php bootblank_main_class(); ?>">
 		<!-- section -->
 		<section>

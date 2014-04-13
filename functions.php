@@ -91,6 +91,20 @@ function favicons() {
 }
 add_action('wp_head', 'favicons');
 
+function bootblank_main_class() {
+    if ( is_active_sidebar('widget-area-1') && is_active_sidebar('widget-area-2') ) {
+        echo 'col-sm-6';
+    } else if ( is_active_sidebar('widget-area-1') || is_active_sidebar('widget-area-2') ) {
+        echo 'col-sm-9';
+    } else {
+        // Classes on full width pages
+        echo 'col-sm-12';
+    }
+}
+function bootblank_sidebar_class() {
+    echo 'col-sm-3';
+}
+
 /*------------------------------------*\
 	Theme Support
 \*------------------------------------*/
@@ -272,6 +286,8 @@ if (function_exists('register_sidebar'))
         'after_title' => '</h3>'
     ));
 }
+
+
 
 // Remove wp_head() injected Recent Comment styles
 function my_remove_recent_comments_style()

@@ -12,19 +12,6 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 
-		<?php
-			function bootblank_main_class() {
-			  if (is_active_sidebar('widget-area-1')) {
-			    echo 'col-sm-9';
-			  } else {
-			    // Classes on full width pages
-			    echo 'col-sm-12';
-			  }
-			}
-			function bootblank_sidebar_class() {
-			  echo 'col-sm-3';
-			}
-		?>
 		<?php wp_head(); ?>
 
 		<script>
