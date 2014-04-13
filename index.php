@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<main role="main" class="<?php bootblank_main_class(); ?>">
+	<div class="<?php bootblank_main_class(); ?>">
 		<!-- section -->
 		<section>
 
@@ -12,7 +12,7 @@
 
 		</section>
 		<!-- /section -->
-	</main>
+	</div>
 
 <?php get_sidebar(); ?>
 

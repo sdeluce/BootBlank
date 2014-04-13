@@ -9,18 +9,6 @@ function bootblank_login_css()  {
     // echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('template_directory') . '/css/login.css?v=1.0.0" />';
 }
 
-function bootblank_main_class() {
-  if (is_active_sidebar('sidebar-1')) {
-    echo 'col-sm-9';
-  } else {
-    // Classes on full width pages
-    echo 'col-sm-12';
-  }
-}
-function bootblank_sidebar_class() {
-  echo 'col-sm-3';
-}
-
 //Deletes empty classes and removes the sub menu class --front--
 function change_submenu_class($menu) {
     $menu = preg_replace('/ class="sub-menu"/','/ class="dropdown" /',$menu);
@@ -552,4 +540,8 @@ function bootblank_shortcode_demo_2($atts, $content = null) // Demo Heading H2 s
     return '<h2>' . $content . '</h2>';
 }
 
+/*------------------------------------*\
+    WooCommerce Support
+\*------------------------------------*/
+require_once ('woosupport.php');
 ?>
