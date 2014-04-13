@@ -23,13 +23,29 @@ module.exports = function (grunt) {
 				}
 			}
 		},
-
+		favicons: {
+			options: {
+				trueColor: true,
+				precomposed: true,
+				appleTouchBackgroundColor: "#292f33",
+				coast: true,
+				windowsTile: true,
+				tileBlackWhite: true,
+				tileColor: "#292f33",
+				html: 'assets/icons/icons.html',
+				HTMLPrefix: '%url%/img/icons/'
+			},
+			icons: {
+				src: 'assets/img/favicon.png',
+				dest: 'img/icons'
+			}
+		},
 		svg2png: {
 			all: {
 				// specify files in array format with multiple src-dest mapping
 				files: [
 					// rasterize all SVG files in "img" and its subdirectories to "img/png"
-					{ src: ['assets/svg/**.svg'], dest: 'assets/img/' },
+					{ src: ['assets/svg/logo.svg'], dest: 'assets/img/' },
 				]
 			}
 		},
@@ -83,5 +99,5 @@ module.exports = function (grunt) {
 			},
 		}
 	});
-	grunt.registerTask('default', ['compass','svg2png','imagemin','svgmin']);
+	grunt.registerTask('default', ['compass','favicons','svg2png','imagemin','svgmin']);
 }
