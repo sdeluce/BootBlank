@@ -504,16 +504,16 @@ add_shortcode('bootblank_shortcode_demo_2', 'bootblank_shortcode_demo_2'); // Pl
 	Custom Post Types
 \*------------------------------------*/
 
-// Create 1 Custom Post type for a Demo, called HTML5-Blank
+// Create 1 Custom Post type for a Demo, called bootblank
 function create_post_type_bootblank()
 {
-    register_taxonomy_for_object_type('category', 'html5-blank'); // Register Taxonomies for Category
-    register_taxonomy_for_object_type('post_tag', 'html5-blank');
-    register_post_type('html5-blank', // Register Custom Post Type
+    register_taxonomy_for_object_type('category', 'bootblank'); // Register Taxonomies for Category
+    register_taxonomy_for_object_type('post_tag', 'bootblank');
+    register_post_type('bootblank', // Register Custom Post Type
         array(
         'labels' => array(
-            'name' => __('BootBlank Custom Post', 'bootblank'), // Rename these to suit
-            'singular_name' => __('BootBlank Custom Post', 'bootblank'),
+            'name' => __('BootBlank Post', 'bootblank'), // Rename these to suit
+            'singular_name' => __('BootBlank Post', 'bootblank'),
             'add_new' => __('Add New', 'bootblank'),
             'add_new_item' => __('Add New BootBlank Custom Post', 'bootblank'),
             'edit' => __('Edit', 'bootblank'),
@@ -541,6 +541,36 @@ function create_post_type_bootblank()
         ) // Add Category and Post Tags support
     ));
 }
+/*------------------------------------*\
+    Colonnnes personnalisées
+\*------------------------------------*/
+function custom_bootblank_columns_type($columns) {
+    $columns['publication_date'] = 'Année';
+
+    $columns['title'] = 'Titre de BootBlank';
+    $columns['date'] = 'Créé le';
+
+    $columns = array_slice($columns, 0, 1) + array( 'thumbnail' =>'Miniature') + array_slice($columns, 1, count($columns)-1, true );
+
+    return $columns;
+}
+add_filter('manage_edit-bootblank_columns', 'custom_bootblank_columns_type');
+
+function custom_bootblank_columns_content($column) {
+    global $post;
+
+    switch ($column) {
+        case 'thumbnail':
+            the_post_thumbnail( 'thumbnail' );
+            break;
+        case 'publication_date':
+            $args = array( 'post_type' => 'bootblank', 'numberposts' => -1, 'meta_query' => array( array( 'key' => '_book_info_author', 'value' => $post->ID ) ) );
+            $books = get_posts($args);
+            echo count($books);
+            break;
+    }
+}
+add_action('manage_bootblank_posts_custom_column', 'custom_bootblank_columns_content');
 
 /*------------------------------------*\
 	ShortCode Functions
