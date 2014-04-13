@@ -503,7 +503,18 @@ add_shortcode('bootblank_shortcode_demo_2', 'bootblank_shortcode_demo_2'); // Pl
 /*------------------------------------*\
 	Custom Post Types
 \*------------------------------------*/
+function add_menu_icons_styles(){
+?>
 
+<style>
+#adminmenu #menu-posts-bootblank div.wp-menu-image:before {
+    content: "\f313";
+}
+</style>
+
+<?php
+}
+add_action( 'admin_head', 'add_menu_icons_styles' );
 // Create 1 Custom Post type for a Demo, called bootblank
 function create_post_type_bootblank()
 {
@@ -572,6 +583,36 @@ function custom_bootblank_columns_content($column) {
 }
 add_action('manage_bootblank_posts_custom_column', 'custom_bootblank_columns_content');
 
+/* Widget 'Coup d'oeil' avec tous les contenus */
+function ntp_right_now_content_table_end() {
+    $args = array(
+        'public' => true ,
+        '_builtin' => false
+    );
+    $output = 'objects';
+    $operator = 'and';
+    $post_types = get_post_types($args , $output , $operator);
+    foreach($post_types as $post_type) {
+        $num_posts = wp_count_posts($post_type->name);
+        $num = number_format_i18n($num_posts->publish);
+        $text = _n($post_type->labels->name, $post_type->labels->name , intval($num_posts->publish));
+        if (current_user_can('edit_posts')) {
+            $cpt_name = $post_type->name;
+        }
+        echo '<li><tr><a class="'.$cpt_name.'" href="edit.php?post_type='.$cpt_name.'"><td></td>' . $num . ' <td>' . $text . '</td></a></tr></li>';
+    }
+    $taxonomies = get_taxonomies($args , $output , $operator);
+    foreach($taxonomies as $taxonomy) {
+        $num_terms  = wp_count_terms($taxonomy->name);
+        $num = number_format_i18n($num_terms);
+        $text = _n($taxonomy->labels->name, $taxonomy->labels->name , intval($num_terms));
+        if (current_user_can('manage_categories')) {
+            $cpt_tax = $taxonomy->name;
+        }
+        echo '<li><tr><a class="'.$cpt_tax.'" href="edit-tags.php?taxonomy='.$cpt_tax.'"><td></td>' . $num . ' <td>' . $text . '</td></a></tr></li>';
+    }
+}
+add_action('dashboard_glance_items', 'ntp_right_now_content_table_end');
 /*------------------------------------*\
 	ShortCode Functions
 \*------------------------------------*/
