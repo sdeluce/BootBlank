@@ -22,7 +22,6 @@ function bootblank_sidebar_class() {
 // Login override CSS  --Front--
 function bootblank_login_css()  {
     echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('template_directory') . '/css/login.css?v=1.0.0" />';
-    // echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('template_directory') . '/css/login.css?v=1.0.0" />';
 }
 
 // Add Admin Widget
@@ -485,7 +484,7 @@ add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove
 add_filter( 'jpeg_quality', create_function( '', 'return 80;' ) ); // Idem php < 5.3
 add_filter ('wp_nav_menu','change_submenu_class'); // Add class menu
 add_filter( 'embed_oembed_html', 'standard_wrap_embeds', 10, 3 ) ; // Video responsive
-add_filter( 'login_errors', 'bootblank_login_obscure' ); // Remove login Error
+add_filter( 'login_errors', 'bootblank_login_obscure' ); // Remove login error
 
 // Remove Filters
 remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altogether
