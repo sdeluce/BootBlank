@@ -4,6 +4,7 @@
   "description": "Thème wordpress Blank",
   "dependencies": {
     "grunt": "^0.4.4",
+    "grunt-contrib-coffee": "^0.10.1",
     "grunt-contrib-compass": "^0.7.2",
     "grunt-contrib-imagemin": "^0.6.1",
     "grunt-contrib-uglify": "^0.4.0",

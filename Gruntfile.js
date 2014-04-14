@@ -23,6 +23,13 @@ module.exports = function (grunt) {
 				}
 			}
 		},
+		coffee: {
+			compile: {
+				files: {
+					'assets/js/script.js': 'assets/coffee/script.coffee'
+				}
+			}
+		},
 		favicons: {
 			options: {
 				trueColor: true,
@@ -89,6 +96,14 @@ module.exports = function (grunt) {
 					livereload: true
 				}
 			},
+			coffee: {
+				files: ['assets/coffee/*.coffee'],
+				tasks: ['coffee'],
+				options: {
+					spawn: false,
+					livereload: true
+				}
+			},
 			scss: {
 				files: ['assets/sass/*.scss','assets/**/*.scss'],
 				tasks: ['compass'],
@@ -99,5 +114,5 @@ module.exports = function (grunt) {
 			},
 		}
 	});
-	grunt.registerTask('default', ['compass','favicons','svg2png','imagemin','svgmin']);
+	grunt.registerTask('default', ['compass','coffee','favicons','svg2png','imagemin','svgmin']);
 }
