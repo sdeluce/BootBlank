@@ -85,7 +85,7 @@ function standard_wrap_embeds( $html, $url, $args ) {
 $post_formats = array( 'aside', 'chat', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio' );
 
 // Add Dashicons in the theme
-function wpc_dashicons() {
+function bootblank_dashicons() {
     wp_enqueue_style('dashicons');
 }
 
@@ -95,6 +95,11 @@ function favicons() {
     echo $head_ico;
 }
 add_action('wp_head', 'favicons');
+
+// Obscure login screen error messages
+function bootblank_login_obscure(){
+    return '<strong>Sorry</strong>: Think you have gone wrong somwhere!';
+}
 
 /*------------------------------------*\
 	Theme Support
@@ -436,8 +441,9 @@ add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline 
 add_action('init', 'bootblank_pagination'); // Add our HTML5 Pagination
 add_action('get_header', 'bootblank_html_minify_start'); // Minifier le html
 add_action('wp_head', 'bootblank_prefetch'); // Optimisation
-// add_action('wp_enqueue_scripts', 'wpc_dashicons'); // Utilisation de Dashicon WP 3.8
+// add_action('wp_enqueue_scripts', 'bootblank_dashicons'); // Utilisation de Dashicon WP 3.8
 add_action('wp_dashboard_setup', 'bootblank_dashboard_widgets'); // Widget Admin BootBlank
+
 
 // Theme support
 add_theme_support('post-formats', $post_formats); // Ajout de Post Format
@@ -479,6 +485,7 @@ add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove
 add_filter( 'jpeg_quality', create_function( '', 'return 80;' ) ); // Idem php < 5.3
 add_filter ('wp_nav_menu','change_submenu_class'); // Add class menu
 add_filter( 'embed_oembed_html', 'standard_wrap_embeds', 10, 3 ) ; // Video responsive
+add_filter( 'login_errors', 'bootblank_login_obscure' ); // Remove login Error
 
 // Remove Filters
 remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altogether
