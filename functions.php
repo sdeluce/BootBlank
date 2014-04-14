@@ -25,6 +25,15 @@ function bootblank_login_css()  {
     // echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('template_directory') . '/css/login.css?v=1.0.0" />';
 }
 
+// Add Admin Widget
+function bootblank_dashboard_widgets() {
+    global $wp_meta_boxes;
+    wp_add_dashboard_widget('custom_help_widget', 'Theme BootBlank', 'bootblank_dashboard_help');
+}
+
+function bootblank_dashboard_help() {
+    echo '<p style="text-align:center;"><img src="'.get_template_directory_uri().'/img/logo.png"/></p>';
+}
 //Deletes empty classes and removes the sub menu class --front--
 function change_submenu_class($menu) {
     $menu = preg_replace('/ class="sub-menu"/','/ class="dropdown" /',$menu);
@@ -428,6 +437,7 @@ add_action('init', 'bootblank_pagination'); // Add our HTML5 Pagination
 add_action('get_header', 'bootblank_html_minify_start'); // Minifier le html
 add_action('wp_head', 'bootblank_prefetch'); // Optimisation
 // add_action('wp_enqueue_scripts', 'wpc_dashicons'); // Utilisation de Dashicon WP 3.8
+add_action('wp_dashboard_setup', 'bootblank_dashboard_widgets'); // Widget Admin BootBlank
 
 // Theme support
 add_theme_support('post-formats', $post_formats); // Ajout de Post Format
