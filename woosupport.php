@@ -14,7 +14,7 @@ function my_theme_wrapper_end() {
 }
 
 /* Désactivation des CSS sous WooCommerce 2.1 */
-// add_filter('woocommerce_enqueue_styles', '__return_false');
+add_filter('woocommerce_enqueue_styles', '__return_false');
 
 add_theme_support( 'woocommerce' );
 ?>
