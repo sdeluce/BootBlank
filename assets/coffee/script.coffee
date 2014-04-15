@@ -1,6 +1,4 @@
-# Assignment:
-number   = 42
-opposite = true
-
-# Conditions:
-number = -42 if opposite
+(($) ->
+	# Ici mon code Coffee
+	# alert 'BootBlank'
+)(jQuery)

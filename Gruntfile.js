@@ -3,30 +3,31 @@ module.exports = function (grunt) {
 	require('load-grunt-tasks')(grunt);
 
 	grunt.initConfig({
-		// uglify: {
-		// 	options: {
-		// 		compress: {
-		// 			// drop_console: true
-		// 		}
-		// 	},
-		// 	my_target: {
-		// 		files: {
-		// 			// 'dest/output.min.js': ['src/input.js']
-		// 		}
-		// 	}
-		// },
-
-		compass: {
-			dist: {
-				options: {
-					config: 'config.rb'
-				}
-			}
-		},
 		coffee: {
 			compile: {
 				files: {
 					'assets/js/script.js': 'assets/coffee/script.coffee'
+				}
+			}
+		},
+		concat: {
+			basic_and_extras: {
+				files: {
+					'assets/js/script.min.js': ['assets/ext_libs/jquery/dist/jquery.js', 'assets/js/script.js'],
+				},
+			},
+		},
+		uglify: {
+			dist: {
+				files: {
+					'js/script.min.js': ['assets/js/script.min.js']
+				}
+			}
+		},
+		compass: {
+			dist: {
+				options: {
+					config: 'config.rb'
 				}
 			}
 		},
@@ -90,7 +91,7 @@ module.exports = function (grunt) {
 			},
 			js: {
 				files: ['assets/js/*.js','!assets/js/*.min.js'],
-				tasks: ['concat'],
+				tasks: ['uglify'],
 				options: {
 					spawn: false,
 					livereload: true
@@ -98,7 +99,7 @@ module.exports = function (grunt) {
 			},
 			coffee: {
 				files: ['assets/coffee/*.coffee'],
-				tasks: ['coffee'],
+				tasks: ['coffee','concat','uglify'],
 				options: {
 					spawn: false,
 					livereload: true
@@ -114,5 +115,5 @@ module.exports = function (grunt) {
 			},
 		}
 	});
-	grunt.registerTask('default', ['compass','coffee','favicons','svg2png','imagemin','svgmin']);
+	grunt.registerTask('default', ['coffee','concat','uglify','compass','favicons','svg2png','imagemin','svgmin']);
 }

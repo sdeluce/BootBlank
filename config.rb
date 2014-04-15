@@ -10,7 +10,7 @@ javascripts_dir = "js"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
-environment = :development #development production
+environment = :production #development production
 
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
