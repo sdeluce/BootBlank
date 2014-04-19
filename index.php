@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+
 <?php get_sidebar(); ?>
 
 	<main class="<?php bootblank_main_class(); ?>" role="main">

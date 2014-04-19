@@ -1,65 +1,67 @@
 <?php get_header(); ?>
 
-	<main role="main">
-	<!-- section -->
-	<section>
+<?php get_sidebar(); ?>
 
-	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+	<main class="<?php bootblank_main_class(); ?>" role="main">
+		<!-- section -->
+		<section>
 
-		<!-- article -->
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-			<!-- post thumbnail -->
-			<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-					<?php the_post_thumbnail(); // Fullsize image for the single post ?>
-				</a>
-			<?php endif; ?>
-			<!-- /post thumbnail -->
+			<!-- article -->
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-			<!-- post title -->
-			<h1>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-			</h1>
-			<!-- /post title -->
+				<!-- post thumbnail -->
+				<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
+					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+						<?php the_post_thumbnail(); // Fullsize image for the single post ?>
+					</a>
+				<?php endif; ?>
+				<!-- /post thumbnail -->
 
-			<!-- post details -->
-			<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
-			<span class="author"><?php _e( 'Published by', 'bootblank' ); ?> <?php the_author_posts_link(); ?></span>
-			<span class="comments"><?php comments_popup_link( __( 'Leave your thoughts', 'bootblank' ), __( '1 Comment', 'bootblank' ), __( '% Comments', 'bootblank' )); ?></span>
-			<!-- /post details -->
+				<!-- post title -->
+				<h1>
+					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+				</h1>
+				<!-- /post title -->
 
-			<?php the_content(); // Dynamic Content ?>
+				<!-- post details -->
+				<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
+				<span class="author"><?php _e( 'Published by', 'bootblank' ); ?> <?php the_author_posts_link(); ?></span>
+				<span class="comments"><?php comments_popup_link( __( 'Leave your thoughts', 'bootblank' ), __( '1 Comment', 'bootblank' ), __( '% Comments', 'bootblank' )); ?></span>
+				<!-- /post details -->
 
-			<?php the_tags( __( 'Tags: ', 'bootblank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
+				<?php the_content(); // Dynamic Content ?>
 
-			<p><?php _e( 'Categorised in: ', 'bootblank' ); the_category(', '); // Separated by commas ?></p>
+				<?php the_tags( __( 'Tags: ', 'bootblank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
 
-			<p><?php _e( 'This post was written by ', 'bootblank' ); the_author(); ?></p>
+				<p><?php _e( 'Categorised in: ', 'bootblank' ); the_category(', '); // Separated by commas ?></p>
 
-			<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
+				<p><?php _e( 'This post was written by ', 'bootblank' ); the_author(); ?></p>
 
-			<?php comments_template(); ?>
+				<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
 
-		</article>
-		<!-- /article -->
+				<?php comments_template(); ?>
 
-	<?php endwhile; ?>
+			</article>
+			<!-- /article -->
 
-	<?php else: ?>
+		<?php endwhile; ?>
 
-		<!-- article -->
-		<article>
+		<?php else: ?>
 
-			<h1><?php _e( 'Sorry, nothing to display.', 'bootblank' ); ?></h1>
+			<!-- article -->
+			<article>
 
-		</article>
-		<!-- /article -->
+				<h1><?php _e( 'Sorry, nothing to display.', 'bootblank' ); ?></h1>
 
-	<?php endif; ?>
+			</article>
+			<!-- /article -->
 
-	</section>
-	<!-- /section -->
+		<?php endif; ?>
+
+		</section>
+		<!-- /section -->
 	</main>
 
 <?php get_sidebar(); ?>

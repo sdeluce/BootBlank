@@ -1,6 +1,8 @@
 <?php get_header(); ?>
 
-	<main role="main">
+<?php get_sidebar(); ?>
+
+    <main class="<?php bootblank_main_class(); ?>" role="main">
 		<!-- section -->
 		<section>
 
@@ -14,6 +16,6 @@
 		<!-- /section -->
 	</main>
 
-<?php get_sidebar(); ?>
+<?php get_sidebar('right'); ?>
 
 <?php get_footer(); ?>
