@@ -1,9 +1,2 @@
 @import "compass";
 @import "libs";
-@import "typographie";
-
-body{
-	background-size: $Hligne $Hligne;
-	@include background-image(linear-gradient(top,#fff, #fff 96%,#efefef 97%) !important);
-	background-position: 0 2px !important;
-}

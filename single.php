@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<main role="main" class="<?php bootblank_main_class(); ?>">
+	<main role="main">
 	<!-- section -->
 	<section>
 

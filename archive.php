@@ -1,6 +1,6 @@
 <?php get_header(); ?>
-<?php get_sidebar('left'); ?>
-	<main role="main" class="col-md-9">
+
+	<main role="main">
 		<!-- section -->
 		<section>
 

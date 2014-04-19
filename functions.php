@@ -1,113 +1,7 @@
 <?php
 /*------------------------------------*\
-    Sidebar Class Bootstrap
-\*------------------------------------*/
-function bootblank_main_class() {
-    if ( is_active_sidebar('widget-area-1') && is_active_sidebar('widget-area-2') ) {
-        echo 'col-sm-6';
-    } else if ( is_active_sidebar('widget-area-1') || is_active_sidebar('widget-area-2') ) {
-        echo 'col-sm-9';
-    } else {
-        // Classes on full width pages
-        echo 'col-sm-12';
-    }
-}
-function bootblank_sidebar_class() {
-    echo 'col-sm-3';
-}
-/*------------------------------------*\
-	External Modules/Files
-\*------------------------------------*/
-
-// Login override CSS  --Front--
-function bootblank_login_css()  {
-    echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('template_directory') . '/css/login.css?v=1.0.0" />';
-}
-
-// Add Admin Widget
-function bootblank_dashboard_widgets() {
-    global $wp_meta_boxes;
-    wp_add_dashboard_widget('custom_help_widget', 'Theme BootBlank', 'bootblank_dashboard_help');
-}
-
-function bootblank_dashboard_help() {
-    echo '<p style="text-align:center;"><img src="'.get_template_directory_uri().'/img/logo.png"/></p>';
-}
-//Deletes empty classes and removes the sub menu class --front--
-function change_submenu_class($menu) {
-    $menu = preg_replace('/ class="sub-menu"/','/ class="dropdown" /',$menu);
-    return $menu;
-}
-
-// Préchargement des pages --front--
-function bootblank_prefetch() {
-    if ( is_single() ) {  ?>
-        <!-- Préchargement de la page d\'accueil -->
-        <link rel="prefetch" href="<?php echo home_url(); ?>" />
-        <link rel="prerender" href="<?php echo home_url(); ?>" />
-
-        <!-- Préchargement de l\'article suivant -->
-        <link rel="prefetch" href="<?php echo get_permalink( get_adjacent_post(false,'',true) ); ?>" />
-        <link rel="prerender" href="<?php echo get_permalink( get_adjacent_post(false,'',true) ); ?>" />
-   <?php
-   }
-}
-
-/** Début Minification des fichiers HTML **/
-function bootblank_html_minify_start() {
-    ob_start( 'bootblank_html_minyfy_finish' );
-}
-
-function bootblank_html_minyfy_finish( $html ) {
-
-    // Suppression des commentaires HTML, sauf les commentaires conditionnels pour IE
-    $html = preg_replace('/<!--(?!\s*(?:\[if [^\]]+]|<!|>))(?:(?!-->).)*-->/s', '', $html);
-
-    // Suppression des espaces vides
-    $html = str_replace(array("\r\n", "\r", "\n", "\t"), '', $html);
-    while ( stristr($html, '  '))
-        $html = str_replace('  ', ' ', $html);
-
-    return $html;
-}
-/** Fin Minification des fichiers HTML **/
-
-// Encapsulage des videos
-function standard_wrap_embeds( $html, $url, $args ) {
-    if( 'video' == get_post_format( get_the_ID() ) ) {
-        $html = '<div class="video-wrapper">' . $html . '</div>';
-    } // end if
-    return $html;
-} // end standard_wrap_embebds
-
-// Posts Formats
-$post_formats = array( 'aside', 'chat', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio' );
-
-// Add Dashicons in the theme
-function bootblank_dashicons() {
-    wp_enqueue_style('dashicons');
-}
-
-function favicons() {
-    $icosource = file_get_contents( get_template_directory_uri().'/assets/icons/icons.html' , "r");
-    $head_ico = str_replace("%url%",  get_template_directory_uri(), $icosource);
-    echo $head_ico;
-}
-add_action('wp_head', 'favicons');
-
-// Obscure login screen error messages
-function bootblank_login_obscure(){
-    return '<strong>Sorry</strong>: Think you have gone wrong somwhere!';
-}
-
-/*------------------------------------*\
 	Theme Support
 \*------------------------------------*/
-
-if (!isset($content_width))
-{
-    $content_width = 900;
-}
 
 if (function_exists('add_theme_support'))
 {
@@ -123,8 +17,7 @@ if (function_exists('add_theme_support'))
 
     // Add Support for Custom Backgrounds - Uncomment below if you're going to use
     add_theme_support('custom-background', array(
-	'default-color' => 'FFF',
-	'default-image' => get_template_directory_uri() . '/img/bg.jpg'
+	'default-color' => 'FFF'
     ));
 
     // Add Support for Custom Header - Uncomment below if you're going to use
@@ -176,27 +69,18 @@ function bootblank_nav()
 	);
 }
 
-add_filter( 'wp_default_scripts', 'remove_jquery_migrate' );
-function remove_jquery_migrate( &$scripts){
-    if(!is_admin()){
-        $scripts->remove( 'jquery');
-        // $scripts->add( 'jquery', false, array( 'jquery-core' ), '1.10.2' );
-    }
-}
-
 // Load BootBlank scripts (header.php)
 function bootblank_header_scripts()
 {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
-        wp_register_script('conditionizr', 'http://cdnjs.cloudflare.com/ajax/libs/conditionizr.js/4.0.0/conditionizr.js', array(), '4.0.0'); // Conditionizr
+        wp_register_script('conditionizr', get_template_directory_uri() . '/js/lib/conditionizr-4.3.0.min.js', array(), '4.3.0'); // Conditionizr
         wp_enqueue_script('conditionizr'); // Enqueue it!
 
-        wp_register_script('modernizr', 'http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js', array(), '2.6.2'); // Modernizr
+        wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
         wp_enqueue_script('modernizr'); // Enqueue it!
 
-        // $jq = date('jny',filemtime( get_template_directory() . '/js/scripts.min.js' ));
-        wp_register_script('bootblankscripts', get_template_directory_uri() . '/js/script.min.js', array(), '1.0.0'); // Custom scripts
+        wp_register_script('bootblankscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
         wp_enqueue_script('bootblankscripts'); // Enqueue it!
     }
 }
@@ -205,7 +89,7 @@ function bootblank_header_scripts()
 function bootblank_conditional_scripts()
 {
     if (is_page('pagenamehere')) {
-        wp_register_script('scriptname', get_template_directory_uri() . '/js/scriptname.js', array(), '1.0.0'); // Conditional script(s)
+        wp_register_script('scriptname', get_template_directory_uri() . '/js/scriptname.js', array('jquery'), '1.0.0'); // Conditional script(s)
         wp_enqueue_script('scriptname'); // Enqueue it!
     }
 }
@@ -213,8 +97,10 @@ function bootblank_conditional_scripts()
 // Load BootBlank styles
 function bootblank_styles()
 {
-    $ver = date('jny',filemtime( get_template_directory() . '/css/style.css' ));
-    wp_register_style('bootblank', get_template_directory_uri() . '/css/style.css', array(), $ver, 'all');
+    /*wp_register_style('normalize', get_template_directory_uri() . '/normalize.css', array(), '1.0', 'all');
+    wp_enqueue_style('normalize'); // Enqueue it!*/
+
+    wp_register_style('bootblank', get_template_directory_uri() . '/css/style.css', array(), '1.0', 'all');
     wp_enqueue_style('bootblank'); // Enqueue it!
 }
 
@@ -270,7 +156,7 @@ if (function_exists('register_sidebar'))
 {
     // Define Sidebar Widget Area 1
     register_sidebar(array(
-        'name' => __('Sidebar Gauche', 'bootblank'),
+        'name' => __('Widget Area 1', 'bootblank'),
         'description' => __('Description for this widget-area...', 'bootblank'),
         'id' => 'widget-area-1',
         'before_widget' => '<div id="%1$s" class="%2$s">',
@@ -281,7 +167,7 @@ if (function_exists('register_sidebar'))
 
     // Define Sidebar Widget Area 2
     register_sidebar(array(
-        'name' => __('Sidebar Droite', 'bootblank'),
+        'name' => __('Widget Area 2', 'bootblank'),
         'description' => __('Description for this widget-area...', 'bootblank'),
         'id' => 'widget-area-2',
         'before_widget' => '<div id="%1$s" class="%2$s">',
@@ -290,8 +176,6 @@ if (function_exists('register_sidebar'))
         'after_title' => '</h3>'
     ));
 }
-
-
 
 // Remove wp_head() injected Recent Comment styles
 function my_remove_recent_comments_style()
@@ -346,7 +230,7 @@ function bootblank_excerpt($length_callback = '', $more_callback = '')
 }
 
 // Custom View Article link to Post
-function bootblank_view_article($more)
+function bootblank_blank_view_article($more)
 {
     global $post;
     return '... <a class="view-article" href="' . get_permalink($post->ID) . '">' . __('View Article', 'bootblank') . '</a>';
@@ -438,7 +322,6 @@ function bootblankcomments($comment, $args, $depth)
 \*------------------------------------*/
 
 // Add Actions
-// add_action('login_head', 'bootblank_login_css'); // Add Override Login Css
 add_action('init', 'bootblank_header_scripts'); // Add Custom Scripts to wp_head
 add_action('wp_print_scripts', 'bootblank_conditional_scripts'); // Add Conditional Page Scripts
 add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
@@ -447,14 +330,6 @@ add_action('init', 'register_bootblank_menu'); // Add BootBlank Menu
 add_action('init', 'create_post_type_bootblank'); // Add our BootBlank Custom Post Type
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'bootblank_pagination'); // Add our HTML5 Pagination
-add_action('get_header', 'bootblank_html_minify_start'); // Minifier le html
-add_action('wp_head', 'bootblank_prefetch'); // Optimisation
-// add_action('wp_enqueue_scripts', 'bootblank_dashicons'); // Utilisation de Dashicon WP 3.8
-add_action('wp_dashboard_setup', 'bootblank_dashboard_widgets'); // Widget Admin BootBlank
-
-
-// Theme support
-add_theme_support('post-formats', $post_formats); // Ajout de Post Format
 
 // Remove Actions
 remove_action('wp_head', 'feed_links_extra', 3); // Display the links to the extra feeds such as category feeds
@@ -470,7 +345,6 @@ remove_action('wp_head', 'start_post_rel_link', 10, 0);
 remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 remove_action('wp_head', 'rel_canonical');
 remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
-remove_action('wp_head', 'wp_generator'); // Remove Wordpress version
 
 // Add Filters
 add_filter('avatar_defaults', 'bootblankgravatar'); // Custom Gravatar in Settings > Discussion
@@ -484,16 +358,11 @@ add_filter('wp_nav_menu_args', 'my_wp_nav_menu_args'); // Remove surrounding <di
 add_filter('the_category', 'remove_category_rel_from_category_list'); // Remove invalid rel attribute
 add_filter('the_excerpt', 'shortcode_unautop'); // Remove auto <p> tags in Excerpt (Manual Excerpts only)
 add_filter('the_excerpt', 'do_shortcode'); // Allows Shortcodes to be executed in Excerpt (Manual Excerpts only)
-add_filter('excerpt_more', 'bootblank_view_article'); // Add 'View Article' button instead of [...] for Excerpts
+add_filter('excerpt_more', 'bootblank_blank_view_article'); // Add 'View Article' button instead of [...] for Excerpts
 add_filter('show_admin_bar', 'remove_admin_bar'); // Remove Admin bar
 add_filter('style_loader_tag', 'bootblank_style_remove'); // Remove 'text/css' from enqueued stylesheet
 add_filter('post_thumbnail_html', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to thumbnails
 add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to post images
-// // add_filter('jpeg_quality', function($arg){return 80;}); // Compression des images à 80% au lieu de 90%
-add_filter( 'jpeg_quality', create_function( '', 'return 80;' ) ); // Idem php < 5.3
-add_filter ('wp_nav_menu','change_submenu_class'); // Add class menu
-add_filter( 'embed_oembed_html', 'standard_wrap_embeds', 10, 3 ) ; // Video responsive
-add_filter( 'login_errors', 'bootblank_login_obscure' ); // Remove login error
 
 // Remove Filters
 remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altogether
@@ -508,31 +377,17 @@ add_shortcode('bootblank_shortcode_demo_2', 'bootblank_shortcode_demo_2'); // Pl
 /*------------------------------------*\
 	Custom Post Types
 \*------------------------------------*/
-function add_menu_icons_styles(){
-?>
 
-<style>
-#adminmenu #menu-posts-bootblank div.wp-menu-image:before {
-    content: "\f313";
-}
-</style>
-
-<?php
-}
-add_action( 'admin_head', 'add_menu_icons_styles' );
 // Create 1 Custom Post type for a Demo, called bootblank
 function create_post_type_bootblank()
 {
-    register_taxonomy_for_object_type('category', 'bootblank');
+    register_taxonomy_for_object_type('category', 'bootblank'); // Register Taxonomies for Category
     register_taxonomy_for_object_type('post_tag', 'bootblank');
-    // Add taxonomy
-    register_taxonomy( 'type', 'bootblank', array( 'hierarchical' => true, 'label' => 'Type', 'query_var' => true, 'rewrite' => true ) );
-register_taxonomy( 'couleur', 'bootblank', array( 'hierarchical' => false, 'label' => 'Couleur', 'query_var' => true, 'rewrite' => true ) );
     register_post_type('bootblank', // Register Custom Post Type
         array(
         'labels' => array(
-            'name' => __('BootBlank Post', 'bootblank'), // Rename these to suit
-            'singular_name' => __('BootBlank Post', 'bootblank'),
+            'name' => __('BootBlank Custom Post', 'bootblank'), // Rename these to suit
+            'singular_name' => __('BootBlank Custom Post', 'bootblank'),
             'add_new' => __('Add New', 'bootblank'),
             'add_new_item' => __('Add New BootBlank Custom Post', 'bootblank'),
             'edit' => __('Edit', 'bootblank'),
@@ -560,73 +415,7 @@ register_taxonomy( 'couleur', 'bootblank', array( 'hierarchical' => false, 'labe
         ) // Add Category and Post Tags support
     ));
 }
-/*------------------------------------*\
-    Colonnnes personnalisées
-\*------------------------------------*/
-function custom_bootblank_columns_type($columns) {
-    $columns['publication_date'] = 'Année';
 
-    $columns['title'] = 'Titre de BootBlank';
-    $columns['date'] = 'Créé le';
-
-    $columns = array_slice($columns, 0, 1) + array( 'thumbnail' =>'Miniature') + array_slice($columns, 1, count($columns)-1, true );
-
-    return $columns;
-}
-add_filter('manage_edit-bootblank_columns', 'custom_bootblank_columns_type');
-
-function custom_bootblank_columns_content($column) {
-    global $post;
-
-    switch ($column) {
-        case 'thumbnail':
-            the_post_thumbnail( 'thumbnail' );
-            break;
-        case 'publication_date':
-            $args = array( 'post_type' => 'bootblank', 'numberposts' => -1, 'meta_query' => array( array( 'key' => '_book_info_author', 'value' => $post->ID ) ) );
-            $books = get_posts($args);
-            echo count($books);
-            break;
-    }
-}
-add_action('manage_bootblank_posts_custom_column', 'custom_bootblank_columns_content');
-
-/* Widget 'Coup d'oeil' avec tous les contenus */
-function ntp_right_now_content_table_end() {
-    $args = array(
-        'public' => true ,
-        '_builtin' => false
-    );
-    $output = 'objects';
-    $operator = 'and';
-    $post_types = get_post_types($args , $output , $operator);
-    foreach($post_types as $post_type) {
-        $num_posts = wp_count_posts($post_type->name);
-        $num = number_format_i18n($num_posts->publish);
-        $text = _n($post_type->labels->name, $post_type->labels->name , intval($num_posts->publish));
-        if (current_user_can('edit_posts')) {
-            $cpt_name = $post_type->name;
-        }
-        echo '<li><tr><a class="'.$cpt_name.'" href="edit.php?post_type='.$cpt_name.'"><td></td>' . $num . ' <td>' . $text . '</td></a></tr></li>';
-    }
-    $taxonomies = get_taxonomies($args , $output , $operator);
-    foreach($taxonomies as $taxonomy) {
-        $num_terms  = wp_count_terms($taxonomy->name);
-        $num = number_format_i18n($num_terms);
-        $text = _n($taxonomy->labels->name, $taxonomy->labels->name , intval($num_terms));
-        if (current_user_can('manage_categories')) {
-            $cpt_tax = $taxonomy->name;
-        }
-        echo '<li><tr><a class="'.$cpt_tax.'" href="edit-tags.php?taxonomy='.$cpt_tax.'"><td></td>' . $num . ' <td>' . $text . '</td></a></tr></li>';
-    }
-}
-add_action('dashboard_glance_items', 'ntp_right_now_content_table_end');
-
-add_action( 'admin_head', 'my_cpt_icon_css' );
-
-function my_cpt_icon_css() {
-    echo '<style type="text/css">#dashboard_right_now li .bootblank:before{content:"\f313"}</style>'."\n";
-}
 /*------------------------------------*\
 	ShortCode Functions
 \*------------------------------------*/
@@ -644,7 +433,9 @@ function bootblank_shortcode_demo_2($atts, $content = null) // Demo Heading H2 s
 }
 
 /*------------------------------------*\
-    WooCommerce Support
+    External Modules/Files
 \*------------------------------------*/
-require_once ('woosupport.php');
+
+// Load any external files you have here
+require_once ('assets/functions/bootblank.php');
 ?>

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
-<?php get_sidebar('left'); ?>
-	<main role="main" class="<?php bootblank_main_class(); ?>">
+
+	<main role="main">
 		<!-- section -->
 		<section>
 
