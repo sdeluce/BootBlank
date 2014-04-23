@@ -15,6 +15,35 @@ function bootblank_main_class() {
 function bootblank_sidebar_class() {
     echo 'col-sm-3';
 }
+/*------------------------------------*\
+    Colonnnes personnalisées
+\*------------------------------------*/
+function custom_slider_columns_type($columns) {
+
+    $columns['title'] = 'Titre du slider';
+    $columns['date'] = 'Créé le';
+
+    $columns = array_slice($columns, 0, 1) + array( 'thumbnail' =>'Miniature') + array_slice($columns, 1, count($columns)-1, true );
+
+    return $columns;
+}
+add_filter('manage_edit-slider_columns', 'custom_slider_columns_type');
+
+function custom_slider_columns_content($column) {
+    global $post;
+
+    switch ($column) {
+        case 'thumbnail':
+            the_post_thumbnail( 'vignette' );
+            break;
+        case 'publication_date':
+            $args = array( 'post_type' => 'bootblank', 'numberposts' => -1, 'meta_query' => array( array( 'key' => '_book_info_author', 'value' => $post->ID ) ) );
+            $books = get_posts($args);
+            echo count($books);
+            break;
+    }
+}
+add_action('manage_slider_posts_custom_column', 'custom_slider_columns_content');
 
 /*------------------------------------*\
     External Modules/Files
@@ -24,6 +53,7 @@ function bootblank_sidebar_class() {
 function bootblank_login_css()  {
     echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('template_directory') . '/css/login.css?v=1.0.0" />';
 }
+add_action('login_head', 'foundation_login_css'); // Add Override Login Css
 
 function bootblank_dashboard_help() {
     echo '<p style="text-align:center;"><img src="'.get_template_directory_uri().'/img/logo.png"/></p>';
@@ -33,6 +63,7 @@ function change_submenu_class($menu) {
     $menu = preg_replace('/ class="sub-menu"/','/ class="dropdown" /',$menu);
     return $menu;
 }
+add_filter ('wp_nav_menu','change_submenu_class'); // Add class menu
 
 // Préchargement des pages --front--
 function bootblank_prefetch() {
@@ -47,6 +78,7 @@ function bootblank_prefetch() {
    <?php
    }
 }
+add_action('wp_head', 'bootblank_prefetch'); // Optimisation
 
 /** Début Minification des fichiers HTML **/
 function bootblank_html_minify_start() {
@@ -65,6 +97,7 @@ function bootblank_html_minyfy_finish( $html ) {
 
     return $html;
 }
+add_action('get_header', 'bootblank_html_minyfy_finish');
 /** Fin Minification des fichiers HTML **/
 
 // Encapsulage des videos
@@ -74,6 +107,7 @@ function standard_wrap_embeds( $html, $url, $args ) {
     } // end if
     return $html;
 } // end standard_wrap_embebds
+add_filter( 'embed_oembed_html', 'standard_wrap_embeds', 10, 3 ) ; // Video responsive
 
 // Posts Formats
 $post_formats = array( 'aside', 'chat', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio' );
@@ -97,6 +131,7 @@ $post_formats = array( 'aside', 'chat', 'gallery', 'link', 'image', 'quote', 'st
 function bootblank_dashicons() {
     wp_enqueue_style('dashicons');
 }
+// add_action('wp_enqueue_scripts', 'bootblank_dashicons'); // Utilisation de Dashicon WP 3.8
 
 // Remove Actions
 remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
@@ -109,4 +144,13 @@ add_filter( 'jpeg_quality', create_function( '', 'return 80;' ) ); // Idem php <
 
 // Remove Filters
 remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altogether
+
+/*------------------------------------*\
+    External Modules/Files
+\*------------------------------------*/
+
+// Load any external files you have here
+// require_once ('widget.php');
+// require_once ('custompost.php');
+// require_once ('woosupport.php');
 ?>

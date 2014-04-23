@@ -10,6 +10,8 @@
   "dependencies": {
     "jquery": "~2.1.0",
     "bootstrap-sass": "~3.0.2",
-    "bootstrap-ie7": "https://github.com/coliff/bootstrap-ie7.git"
+    "bootstrap-ie7": "https://github.com/coliff/bootstrap-ie7.git",
+    "conditionizr": "~4.3.0",
+    "modernizr": "~2.7.2"
   }
 }

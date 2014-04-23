@@ -327,7 +327,6 @@ add_action('wp_print_scripts', 'bootblank_conditional_scripts'); // Add Conditio
 add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
 add_action('wp_enqueue_scripts', 'bootblank_styles'); // Add Theme Stylesheet
 add_action('init', 'register_bootblank_menu'); // Add BootBlank Menu
-add_action('init', 'create_post_type_bootblank'); // Add our BootBlank Custom Post Type
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'bootblank_pagination'); // Add our HTML5 Pagination
 
@@ -373,48 +372,6 @@ add_shortcode('bootblank_shortcode_demo_2', 'bootblank_shortcode_demo_2'); // Pl
 
 // Shortcodes above would be nested like this -
 // [bootblank_shortcode_demo] [bootblank_shortcode_demo_2] Here's the page title! [/bootblank_shortcode_demo_2] [/bootblank_shortcode_demo]
-
-/*------------------------------------*\
-	Custom Post Types
-\*------------------------------------*/
-
-// Create 1 Custom Post type for a Demo, called bootblank
-function create_post_type_bootblank()
-{
-    register_taxonomy_for_object_type('category', 'bootblank'); // Register Taxonomies for Category
-    register_taxonomy_for_object_type('post_tag', 'bootblank');
-    register_post_type('bootblank', // Register Custom Post Type
-        array(
-        'labels' => array(
-            'name' => __('BootBlank Custom Post', 'bootblank'), // Rename these to suit
-            'singular_name' => __('BootBlank Custom Post', 'bootblank'),
-            'add_new' => __('Add New', 'bootblank'),
-            'add_new_item' => __('Add New BootBlank Custom Post', 'bootblank'),
-            'edit' => __('Edit', 'bootblank'),
-            'edit_item' => __('Edit BootBlank Custom Post', 'bootblank'),
-            'new_item' => __('New BootBlank Custom Post', 'bootblank'),
-            'view' => __('View BootBlank Custom Post', 'bootblank'),
-            'view_item' => __('View BootBlank Custom Post', 'bootblank'),
-            'search_items' => __('Search BootBlank Custom Post', 'bootblank'),
-            'not_found' => __('No BootBlank Custom Posts found', 'bootblank'),
-            'not_found_in_trash' => __('No BootBlank Custom Posts found in Trash', 'bootblank')
-        ),
-        'public' => true,
-        'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
-        'has_archive' => true,
-        'supports' => array(
-            'title',
-            'editor',
-            'excerpt',
-            'thumbnail'
-        ), // Go to Dashboard Custom BootBlank post for supports
-        'can_export' => true, // Allows export in Tools > Export
-        'taxonomies' => array(
-            'post_tag',
-            'category'
-        ) // Add Category and Post Tags support
-    ));
-}
 
 /*------------------------------------*\
 	ShortCode Functions

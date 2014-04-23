@@ -13,7 +13,14 @@ module.exports = function (grunt) {
 		concat: {
 			basic_and_extras: {
 				files: {
-					'assets/js/script.min.js': ['assets/ext_libs/jquery/dist/jquery.js', 'assets/js/script.js'],
+					'assets/js/script.min.js': [
+						'assets/ext_libs/jquery/dist/jquery.js',
+						'assets/ext_libs/conditionizr/src/conditionizr.js',
+						'assets/ext_libs/modernizr/modernizr.js',
+						'assets/ext_libs/bootstrap-sass/js/carousel.js',
+						'assets/ext_libs/bootstrap-sass/js/transition.js',
+						'assets/js/script.js'
+					],
 				},
 			},
 		},
@@ -90,7 +97,7 @@ module.exports = function (grunt) {
 				}
 			},
 			js: {
-				files: ['assets/js/*.js','!assets/js/*.min.js'],
+				files: ['assets/js/*.js','assets/**/*.js','!assets/js/*.min.js'],
 				tasks: ['uglify'],
 				options: {
 					spawn: false,
@@ -115,5 +122,10 @@ module.exports = function (grunt) {
 			},
 		}
 	});
-	grunt.registerTask('default', ['coffee','concat','uglify','compass','favicons','svg2png','imagemin','svgmin']);
+	grunt.registerTask('default', ['coffee','concat','uglify','compass','svg2png','favicons','imagemin','svgmin']);
+
+	grunt.registerTask('img', ['svg2png','imagemin','svgmin']);
+	grunt.registerTask('style', ['compass']);
+	grunt.registerTask('js', ['coffee','concat','uglify']);
+	grunt.registerTask('icon', ['favicons']);
 }
