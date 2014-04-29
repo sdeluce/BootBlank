@@ -5,8 +5,18 @@ module.exports = function (grunt) {
 	grunt.initConfig({
 		coffee: {
 			compile: {
+				options: {
+					jsbare: true
+				},
 				files: {
 					'assets/js/script.js': 'assets/coffee/script.coffee'
+				}
+			}
+		},
+		uglify: {
+			dist: {
+				files: {
+					'js/script.min.js': ['assets/js/script.min.js'],
 				}
 			}
 		},
@@ -17,19 +27,11 @@ module.exports = function (grunt) {
 						'assets/ext_libs/jquery/dist/jquery.js',
 						'assets/ext_libs/conditionizr/src/conditionizr.js',
 						'assets/ext_libs/modernizr/modernizr.js',
-						'assets/ext_libs/bootstrap-sass/js/carousel.js',
-						'assets/ext_libs/bootstrap-sass/js/transition.js',
+						'assets/ext_libs/jquery-placeholder/jquery.placeholder.js',
 						'assets/js/script.js'
 					],
 				},
 			},
-		},
-		uglify: {
-			dist: {
-				files: {
-					'js/script.min.js': ['assets/js/script.min.js']
-				}
-			}
 		},
 		compass: {
 			dist: {
@@ -98,7 +100,7 @@ module.exports = function (grunt) {
 			},
 			js: {
 				files: ['assets/js/*.js','assets/**/*.js','!assets/js/*.min.js'],
-				tasks: ['uglify'],
+				tasks: ['concat','uglify'],
 				options: {
 					spawn: false,
 					livereload: true

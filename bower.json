@@ -12,6 +12,7 @@
     "bootstrap-sass": "~3.0.2",
     "bootstrap-ie7": "https://github.com/coliff/bootstrap-ie7.git",
     "conditionizr": "~4.3.0",
-    "modernizr": "~2.7.2"
+    "modernizr": "~2.7.2",
+    "jquery-placeholder": "~2.0.8"
   }
 }
