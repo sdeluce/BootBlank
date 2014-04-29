@@ -4,7 +4,7 @@
 
 	<main class="<?php bootblank_main_class(); ?>" role="main">
 		<!-- section -->
-		<section>
+		<section itemscope itemtype="http://schema.org/Blog">
 
 			<h1><?php _e( 'Latest Posts', 'bootblank' ); ?></h1>
 
