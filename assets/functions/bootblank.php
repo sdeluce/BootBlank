@@ -97,7 +97,7 @@ function bootblank_html_minyfy_finish( $html ) {
 
     return $html;
 }
-add_action('get_header', 'bootblank_html_minyfy_finish');
+add_action('get_header', 'bootblank_html_minify_start');
 /** Fin Minification des fichiers HTML **/
 
 // Encapsulage des videos
