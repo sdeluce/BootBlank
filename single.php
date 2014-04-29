@@ -30,16 +30,16 @@
 					<!-- /post title -->
 
 					<!-- post details -->
-					<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
-					<span class="author"><?php _e( 'Published by', 'bootblank' ); ?> <?php the_author_posts_link(); ?></span>
+					<span class="date"><span itemprop="datePublished"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span></span>
+					<span class="author"><?php _e( 'Published by', 'bootblank' ); ?> <span itemprop="author"><?php the_author_posts_link(); ?></span></span>
 					<span class="comments"><?php comments_popup_link( __( 'Leave your thoughts', 'bootblank' ), __( '1 Comment', 'bootblank' ), __( '% Comments', 'bootblank' )); ?></span>
 					<!-- /post details -->
 
 					<?php the_content(); // Dynamic Content ?>
 
-					<?php the_tags( __( 'Tags: ', 'bootblank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
+					<span itemprop="keywords" ><?php the_tags( __( 'Tags: ', 'bootblank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?></span>
 
-					<p><?php _e( 'Categorised in: ', 'bootblank' ); the_category(', '); // Separated by commas ?></p>
+					<p><?php _e( 'Categorised in: ', 'bootblank' );. '<span itemprop="genre" >'.the_category(', ').'</span>'; // Separated by commas ?></p>
 
 					<p><?php _e( 'This post was written by ', 'bootblank' ); the_author(); ?></p>
 

@@ -4,14 +4,14 @@
 
 		<main class="<?php bootblank_main_class(); ?>" role="main">
 			<!-- section -->
-			<section>
+			<section itemscope itemtype="http://schema.org/WebPage">
 
-				<h1><?php the_title(); ?></h1>
+				<h1 itemprop="headline"><?php the_title(); ?></h1>
 
 			<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 				<!-- article -->
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<article itemprop="contentLocation" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 					<?php the_content(); ?>
 
