@@ -152,9 +152,6 @@ add_filter( 'jpeg_quality', create_function( '', 'return 80;' ) ); // Idem php <
 // Remove Filters
 remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altogether
 
-define ('EMPTY_TRASH_DAYS', 7);
-define( 'WP_POST_REVISIONS', 5 );
-
 /*------------------------------------*\
     Add Color to editor Functions
 \*------------------------------------*/
