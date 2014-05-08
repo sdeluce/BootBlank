@@ -17,6 +17,7 @@ module.exports = function (grunt) {
 			dist: {
 				files: {
 					'js/script.min.js': ['assets/js/script.min.js'],
+					'js/respond.min.js': ['assets/ext_libs/respond/src/respond.js'],
 				}
 			}
 		},
@@ -54,7 +55,7 @@ module.exports = function (grunt) {
 			},
 			icons: {
 				src: 'assets/img/favicon.png',
-				dest: 'img/icons'
+				dest: 'assets/img/icons'
 			}
 		},
 		svg2png: {
@@ -69,11 +70,19 @@ module.exports = function (grunt) {
 
 		imagemin: {
 			dynamic: {
+				options: {
+					optimizationLevel: 7
+				},
 				files: [{
 					expand: true,
 					cwd: 'assets/img/',
 					src: ['**/*.{png,jpg,gif}'],
 					dest: 'img/'
+				},{
+					expand: true,
+					cwd: 'assets/img/icons/',
+					src: ['**/*.{png,jpg,gif}'],
+					dest: 'img/icons/'
 				}]
 			}
 		},

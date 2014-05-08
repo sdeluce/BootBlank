@@ -172,6 +172,39 @@ return $init;
 add_filter('tiny_mce_before_init', 'my_mce4_options');
 
 /*------------------------------------*\
+    Defer js
+\*------------------------------------*/
+function defer_parsing_of_js ( $url ) {
+    if ( FALSE === strpos( $url, '.js' ) ) return $url;
+    if ( strpos( $url, 'jquery.js' ) ) return $url;
+    return "$url' defer";
+}
+add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
+
+automatic_feed_links(false);
+
+remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0 );
+// remove_action('wp_head', 'wp_dlmp_l10n_style' );
+// remove_action('wp_head', 'rsd_link');
+remove_action('wp_head', 'wlwmanifest_link');
+
+/*------------------------------------*\
+    BackCompat wp 3.8
+\*------------------------------------*/
+if ( version_compare( $GLOBALS['wp_version'], '3.8', '<' ) ) {
+    require get_template_directory() . '/assets/functions/back-compat.php';
+}
+/*------------------------------------*\
+    Move admin bar
+\*------------------------------------*/
+function fb_move_admin_bar() {
+    $adminbar = file_get_contents( get_template_directory_uri().'/css/adminbar.css' , "r");
+    echo '<style type="text/css">'.$adminbar.'</style>';
+}
+// en front-end
+add_action( 'wp_head', 'fb_move_admin_bar' );
+
+/*------------------------------------*\
     External Modules/Files
 \*------------------------------------*/
 

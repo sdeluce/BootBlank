@@ -2,10 +2,9 @@
   "name": "bootblank",
   "version": "1.0.0",
   "description": "Theme wordpress BootBlank",
-  "dependencies": {
+   "dependencies": {
     "grunt": "^0.4.4",
-    "grunt-svg2png": "^0.2.1",
-    "grunt-svgmin": "^0.4.0",
+    "grunt-contrib-rename": "0.0.3",
     "load-grunt-tasks": "^0.4.0"
   },
   "author": "Stephane Deluce",
@@ -14,9 +13,13 @@
     "grunt-contrib-coffee": "^0.10.1",
     "grunt-contrib-compass": "^0.7.2",
     "grunt-contrib-concat": "^0.4.0",
-    "grunt-contrib-imagemin": "^0.6.1",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-imagemin": "^0.7.0",
+    "grunt-contrib-rename": "0.0.3",
     "grunt-contrib-uglify": "^0.4.0",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-favicons": "^0.6.4"
+    "grunt-favicons": "^0.6.4",
+    "grunt-svg2png": "^0.2.1",
+    "grunt-svgmin": "^0.4.0"
   }
 }
