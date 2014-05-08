@@ -39,6 +39,11 @@ module.exports = function (grunt) {
 				options: {
 					config: 'config.rb'
 				}
+			},
+			dev: {
+				options: {
+					config: 'configdev.rb'
+				}
 			}
 		},
 		favicons: {
@@ -125,7 +130,7 @@ module.exports = function (grunt) {
 			},
 			scss: {
 				files: ['assets/sass/*.scss','assets/**/*.scss'],
-				tasks: ['compass'],
+				tasks: ['compass:dev'],
 				options: {
 					spawn: false,
 					livereload: true
@@ -133,7 +138,9 @@ module.exports = function (grunt) {
 			},
 		}
 	});
-	grunt.registerTask('default', ['coffee','concat','uglify','compass','svg2png','favicons','imagemin','svgmin']);
+	grunt.registerTask('default', ['coffee','concat','uglify','compass:dev','svg2png','favicons','imagemin','svgmin']);
+
+	grunt.registerTask('pack', ['coffee','concat','uglify','compass:dist','svg2png','favicons','imagemin','svgmin']);
 
 	grunt.registerTask('img', ['svg2png','imagemin','svgmin']);
 	grunt.registerTask('style', ['compass']);
