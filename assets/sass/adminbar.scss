@@ -6,17 +6,19 @@ $hover:blue;
 $link: #3c3c3c;
 $ico: #777;
 
-body {
-	margin: 0;
-	padding: 0;
-	background:#bada55;
-	padding-bottom: 32px;
-	&.admin-bar {
-		#wphead {
-			padding-top: 0;
-		}
-		#footer {
-			padding-bottom: 28px;
+html {
+	margin-top: 0px !important;
+	body {
+		margin: 0;
+		padding: 0;
+		padding-bottom: 32px;
+		&.admin-bar {
+			#wphead {
+				padding-top: 0;
+			}
+			#footer {
+				padding-bottom: 28px;
+			}
 		}
 	}
 }

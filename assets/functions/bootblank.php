@@ -101,6 +101,12 @@ function fb_move_admin_bar() {
 // en front-end
 add_action( 'wp_head', 'fb_move_admin_bar' );
 
+
+function my_filter_head() {
+	remove_action('wp_head', '_admin_bar_bump_cb');
+}
+add_action('get_header', 'my_filter_head');
+
 /*------------------------------------*\
 	External Modules/Files
 \*------------------------------------*/
