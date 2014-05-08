@@ -34,15 +34,31 @@ module.exports = function (grunt) {
 				},
 			},
 		},
+		clean: {
+			css: ["css/*.css"]
+		},
 		compass: {
 			dist: {
 				options: {
-					config: 'config.rb'
+					sassDir: 'assets/sass',
+					cssDir: 'css',
+					environment: 'production',
+					outputStyle: 'compressed',
+					httpPath: '/',
+					imagesPath: 'img',
+					javascriptsPath: 'js'
 				}
 			},
 			dev: {
 				options: {
-					config: 'configdev.rb'
+					sassDir: 'assets/sass',
+					cssDir: 'css',
+					environment: 'development',
+					debugInfo: true,
+					outputStyle: 'nested',
+					httpPath: '/',
+					imagesPath: 'img',
+					javascriptsPath: 'js'
 				}
 			}
 		},
@@ -65,7 +81,6 @@ module.exports = function (grunt) {
 		},
 		svg2png: {
 			all: {
-				// specify files in array format with multiple src-dest mapping
 				files: [
 					// rasterize all SVG files in "img" and its subdirectories to "img/png"
 					{ src: ['assets/svg/logo.svg'], dest: 'assets/img/' },
@@ -138,12 +153,13 @@ module.exports = function (grunt) {
 			},
 		}
 	});
-	grunt.registerTask('default', ['coffee','concat','uglify','compass:dev','svg2png','favicons','imagemin','svgmin']);
+	grunt.registerTask('dev', ['clean','coffee','concat','uglify','compass:dev','svg2png','favicons','imagemin','svgmin']);
+	grunt.registerTask('build', ['clean','coffee','concat','uglify','compass:dist','svg2png','favicons','imagemin','svgmin']);
 
-	grunt.registerTask('pack', ['coffee','concat','uglify','compass:dist','svg2png','favicons','imagemin','svgmin']);
+	grunt.registerTask('default', ['dev', 'watch']);
 
 	grunt.registerTask('img', ['svg2png','imagemin','svgmin']);
-	grunt.registerTask('style', ['compass']);
+	grunt.registerTask('style', ['clean','compass:dist']);
 	grunt.registerTask('js', ['coffee','concat','uglify']);
 	grunt.registerTask('icon', ['favicons']);
 }
