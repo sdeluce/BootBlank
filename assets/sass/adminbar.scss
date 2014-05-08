@@ -7,6 +7,9 @@ $link: #3c3c3c;
 $ico: #777;
 
 body {
+	margin: 0;
+	padding: 0;
+	background:#bada55;
 	padding-bottom: 32px;
 	&.admin-bar {
 		#wphead {
