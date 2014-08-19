@@ -55,13 +55,6 @@ function favicons() {
 }
 add_action('wp_head', 'favicons');
 
-// Remove jQuery lib
-// add_action( 'admin_enqueue_scripts', 'remove_jquery' );
-function remove_jquery()
-{
-	wp_deregister_script('jquery');
-}
-
 // Obscure login screen error messages
 function bootblank_login_obscure(){
 	return '<strong>Sorry</strong>: Think you have gone wrong somwhere!';
