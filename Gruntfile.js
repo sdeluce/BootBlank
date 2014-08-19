@@ -62,33 +62,21 @@ module.exports = function (grunt) {
 				}
 			}
 		},
-		// favicons: {
-		// 	options: {
-		// 		trueColor: true,
-		// 		precomposed: true,
-		// 		appleTouchBackgroundColor: "#e2b2c2",
-		// 		coast: true,
-		// 		windowsTile: true,
-		// 		tileBlackWhite: false,
-		// 		tileColor: "auto",
-		// 		html: 'assets/icons/icons.html',
-		// 		HTMLPrefix: "%url%/img/icons/"
-		// 	},
-		// 	icons: {
-		// 		src: 'assets/img/favicon.png',
-		// 		dest: 'assets/img/icons'
-		// 	}
-		// },
 		multiresize: {
-			iOS: {
-				src: 'orig/Icon-512.png',
-				dest: ['Icon.png', 'Icon@2x.png', 'Icon-72.png', 'Icon-72@2x.png'],
-				destSizes: ['57x57', '114x114', '72x72', '144x144']
+			app: {
+				src: 'assets/img/icon.png',
+				dest: ['assets/img/icons/apple-touch-icon-57.png', 'assets/img/icons/apple-touch-icon-60.png', 'assets/img/icons/apple-touch-icon-72.png', 'assets/img/icons/apple-touch-icon-114.png','assets/img/icons/apple-touch-icon-120.png','assets/img/icons/apple-touch-icon-144.png','assets/img/icons/apple-touch-icon-152.png'],
+				destSizes: ['57x57', '60x60', '72x72', '114x114', '120x120', '144x144', '152x152']
 			},
-			Android: {
-				src: 'orig/Icon-Android-512.png',
-				dest: ['Icon-ldpi.png', 'Icon-mdpi.png', 'Icon-hdpi.png', 'Icon-xhdpi.png'],
-				destSizes: ['36x36', '48x48', '72x72', '96x96']
+			icons: {
+				src: 'assets/img/favicon.png',
+				dest: ['assets/img/icons/favicon-12.png', 'assets/img/icons/favicon-36.png', 'assets/img/icons/favicon-96.png', 'assets/img/icons/favicon-160.png', 'assets/img/icons/favicon-196.png'],
+				destSizes: ['12x12', '36x36', '96x96', '160x160', '196x196']
+			},
+			w8: {
+				src: 'assets/img/w8.png',
+				dest: ['assets/img/icons/mstile-144.png'],
+				destSizes: ['144x144']
 			}
 		},
 		svg2png: {
