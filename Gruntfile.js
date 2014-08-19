@@ -62,21 +62,33 @@ module.exports = function (grunt) {
 				}
 			}
 		},
-		favicons: {
-			options: {
-				trueColor: true,
-				precomposed: true,
-				appleTouchBackgroundColor: "#e2b2c2",
-				coast: true,
-				windowsTile: true,
-				tileBlackWhite: false,
-				tileColor: "auto",
-				html: 'assets/icons/icons.html',
-				HTMLPrefix: "%url%/img/icons/"
+		// favicons: {
+		// 	options: {
+		// 		trueColor: true,
+		// 		precomposed: true,
+		// 		appleTouchBackgroundColor: "#e2b2c2",
+		// 		coast: true,
+		// 		windowsTile: true,
+		// 		tileBlackWhite: false,
+		// 		tileColor: "auto",
+		// 		html: 'assets/icons/icons.html',
+		// 		HTMLPrefix: "%url%/img/icons/"
+		// 	},
+		// 	icons: {
+		// 		src: 'assets/img/favicon.png',
+		// 		dest: 'assets/img/icons'
+		// 	}
+		// },
+		multiresize: {
+			iOS: {
+				src: 'orig/Icon-512.png',
+				dest: ['Icon.png', 'Icon@2x.png', 'Icon-72.png', 'Icon-72@2x.png'],
+				destSizes: ['57x57', '114x114', '72x72', '144x144']
 			},
-			icons: {
-				src: 'assets/img/favicon.png',
-				dest: 'assets/img/icons'
+			Android: {
+				src: 'orig/Icon-Android-512.png',
+				dest: ['Icon-ldpi.png', 'Icon-mdpi.png', 'Icon-hdpi.png', 'Icon-xhdpi.png'],
+				destSizes: ['36x36', '48x48', '72x72', '96x96']
 			}
 		},
 		svg2png: {
@@ -153,13 +165,13 @@ module.exports = function (grunt) {
 			},
 		}
 	});
-	grunt.registerTask('dev', ['clean','coffee','concat','uglify','compass:dev','svg2png','favicons','imagemin','svgmin']);
-	grunt.registerTask('build', ['clean','coffee','concat','uglify','compass:dist','svg2png','favicons','imagemin','svgmin']);
+	grunt.registerTask('dev', ['clean','coffee','concat','uglify','compass:dev','svg2png','multiresize','imagemin','svgmin']);
+	grunt.registerTask('build', ['clean','coffee','concat','uglify','compass:dist','svg2png','multiresize','imagemin','svgmin']);
 
 	grunt.registerTask('default', ['dev', 'watch']);
 
 	grunt.registerTask('img', ['svg2png','imagemin','svgmin']);
 	grunt.registerTask('style', ['clean','compass:dist']);
 	grunt.registerTask('js', ['coffee','concat','uglify']);
-	grunt.registerTask('icon', ['favicons']);
+	grunt.registerTask('icon', ['multiresize']);
 }
