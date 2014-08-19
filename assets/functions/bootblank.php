@@ -56,7 +56,7 @@ function favicons() {
 add_action('wp_head', 'favicons');
 
 // Remove jQuery lib
-add_action( 'admin_enqueue_scripts', 'remove_jquery' );
+// add_action( 'admin_enqueue_scripts', 'remove_jquery' );
 function remove_jquery()
 {
 	wp_deregister_script('jquery');
