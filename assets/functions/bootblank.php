@@ -106,7 +106,7 @@ add_action('get_header', 'my_filter_head');
 
 // Load any external files you have here
 require_once ('optim.php');
-require_once ('custompost.php');
+// require_once ('custompost.php');
 // require_once ('widget.php');
 // require_once ('woosupport.php');
 ?>
