@@ -3,27 +3,23 @@
 
 // $Variables Susy
 // -------------------------------------//
-$large		:	1200px;
-$medium 	:	960px;
-$small		:	768px;
+$screen-lg-min		:	1200px;
+$screen-md-min 		:	992px;
+$screen-sm-min		:	768px;
+
+$columns				: 	12;
 
 $susy: (
-	columns: 12,
+	columns: $columns,
 	gutters: 1/4,
 	math: fluid,
 	output: float,
 	gutter-position: inside,
-);
-
-$shorthand: 12 1/4 fluid float inside;
-
-// $Configuration Susy
-// -------------------------------------//
-$susy: (
 	global-box-sizing: border-box,
 	use-custom: (rem: true)
 );
 
+$shorthand: 12 1/4 fluid float inside;
 @include border-box-sizing;
 
 
@@ -31,23 +27,60 @@ $susy: (
 // $ExtraSmall
 // -------------------------------------//
 .container {
-	@include container;
+	@include container(95%);
 }
-
-
+@for $i from 1 through $columns {
+	.col-xs-#{$i}{
+		@include span($i of $columns);
+	}
+	.col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}{
+		@include span($columns of $columns);
+	}
+}
 
 // $Small
 // -------------------------------------//
-
+@media (min-width: $screen-sm-min) {
+	.container {
+		@include container(720px);
+	}
+	@for $i from 1 through $columns {
+		.col-xs-#{$i}, .col-sm-#{$i}{
+			@include span($i of $columns);
+		}
+		.col-md-#{$i}, .col-lg-#{$i}{
+			@include span($columns of $columns);
+		}
+	}
+}
 
 
 // $Medium
 // -------------------------------------//
-
+@media (min-width: $screen-md-min) {
+	.container {
+		@include container(960px);
+	}
+	@for $i from 1 through $columns {
+		.col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}{
+			@include span($i of $columns);
+		}
+		.col-lg-#{$i}{
+			@include span($columns of $columns);
+		}
+	}
+}
 
 
 // $Large
 // -------------------------------------//
-.col-sm-3 {
-	@include span(3 of 12);
+@media (min-width: $screen-lg-min) {
+	.container {
+		@include container(1144px);
+	}
+	@for $i from 1 through $columns {
+		.col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}{
+			@include span($i of $columns);
+		}
+	}
 }

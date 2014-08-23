@@ -1,0 +1,20 @@
+@import "compass";
+@import "compass/reset";
+
+/* Utiliser Bootstrap ou Susy
+// -------------------------------------*/
+@import "susy";
+// @import "bootstrap";
+
+
+
+/* Utiliser TypePlate
+// -------------------------------------*/
+@import "vars-typeplate";
+@import "../ext_libs/typeplate/scss/typeplate";
+
+
+
+div.clear {
+	clear: both;
+}
