@@ -1,11 +1,11 @@
 // Configs
 
-$body-font-size: 16px;
+$body-font-size: 14px;
 $body-line-height: 1.5;
-$scale-factor: 1.25;
+$scale-factor: 1.125;
 $computed-line-height: $body-line-height * $body-font-size;
 
-$show-grid: false;
+$show-grid: true;
 
 
 @import "../ext_libs/gridlover-mixin/sass/rhythm.sass";
@@ -30,7 +30,7 @@ $show-grid: false;
 
 body {
 	@if $show-grid {
-		@include bg-grid(#bdc3c7, transparent, $body-line-height);
+		@include bg-grid(#ebf0f9, transparent, $body-line-height);
 	}
 	@include rhythm(0);
 }
@@ -39,7 +39,7 @@ p, ul, ol {
 }
 
 h1 {
-	@include rhythm(4, 2, 1);
+	@include rhythm(4, 1, 1);
 	font-weight: bold;
 }
 h2 {

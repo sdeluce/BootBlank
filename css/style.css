@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Indie+Flower|Lato);
+@import url(http://fonts.googleapis.com/css?family=Lato:700|PT+Sans);
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/stephane\/\.rvm\/gems\/ruby-2\.1\.1\/gems\/compass-core-1\.0\.0\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\000035}}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -59,38 +59,42 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 // -------------------------------------*/
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_typo-config\.scss}line{font-family:\0000331}}
 body {
-  font-size: 16px;
-  line-height: 24px; }
+  background-color: transparent;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 49%, #ebf0f9 50%, #ebf0f9 52%, rgba(0, 0, 0, 0) 53%, rgba(0, 0, 0, 0)), linear-gradient(90deg, rgba(0, 0, 0, 0) 49%, #ebf0f9 50%, #ebf0f9 52%, rgba(0, 0, 0, 0) 53%, rgba(0, 0, 0, 0));
+  background-position: .5em .5em;
+  background-size: 300% 1.5em;
+  font-size: 14px;
+  line-height: 21px; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_typo-config\.scss}line{font-family:\0000337}}
 p, ul, ol {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 21px;
   margin-top: 0px;
-  margin-bottom: 24px; }
+  margin-bottom: 21px; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_typo-config\.scss}line{font-family:\0000341}}
 h1 {
-  font-size: 39px;
-  line-height: 48px;
-  margin-top: 48px;
-  margin-bottom: 24px;
+  font-size: 22px;
+  line-height: 42px;
+  margin-top: 21px;
+  margin-bottom: 21px;
   font-weight: bold; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_typo-config\.scss}line{font-family:\0000345}}
 h2 {
-  font-size: 31px;
-  line-height: 48px;
-  margin-top: 24px;
-  margin-bottom: 24px;
+  font-size: 20px;
+  line-height: 21px;
+  margin-top: 21px;
+  margin-bottom: 21px;
   font-weight: bold; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_typo-config\.scss}line{font-family:\0000349}}
 h3 {
-  font-size: 25px;
-  line-height: 48px;
-  margin-top: 24px;
-  margin-bottom: 24px;
+  font-size: 18px;
+  line-height: 21px;
+  margin-top: 21px;
+  margin-bottom: 21px;
   font-weight: bold; }
 
 /* Utiliser Bootstrap ou Susy
@@ -813,7 +817,7 @@ div.clear {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/style\.scss}line{font-family:\0000312}}
 body {
-  font-family: sans-serif; }
+  font-family: "PT Sans", sans-serif; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/style\.scss}line{font-family:\0000315}}
 h1, h2, h3, h4, h5, h6 {
@@ -844,6 +848,7 @@ img.alignright {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/style\.scss}line{font-family:\0000343}}
 blockquote {
   position: relative;
+  font-style: italic;
   padding: 1.5em 1.5em 0.01em 1.5em;
   margin-bottom: 1.49em;
   margin-left: 1.5em;

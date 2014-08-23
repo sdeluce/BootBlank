@@ -24,15 +24,16 @@
 	<body <?php body_class(); ?>>
 
 		<!-- wrapper -->
-		<div class="container wrapper">
+		<div class="wrapper">
 
 			<!-- header -->
 			<header class="header clear" role="banner">
 
+				<div class="container">
 					<!-- logo -->
 					<div class="logo">
 						<a href="<?php echo home_url(); ?>">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
+							<img style="margin-bottom:1em; height:5.8em;" src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
 						</a>
 					</div>
 					<!-- /logo -->
@@ -42,6 +43,7 @@
 						<?php bootblank_nav(); ?>
 					</nav>
 					<!-- /nav -->
+				</div>
 
 			</header>
 			<!-- /header -->

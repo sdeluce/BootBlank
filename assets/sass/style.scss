@@ -4,10 +4,10 @@
 
 // $Fonts
 // -------------------------------------//
-@import url( http://fonts.googleapis.com/css?family=Indie+Flower|Lato );
+@import url(http://fonts.googleapis.com/css?family=Lato:700|PT+Sans);
 
 $titleFont:        'Lato', sans-serif;
-$textFont:         sans-serif;
+$textFont:        'PT Sans', sans-serif;
 
 body {
 	font-family: $textFont;
@@ -42,6 +42,7 @@ img.alignright {
 
 blockquote {
 	position: relative;
+	font-style: italic;
 	padding: 1.5em 1.5em 0.01em 1.5em;
 	margin-bottom: 1.49em;
 	margin-left: 1.5em;
