@@ -1,4 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Indie+Flower|Lato);
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/stephane\/\.rvm\/gems\/ruby-2\.1\.1\/gems\/compass-core-1\.0\.0\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\000035}}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -54,6 +53,48 @@ a img {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/stephane\/\.rvm\/gems\/ruby-2\.1\.1\/gems\/compass-core-1\.0\.0\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\00003116}}
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block; }
+
+/* Utiliser Typo
+// -------------------------------------*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_libs\.scss}line{font-family:\0000332}}
+body {
+  background-color: #bada55;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 49%, #000000 50%, #000000 51%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0)), linear-gradient(90deg, rgba(0, 0, 0, 0) 49%, #000000 50%, #000000 51%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0));
+  background-position: .5em .5em;
+  background-size: 1.5em 1.5em;
+  font-size: 16px;
+  line-height: 24px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_libs\.scss}line{font-family:\0000338}}
+p, ul, ol {
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 0px;
+  margin-bottom: 24px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_libs\.scss}line{font-family:\0000342}}
+h1 {
+  font-size: 39px;
+  line-height: 48px;
+  margin-top: 48px;
+  margin-bottom: 24px;
+  font-weight: bold; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_libs\.scss}line{font-family:\0000346}}
+h2 {
+  font-size: 31px;
+  line-height: 48px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  font-weight: bold; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_libs\.scss}line{font-family:\0000350}}
+h3 {
+  font-size: 25px;
+  line-height: 48px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  font-weight: bold; }
 
 /* Utiliser Bootstrap ou Susy
 // -------------------------------------*/
@@ -769,48 +810,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%; } }
-/* Utiliser Typo
-// -------------------------------------*/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_libs\.scss}line{font-family:\0000338}}
-body {
-  background-color: transparent;
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 49%, #efefef 50%, #efefef 51%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0)), linear-gradient(90deg, rgba(0, 0, 0, 0) 49%, #efefef 50%, #efefef 51%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0));
-  background-position: .5em .5em;
-  background-size: 200% 1.5em;
-  font-size: 18px;
-  line-height: 21px;
-  margin-top: 21px;
-  margin-bottom: 21px; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_libs\.scss}line{font-family:\0000342}}
-p, span {
-  font-size: 18px;
-  line-height: 21px;
-  margin-top: 21px;
-  margin-bottom: 21px; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_libs\.scss}line{font-family:\0000345}}
-h1 {
-  font-size: 52px;
-  line-height: 63px;
-  margin-top: 21px;
-  margin-bottom: 21px; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_libs\.scss}line{font-family:\0000348}}
-h2 {
-  font-size: 40px;
-  line-height: 42px;
-  margin-top: 21px;
-  margin-bottom: 21px; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_libs\.scss}line{font-family:\0000353}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_libs\.scss}line{font-family:\0000364}}
 div.clear {
   clear: both; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/style\.scss}line{font-family:\0000313}}
 body {
-  font-family: "Lato", sans-serif; }
+  font-family: sans-serif; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/style\.scss}line{font-family:\0000316}}
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Indie Flower", cursive; }
+  font-family: sans-serif; }

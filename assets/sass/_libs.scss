@@ -1,11 +1,6 @@
 @import "compass";
 @import "compass/reset";
 
-/* Utiliser Bootstrap ou Susy
-// -------------------------------------*/
-@import "susy";
-// @import "bootstrap";
-
 
 
 /* Utiliser Typo
@@ -13,11 +8,10 @@
 // @import "typographie";
 // @import "vars-typeplate";
 // @import "../ext_libs/typeplate/scss/typeplate";
-
 @import "typo-config";
 @import "../ext_libs/gridlover-mixin/sass/rhythm.sass";
 
-@mixin bg-grid($color, $bg-color: transparent, $lh: $line-height) {
+@mixin bg-grid($color, $bg-color, $lh) {
 	background-color: $bg-color;
 	background-image: linear-gradient(0deg,
 			transparent 49%,
@@ -31,23 +25,40 @@
 			$color 51%,
 			transparent 52%,
 			transparent);
-		background-position: .5em .5em;
-		background-size: 200% ($lh * 1em);
+	background-position: .5em .5em;
+	background-size:  ($lh * 1em) ($lh * 1em);
 }
 
 body {
-	@include bg-grid(#efefef, transparent, $body-line-height);
-	@include rhythm(1, 1, 1);
+	@if $show-grid {
+		@include bg-grid(#000000, #bada55, $body-line-height);
+	}
+	@include rhythm(0);
 }
-p, span {
-	@include rhythm(1, 1, 1);
+p, ul, ol {
+	@include rhythm(0, 0, 1);
 }
+
 h1 {
-	@include rhythm(5, 1, 1);
+	@include rhythm(4, 2, 1);
+	font-weight: bold;
 }
 h2 {
-	@include rhythm(4, 1, 1);
+	@include rhythm(3, 1, 1);
+	font-weight: bold;
 }
+h3 {
+	@include rhythm(2, 1, 1);
+	font-weight: bold;
+}
+
+
+
+/* Utiliser Bootstrap ou Susy
+// -------------------------------------*/
+@import "susy";
+// @import "bootstrap";
+
 
 
 div.clear {

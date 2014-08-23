@@ -30,9 +30,11 @@
 					<!-- /post title -->
 
 					<!-- post details -->
-					<span class="date"><span itemprop="datePublished"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span></span>
-					<span class="author"><?php _e( 'Published by', 'bootblank' ); ?> <span itemprop="author"><?php the_author_posts_link(); ?></span></span>
-					<span class="comments"><?php comments_popup_link( __( 'Leave your thoughts', 'bootblank' ), __( '1 Comment', 'bootblank' ), __( '% Comments', 'bootblank' )); ?></span>
+					<p>
+						<span class="date"><span itemprop="datePublished"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span></span>
+						<span class="author"><?php _e( 'Published by', 'bootblank' ); ?> <span itemprop="author"><?php the_author_posts_link(); ?></span></span>
+						<span class="comments"><?php comments_popup_link( __( 'Leave your thoughts', 'bootblank' ), __( '1 Comment', 'bootblank' ), __( '% Comments', 'bootblank' )); ?></span>
+					</p>
 					<!-- /post details -->
 
 					<?php the_content(); // Dynamic Content ?>
