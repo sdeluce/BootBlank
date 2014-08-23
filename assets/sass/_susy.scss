@@ -22,13 +22,12 @@ $susy: (
 $shorthand: 12 1/4 fluid float inside;
 @include border-box-sizing;
 
-
-
 // $ExtraSmall
 // -------------------------------------//
 .container {
 	@include container(95%);
 	@include clearfix;
+
 }
 @for $i from 1 through $columns {
 	.col-xs-#{$i}{

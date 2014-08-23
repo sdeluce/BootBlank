@@ -72,8 +72,13 @@ module.exports = function (grunt) {
 			},
 			icons: {
 				src: 'assets/img/favicon.png',
-				dest: ['assets/img/icons/favicon-12.png', 'assets/img/icons/favicon-36.png', 'assets/img/icons/favicon-96.png', 'assets/img/icons/favicon-160.png', 'assets/img/icons/favicon-196.png'],
-				destSizes: ['12x12', '36x36', '96x96', '160x160', '196x196']
+				dest: ['assets/img/icons/favicon-96.png', 'assets/img/icons/favicon-160.png', 'assets/img/icons/favicon-196.png'],
+				destSizes: ['96x96', '160x160', '196x196']
+			},
+			favicons: {
+				src: 'assets/img/favicon-32.png',
+				dest: ['assets/img/icons/favicon-12.png', 'assets/img/icons/favicon-32.png'],
+				destSizes: ['16x16', '32x32']
 			},
 			w8: {
 				src: 'assets/img/w8.png',

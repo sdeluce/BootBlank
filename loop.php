@@ -23,9 +23,11 @@
 		<!-- /post title -->
 
 		<!-- post details -->
-		<span class="date"><span itemprop="dateCreated"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span></span>
-		<span class="author"><?php _e( 'Published by', 'bootblank' ); ?> <span itemprop="creator"><?php the_author_posts_link(); ?></span></span>
-		<span class="comments"><?php comments_popup_link( __( 'Leave your thoughts', 'bootblank' ), __( '1 Comment', 'bootblank' ), __( '% Comments', 'bootblank' )); ?></span>
+		<p>
+			<span class="date"><span itemprop="dateCreated"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span></span>
+			<span class="author"><?php _e( 'Published by', 'bootblank' ); ?> <span itemprop="creator"><?php the_author_posts_link(); ?></span></span>
+			<span class="comments"><?php comments_popup_link( __( 'Leave your thoughts', 'bootblank' ), __( '1 Comment', 'bootblank' ), __( '% Comments', 'bootblank' )); ?></span>
+		</p>
 		<!-- /post details -->
 
 		<?php bootblank_excerpt('bootblank_index'); // Build your custom callback length in functions.php ?>

@@ -1,11 +1,12 @@
 @import "compass";
+@import "compass/reset";
 @import "libs";
 
 // $Fonts
 // -------------------------------------//
-// @import url( http://fonts.googleapis.com/css?family=Indie+Flower|Lato );
+@import url( http://fonts.googleapis.com/css?family=Indie+Flower|Lato );
 
-$titleFont:         sans-serif;
+$titleFont:        'Lato', sans-serif;
 $textFont:         sans-serif;
 
 // $Style
@@ -15,4 +16,14 @@ body {
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: $titleFont;
+}
+
+blockquote {
+	position: relative;
+	padding: 1.5em 1.5em 0.01em 1.5em;
+	margin-bottom: 1.49em;
+	margin-left: 1.5em;
+	border-left: 4px solid darken(white,10);
+	display: block;
+	background: darken(white,3);
 }
