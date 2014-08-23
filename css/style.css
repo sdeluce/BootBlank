@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower|Lato);
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/stephane\/\.rvm\/gems\/ruby-2\.1\.1\/gems\/compass-core-1\.0\.0\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\000035}}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -67,183 +67,209 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .container {
   max-width: 95%;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  overflow: hidden;
+  *zoom: 1; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/ext_libs\/susy\/sass\/susy\/output\/support\/_clearfix\.scss}line{font-family:\0000312}}
   .container:after {
     content: " ";
     display: block;
     clear: both; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000334}}
 .col-xs-1 {
   width: 8.33333%;
   float: left;
   padding-left: 0.83333%;
   padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000337}}
 .col-sm-1, .col-md-1, .col-lg-1 {
   width: 100%;
   float: left;
   padding-left: 0.83333%;
-  padding-right: 0.83333%; }
+  padding-right: 0.83333%;
+  overflow: hidden;
+  *zoom: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000334}}
 .col-xs-2 {
   width: 16.66667%;
   float: left;
   padding-left: 0.83333%;
   padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000337}}
 .col-sm-2, .col-md-2, .col-lg-2 {
   width: 100%;
   float: left;
   padding-left: 0.83333%;
-  padding-right: 0.83333%; }
+  padding-right: 0.83333%;
+  overflow: hidden;
+  *zoom: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000334}}
 .col-xs-3 {
   width: 25%;
   float: left;
   padding-left: 0.83333%;
   padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000337}}
 .col-sm-3, .col-md-3, .col-lg-3 {
   width: 100%;
   float: left;
   padding-left: 0.83333%;
-  padding-right: 0.83333%; }
+  padding-right: 0.83333%;
+  overflow: hidden;
+  *zoom: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000334}}
 .col-xs-4 {
   width: 33.33333%;
   float: left;
   padding-left: 0.83333%;
   padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000337}}
 .col-sm-4, .col-md-4, .col-lg-4 {
   width: 100%;
   float: left;
   padding-left: 0.83333%;
-  padding-right: 0.83333%; }
+  padding-right: 0.83333%;
+  overflow: hidden;
+  *zoom: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000334}}
 .col-xs-5 {
   width: 41.66667%;
   float: left;
   padding-left: 0.83333%;
   padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000337}}
 .col-sm-5, .col-md-5, .col-lg-5 {
   width: 100%;
   float: left;
   padding-left: 0.83333%;
-  padding-right: 0.83333%; }
+  padding-right: 0.83333%;
+  overflow: hidden;
+  *zoom: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000334}}
 .col-xs-6 {
   width: 50%;
   float: left;
   padding-left: 0.83333%;
   padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000337}}
 .col-sm-6, .col-md-6, .col-lg-6 {
   width: 100%;
   float: left;
   padding-left: 0.83333%;
-  padding-right: 0.83333%; }
+  padding-right: 0.83333%;
+  overflow: hidden;
+  *zoom: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000334}}
 .col-xs-7 {
   width: 58.33333%;
   float: left;
   padding-left: 0.83333%;
   padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000337}}
 .col-sm-7, .col-md-7, .col-lg-7 {
   width: 100%;
   float: left;
   padding-left: 0.83333%;
-  padding-right: 0.83333%; }
+  padding-right: 0.83333%;
+  overflow: hidden;
+  *zoom: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000334}}
 .col-xs-8 {
   width: 66.66667%;
   float: left;
   padding-left: 0.83333%;
   padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000337}}
 .col-sm-8, .col-md-8, .col-lg-8 {
   width: 100%;
   float: left;
   padding-left: 0.83333%;
-  padding-right: 0.83333%; }
+  padding-right: 0.83333%;
+  overflow: hidden;
+  *zoom: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000334}}
 .col-xs-9 {
   width: 75%;
   float: left;
   padding-left: 0.83333%;
   padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000337}}
 .col-sm-9, .col-md-9, .col-lg-9 {
   width: 100%;
   float: left;
   padding-left: 0.83333%;
-  padding-right: 0.83333%; }
+  padding-right: 0.83333%;
+  overflow: hidden;
+  *zoom: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000334}}
 .col-xs-10 {
   width: 83.33333%;
   float: left;
   padding-left: 0.83333%;
   padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000337}}
 .col-sm-10, .col-md-10, .col-lg-10 {
   width: 100%;
   float: left;
   padding-left: 0.83333%;
-  padding-right: 0.83333%; }
+  padding-right: 0.83333%;
+  overflow: hidden;
+  *zoom: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000334}}
 .col-xs-11 {
   width: 91.66667%;
   float: left;
   padding-left: 0.83333%;
   padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000337}}
 .col-sm-11, .col-md-11, .col-lg-11 {
   width: 100%;
   float: left;
   padding-left: 0.83333%;
-  padding-right: 0.83333%; }
+  padding-right: 0.83333%;
+  overflow: hidden;
+  *zoom: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000334}}
 .col-xs-12 {
   width: 100%;
   float: left;
   padding-left: 0.83333%;
   padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000337}}
 .col-sm-12, .col-md-12, .col-lg-12 {
   width: 100%;
   float: left;
   padding-left: 0.83333%;
-  padding-right: 0.83333%; }
+  padding-right: 0.83333%;
+  overflow: hidden;
+  *zoom: 1; }
 
 @media (min-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000344}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000346}}
   .container {
     max-width: 720px;
     margin-left: auto;
@@ -254,175 +280,199 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
       display: block;
       clear: both; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000348}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000350}}
   .col-xs-1, .col-sm-1 {
     width: 8.33333%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000351}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000353}}
   .col-md-1, .col-lg-1 {
     width: 100%;
     float: left;
     padding-left: 0.83333%;
-    padding-right: 0.83333%; }
+    padding-right: 0.83333%;
+    overflow: hidden;
+    *zoom: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000348}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000350}}
   .col-xs-2, .col-sm-2 {
     width: 16.66667%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000351}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000353}}
   .col-md-2, .col-lg-2 {
     width: 100%;
     float: left;
     padding-left: 0.83333%;
-    padding-right: 0.83333%; }
+    padding-right: 0.83333%;
+    overflow: hidden;
+    *zoom: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000348}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000350}}
   .col-xs-3, .col-sm-3 {
     width: 25%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000351}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000353}}
   .col-md-3, .col-lg-3 {
     width: 100%;
     float: left;
     padding-left: 0.83333%;
-    padding-right: 0.83333%; }
+    padding-right: 0.83333%;
+    overflow: hidden;
+    *zoom: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000348}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000350}}
   .col-xs-4, .col-sm-4 {
     width: 33.33333%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000351}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000353}}
   .col-md-4, .col-lg-4 {
     width: 100%;
     float: left;
     padding-left: 0.83333%;
-    padding-right: 0.83333%; }
+    padding-right: 0.83333%;
+    overflow: hidden;
+    *zoom: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000348}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000350}}
   .col-xs-5, .col-sm-5 {
     width: 41.66667%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000351}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000353}}
   .col-md-5, .col-lg-5 {
     width: 100%;
     float: left;
     padding-left: 0.83333%;
-    padding-right: 0.83333%; }
+    padding-right: 0.83333%;
+    overflow: hidden;
+    *zoom: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000348}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000350}}
   .col-xs-6, .col-sm-6 {
     width: 50%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000351}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000353}}
   .col-md-6, .col-lg-6 {
     width: 100%;
     float: left;
     padding-left: 0.83333%;
-    padding-right: 0.83333%; }
+    padding-right: 0.83333%;
+    overflow: hidden;
+    *zoom: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000348}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000350}}
   .col-xs-7, .col-sm-7 {
     width: 58.33333%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000351}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000353}}
   .col-md-7, .col-lg-7 {
     width: 100%;
     float: left;
     padding-left: 0.83333%;
-    padding-right: 0.83333%; }
+    padding-right: 0.83333%;
+    overflow: hidden;
+    *zoom: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000348}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000350}}
   .col-xs-8, .col-sm-8 {
     width: 66.66667%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000351}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000353}}
   .col-md-8, .col-lg-8 {
     width: 100%;
     float: left;
     padding-left: 0.83333%;
-    padding-right: 0.83333%; }
+    padding-right: 0.83333%;
+    overflow: hidden;
+    *zoom: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000348}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000350}}
   .col-xs-9, .col-sm-9 {
     width: 75%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000351}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000353}}
   .col-md-9, .col-lg-9 {
     width: 100%;
     float: left;
     padding-left: 0.83333%;
-    padding-right: 0.83333%; }
+    padding-right: 0.83333%;
+    overflow: hidden;
+    *zoom: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000348}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000350}}
   .col-xs-10, .col-sm-10 {
     width: 83.33333%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000351}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000353}}
   .col-md-10, .col-lg-10 {
     width: 100%;
     float: left;
     padding-left: 0.83333%;
-    padding-right: 0.83333%; }
+    padding-right: 0.83333%;
+    overflow: hidden;
+    *zoom: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000348}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000350}}
   .col-xs-11, .col-sm-11 {
     width: 91.66667%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000351}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000353}}
   .col-md-11, .col-lg-11 {
     width: 100%;
     float: left;
     padding-left: 0.83333%;
-    padding-right: 0.83333%; }
+    padding-right: 0.83333%;
+    overflow: hidden;
+    *zoom: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000348}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000350}}
   .col-xs-12, .col-sm-12 {
     width: 100%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000351}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000353}}
   .col-md-12, .col-lg-12 {
     width: 100%;
     float: left;
     padding-left: 0.83333%;
-    padding-right: 0.83333%; } }
+    padding-right: 0.83333%;
+    overflow: hidden;
+    *zoom: 1; } }
 @media (min-width: 992px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000361}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000364}}
   .container {
     max-width: 960px;
     margin-left: auto;
@@ -433,175 +483,199 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
       display: block;
       clear: both; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000368}}
   .col-xs-1, .col-sm-1, .col-md-1 {
     width: 8.33333%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000368}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000371}}
   .col-lg-1 {
     width: 100%;
     float: left;
     padding-left: 0.83333%;
-    padding-right: 0.83333%; }
+    padding-right: 0.83333%;
+    overflow: hidden;
+    *zoom: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000368}}
   .col-xs-2, .col-sm-2, .col-md-2 {
     width: 16.66667%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000368}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000371}}
   .col-lg-2 {
     width: 100%;
     float: left;
     padding-left: 0.83333%;
-    padding-right: 0.83333%; }
+    padding-right: 0.83333%;
+    overflow: hidden;
+    *zoom: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000368}}
   .col-xs-3, .col-sm-3, .col-md-3 {
     width: 25%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000368}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000371}}
   .col-lg-3 {
     width: 100%;
     float: left;
     padding-left: 0.83333%;
-    padding-right: 0.83333%; }
+    padding-right: 0.83333%;
+    overflow: hidden;
+    *zoom: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000368}}
   .col-xs-4, .col-sm-4, .col-md-4 {
     width: 33.33333%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000368}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000371}}
   .col-lg-4 {
     width: 100%;
     float: left;
     padding-left: 0.83333%;
-    padding-right: 0.83333%; }
+    padding-right: 0.83333%;
+    overflow: hidden;
+    *zoom: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000368}}
   .col-xs-5, .col-sm-5, .col-md-5 {
     width: 41.66667%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000368}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000371}}
   .col-lg-5 {
     width: 100%;
     float: left;
     padding-left: 0.83333%;
-    padding-right: 0.83333%; }
+    padding-right: 0.83333%;
+    overflow: hidden;
+    *zoom: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000368}}
   .col-xs-6, .col-sm-6, .col-md-6 {
     width: 50%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000368}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000371}}
   .col-lg-6 {
     width: 100%;
     float: left;
     padding-left: 0.83333%;
-    padding-right: 0.83333%; }
+    padding-right: 0.83333%;
+    overflow: hidden;
+    *zoom: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000368}}
   .col-xs-7, .col-sm-7, .col-md-7 {
     width: 58.33333%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000368}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000371}}
   .col-lg-7 {
     width: 100%;
     float: left;
     padding-left: 0.83333%;
-    padding-right: 0.83333%; }
+    padding-right: 0.83333%;
+    overflow: hidden;
+    *zoom: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000368}}
   .col-xs-8, .col-sm-8, .col-md-8 {
     width: 66.66667%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000368}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000371}}
   .col-lg-8 {
     width: 100%;
     float: left;
     padding-left: 0.83333%;
-    padding-right: 0.83333%; }
+    padding-right: 0.83333%;
+    overflow: hidden;
+    *zoom: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000368}}
   .col-xs-9, .col-sm-9, .col-md-9 {
     width: 75%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000368}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000371}}
   .col-lg-9 {
     width: 100%;
     float: left;
     padding-left: 0.83333%;
-    padding-right: 0.83333%; }
+    padding-right: 0.83333%;
+    overflow: hidden;
+    *zoom: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000368}}
   .col-xs-10, .col-sm-10, .col-md-10 {
     width: 83.33333%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000368}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000371}}
   .col-lg-10 {
     width: 100%;
     float: left;
     padding-left: 0.83333%;
-    padding-right: 0.83333%; }
+    padding-right: 0.83333%;
+    overflow: hidden;
+    *zoom: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000368}}
   .col-xs-11, .col-sm-11, .col-md-11 {
     width: 91.66667%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000368}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000371}}
   .col-lg-11 {
     width: 100%;
     float: left;
     padding-left: 0.83333%;
-    padding-right: 0.83333%; }
+    padding-right: 0.83333%;
+    overflow: hidden;
+    *zoom: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000368}}
   .col-xs-12, .col-sm-12, .col-md-12 {
     width: 100%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000368}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000371}}
   .col-lg-12 {
     width: 100%;
     float: left;
     padding-left: 0.83333%;
-    padding-right: 0.83333%; } }
+    padding-right: 0.83333%;
+    overflow: hidden;
+    *zoom: 1; } }
 @media (min-width: 1200px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000378}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000382}}
   .container {
     max-width: 1144px;
     margin-left: auto;
@@ -612,84 +686,84 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
       display: block;
       clear: both; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000386}}
   .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1 {
     width: 8.33333%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000386}}
   .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2 {
     width: 16.66667%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000386}}
   .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3 {
     width: 25%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000386}}
   .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4 {
     width: 33.33333%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000386}}
   .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5 {
     width: 41.66667%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000386}}
   .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6 {
     width: 50%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000386}}
   .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7 {
     width: 58.33333%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000386}}
   .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8 {
     width: 66.66667%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000386}}
   .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9 {
     width: 75%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000386}}
   .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10 {
     width: 83.33333%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000386}}
   .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11 {
     width: 91.66667%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_susy\.scss}line{font-family:\0000386}}
   .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
     width: 100%;
     float: left;
@@ -697,342 +771,78 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-right: 0.83333%; } }
 /* Utiliser TypePlate
 // -------------------------------------*/
-/*!
-TYPEPLATE
-URL ........... http://typeplate.com
-VERSION ....... 1.1.4
-Github ........ https://github.com/typeplate/bower
-AUTHORS ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
-LICENSE ....... Creative Commmons Attribution 3.0 (http://creativecommons.org/licenses/by/3.0)
-LICENSE URL ... https://github.com/typeplate/bower/blob/master/license.txt
-*/
-@font-face {
-  font-family: "Ampersand";
-  src: local("Georgia"), local("Garamond"), local("Palatino"), local("Book Antiqua");
-  unicode-range: U+0026; }
-@font-face {
-  font-family: "Ampersand";
-  src: local("Georgia");
-  unicode-range: U+270C; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/ext_libs\/typeplate\/scss\/_typeplate\.scss}line{font-family:\00003397}}
+/***************************/
+/***************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_typographie\.scss}line{font-family:\0000324}}
 body {
-  word-wrap: break-word; }
+  font-size: 14px;
+  line-height: 1.5em;
+  letter-spacing: 1px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_typographie\.scss}line{font-family:\0000329}}
+  body p, body h1, body h2, body h3, body h4, body h5, body h6, body ul, body ol, body blockquote, body hr {
+    margin-bottom: 21px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_typographie\.scss}line{font-family:\0000332}}
+  body hr {
+    margin: 21px 0;
+    height: 1px;
+    padding: 0;
+    color: #ddd;
+    background-color: #ddd;
+    border: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_typographie\.scss}line{font-family:\0000341}}
+  body h1 {
+    font-size: 1.41667em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_typographie\.scss}line{font-family:\0000341}}
+  body h2 {
+    font-size: 1.33333em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_typographie\.scss}line{font-family:\0000341}}
+  body h3 {
+    font-size: 1.25em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_typographie\.scss}line{font-family:\0000341}}
+  body h4 {
+    font-size: 1.16667em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_typographie\.scss}line{font-family:\0000341}}
+  body h5 {
+    font-size: 1.08333em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_typographie\.scss}line{font-family:\0000341}}
+  body h6 {
+    font-size: 1em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_typographie\.scss}line{font-family:\0000345}}
+  body blockquote {
+    padding-left: 10px;
+    margin-left: 20px;
+    font-style: italic; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_typographie\.scss}line{font-family:\0000350}}
+  body ul, body ol {
+    list-style-type: square;
+    padding-left: 30px;
+    list-style-position: outside; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_typographie\.scss}line{font-family:\0000355}}
+  body ol {
+    list-style-type: upper-roman; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/ext_libs\/typeplate\/scss\/_typeplate\.scss}line{font-family:\00003401}}
-pre code {
-  word-wrap: normal; }
-
-/**
- * Dropcap Sass @include
- * Use the following Sass @include with any selector you feel necessary.
- *
-	@include dropcap($dropcap-float-position, $dropcap-font-size, $dropcap-font-family, $dropcap-txt-indent, $dropcap-margin, $dropcap-padding, $dropcap-color, $dropcap-line-height, $dropcap-bg);
- *
- * Extend this object into your custom stylesheet. Let the variables do the work.
- *
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/ext_libs\/typeplate\/scss\/_typeplate\.scss}line{font-family:\00003526}}
-html {
-  font: normal 112.5%/1.65 sans-serif; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/ext_libs\/typeplate\/scss\/_typeplate\.scss}line{font-family:\00003534}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_typographie\.scss}line{font-family:\0000360}}
 body {
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  -o-hyphens: auto;
-  hyphens: auto;
-  color: #444; }
+  -moz-background-size: 1.5em !important;
+  -o-background-size: 1.5em !important;
+  -webkit-background-size: 1.5em !important;
+  background-size: 1.5em !important;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iOTYlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIi8+PHN0b3Agb2Zmc2V0PSI5NyUiIHN0b3AtY29sb3I9IiNlZmVmZWYiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(96%, #ffffff), color-stop(97%, #efefef));
+  background-image: -moz-linear-gradient(top, #ffffff, #ffffff 96%, #efefef 97%);
+  background-image: -webkit-linear-gradient(top, #ffffff, #ffffff 96%, #efefef 97%);
+  background-image: linear-gradient(to bottom, #ffffff, #ffffff 96%, #efefef 97%);
+  background-position: 0 6px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/ext_libs\/typeplate\/scss\/_typeplate\.scss}line{font-family:\00003545}}
-small {
-  font-size: 65%; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/ext_libs\/typeplate\/scss\/_typeplate\.scss}line{font-family:\00003569}}
-h1, h2, h3, h4, h5, h6 {
-  text-rendering: optimizeLegibility;
-  line-height: 1;
-  margin-top: 0; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/ext_libs\/typeplate\/scss\/_typeplate\.scss}line{font-family:\00003584}}
-.tera {
-  font-size: 117px;
-  font-size: 6.5rem;
-  margin-bottom: 4.56923px;
-  margin-bottom: 0.25385rem; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/ext_libs\/typeplate\/scss\/_typeplate\.scss}line{font-family:\00003584}}
-.giga {
-  font-size: 90px;
-  font-size: 5rem;
-  margin-bottom: 5.94px;
-  margin-bottom: 0.33rem; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/ext_libs\/typeplate\/scss\/_typeplate\.scss}line{font-family:\00003584}}
-.mega {
-  font-size: 72px;
-  font-size: 4rem;
-  margin-bottom: 7.425px;
-  margin-bottom: 0.4125rem; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/ext_libs\/typeplate\/scss\/_typeplate\.scss}line{font-family:\00003584}}
-.alpha, h1 {
-  font-size: 60px;
-  font-size: 3.33333rem;
-  margin-bottom: 8.91px;
-  margin-bottom: 0.495rem; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/ext_libs\/typeplate\/scss\/_typeplate\.scss}line{font-family:\00003584}}
-.beta, h2 {
-  font-size: 48px;
-  font-size: 2.66667rem;
-  margin-bottom: 11.1375px;
-  margin-bottom: 0.61875rem; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/ext_libs\/typeplate\/scss\/_typeplate\.scss}line{font-family:\00003584}}
-.gamma, h3 {
-  font-size: 36px;
-  font-size: 2rem;
-  margin-bottom: 14.85px;
-  margin-bottom: 0.825rem; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/ext_libs\/typeplate\/scss\/_typeplate\.scss}line{font-family:\00003584}}
-.delta, h4 {
-  font-size: 24px;
-  font-size: 1.33333rem;
-  margin-bottom: 22.275px;
-  margin-bottom: 1.2375rem; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/ext_libs\/typeplate\/scss\/_typeplate\.scss}line{font-family:\00003584}}
-.epsilon, h5 {
-  font-size: 21px;
-  font-size: 1.16667rem;
-  margin-bottom: 25.45714px;
-  margin-bottom: 1.41429rem; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/ext_libs\/typeplate\/scss\/_typeplate\.scss}line{font-family:\00003584}}
-.zeta, h6 {
-  font-size: 18px;
-  font-size: 1rem;
-  margin-bottom: 29.7px;
-  margin-bottom: 1.65rem; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/ext_libs\/typeplate\/scss\/_typeplate\.scss}line{font-family:\00003624}}
-p {
-  margin: auto auto 1.5em; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/ext_libs\/typeplate\/scss\/_typeplate\.scss}line{font-family:\00003642}}
-abbr,
-acronym,
-blockquote,
-code,
-dir,
-kbd,
-listing,
-plaintext,
-q,
-samp,
-tt,
-var,
-xmp {
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  -o-hyphens: none;
-  hyphens: none; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/ext_libs\/typeplate\/scss\/_typeplate\.scss}line{font-family:\00003662}}
-pre code {
-  white-space: -moz-pre-wrap;
-  white-space: pre-wrap; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/ext_libs\/typeplate\/scss\/_typeplate\.scss}line{font-family:\00003667}}
-pre {
-  white-space: pre; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/ext_libs\/typeplate\/scss\/_typeplate\.scss}line{font-family:\00003671}}
-code {
-  white-space: pre;
-  font-family: monospace; }
-
-/**
- * Abbreviations Markup
- *
-	<abbr title="hyper text markup language">HMTL</abbr>
- *
- * Extend this object into your markup.
- *
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/ext_libs\/typeplate\/scss\/_typeplate\.scss}line{font-family:\00003687}}
-abbr {
-  font-variant: small-caps;
-  font-weight: 600;
-  text-transform: lowercase;
-  color: gray; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/ext_libs\/typeplate\/scss\/_typeplate\.scss}line{font-family:\00003689}}
-  abbr[title]:hover {
-    cursor: help; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/ext_libs\/typeplate\/scss\/_typeplate\.scss}line{font-family:\00003698}}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #222; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/ext_libs\/typeplate\/scss\/_typeplate\.scss}line{font-family:\00003713}}
-p + .drop-cap {
-  text-indent: 0;
-  margin-top: 0; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/ext_libs\/typeplate\/scss\/_typeplate\.scss}line{font-family:\00003428}}
-.drop-cap:first-letter {
-  float: left;
-  margin: inherit;
-  padding: inherit;
-  font-size: 4em;
-  font-family: inherit;
-  line-height: 1;
-  text-indent: 0;
-  background: transparent;
-  color: inherit; }
-
-/**
- * Lining Definition Style Markup
- *
-	<dl class="lining">
-		<dt><b></b></dt>
-		<dd></dd>
-	</dl>
- *
- * Extend this object into your markup.
- *
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/ext_libs\/typeplate\/scss\/_typeplate\.scss}line{font-family:\00003466}}
-.lining dt,
-.lining dd {
-  display: inline;
-  margin: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/ext_libs\/typeplate\/scss\/_typeplate\.scss}line{font-family:\00003474}}
-.lining dt + dt:before,
-.lining dd + dt:before {
-  content: "\A";
-  white-space: pre; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/ext_libs\/typeplate\/scss\/_typeplate\.scss}line{font-family:\00003482}}
-.lining dd + dd:before {
-  content: ", "; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/ext_libs\/typeplate\/scss\/_typeplate\.scss}line{font-family:\00003486}}
-.lining dd:before {
-  content: ": ";
-  margin-left: -0.2rem; }
-
-/**
- * Dictionary Definition Style Markup
- *
-	<dl class="dictionary-style">
-		<dt><b></b></dt>
-			<dd></dd>
-	</dl>
- *
- * Extend this object into your markup.
- *
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/ext_libs\/typeplate\/scss\/_typeplate\.scss}line{font-family:\00003494}}
-.dictionary-style dt {
-  display: inline;
-  counter-reset: definitions; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/ext_libs\/typeplate\/scss\/_typeplate\.scss}line{font-family:\00003498}}
-  .dictionary-style dt + dt:before {
-    content: ", ";
-    margin-left: -0.2rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/ext_libs\/typeplate\/scss\/_typeplate\.scss}line{font-family:\00003504}}
-.dictionary-style dd {
-  display: block;
-  counter-increment: definitions; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/ext_libs\/typeplate\/scss\/_typeplate\.scss}line{font-family:\00003507}}
-  .dictionary-style dd:before {
-    content: counter(definitions,decimal) ". "; }
-
-/**
- * Blockquote Markup
- *
-		<figure>
-			<blockquote cite="">
-				<p></p>
-			</blockquote>
-			<figcaption>
-				<cite>
-					<small><a href=""></a></small>
-				</cite>
-			</figcaption>
-		</figure>
- *
- * Extend this object into your markup.
- *
- */
-/**
- * Pull Quotes Markup
- *
-	<aside class="pull-quote">
-		<blockquote>
-			<p></p>
-		</blockquote>
-	</aside>
- *
- * Extend this object into your custom stylesheet.
- *
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/ext_libs\/typeplate\/scss\/_typeplate\.scss}line{font-family:\00003797}}
-.pull-quote {
-  position: relative;
-  padding: 1em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/ext_libs\/typeplate\/scss\/_typeplate\.scss}line{font-family:\00003368}}
-  .pull-quote:before, .pull-quote:after {
-    height: 1em;
-    opacity: 0.5;
-    position: absolute;
-    font-size: 4em;
-    color: #dc976e; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/ext_libs\/typeplate\/scss\/_typeplate\.scss}line{font-family:\00003376}}
-  .pull-quote:before {
-    content: '“';
-    top: 0;
-    left: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/ext_libs\/typeplate\/scss\/_typeplate\.scss}line{font-family:\00003381}}
-  .pull-quote:after {
-    content: '”';
-    bottom: 0;
-    right: 0; }
-
-/**
- * Figures Markup
- *
-	<figure>
-		<figcaption>
-			<strong>Fig. 4.2 | </strong>Type Anatomy, an excerpt from Mark Boulton's book<cite title="http://designingfortheweb.co.uk/book/part3/part3_chapter11.php">"Designing for the Web"</cite>
-		</figcaption>
-	</figure>
- *
- * Extend this object into your markup.
- *
- */
-/**
- * Footnote Markup : Replace 'X' with your unique number for each footnote
- *
-	<article>
-		<p><sup><a href="#fn-itemX" id="fn-returnX"></a></sup></p>
-		<footer>
-			<ol class="foot-notes">
-				<li id="fn-itemX"><a href="#fn-returnX">↩</a></li>
-			</ol>
-		</footer>
-	</article>
- *
- * Extend this object into your markup.
- *
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_libs\.scss}line{font-family:\0000318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_libs\.scss}line{font-family:\0000319}}
 div.clear {
   clear: both; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/style\.scss}line{font-family:\0000313}}
+body {
+  font-family: "Lato", sans-serif; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/style\.scss}line{font-family:\0000316}}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Indie Flower", cursive; }

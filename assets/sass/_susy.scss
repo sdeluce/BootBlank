@@ -28,6 +28,7 @@ $shorthand: 12 1/4 fluid float inside;
 // -------------------------------------//
 .container {
 	@include container(95%);
+	@include clearfix;
 }
 @for $i from 1 through $columns {
 	.col-xs-#{$i}{
@@ -35,6 +36,7 @@ $shorthand: 12 1/4 fluid float inside;
 	}
 	.col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}{
 		@include span($columns of $columns);
+		@include clearfix;
 	}
 }
 
@@ -50,6 +52,7 @@ $shorthand: 12 1/4 fluid float inside;
 		}
 		.col-md-#{$i}, .col-lg-#{$i}{
 			@include span($columns of $columns);
+			@include clearfix;
 		}
 	}
 }
@@ -67,6 +70,7 @@ $shorthand: 12 1/4 fluid float inside;
 		}
 		.col-lg-#{$i}{
 			@include span($columns of $columns);
+			@include clearfix;
 		}
 	}
 }

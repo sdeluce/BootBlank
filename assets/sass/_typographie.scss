@@ -1,0 +1,65 @@
+@import "compass";
+
+/***************************/
+
+$FontSize	:	14; // en px
+$lineHeight	:	1.5; // en em
+
+$hrColor	:	#ddd;
+$show-grid 	:	true;
+
+/***************************/
+
+$TypoBase:$FontSize * 1px;
+$Hligne:$lineHeight * 1em;
+$margeBottom:$FontSize * $lineHeight * 1px;
+
+
+$TypoBase:          $FontSize * 1px;
+$Hligne:            $lineHeight * 1em;
+$margeBottom:       $FontSize * $lineHeight * 1px;
+
+
+
+body {
+	font-size: $TypoBase;
+	line-height: $Hligne;
+	letter-spacing: 1px;
+
+	p,h1,h2,h3,h4,h5,h6,ul,ol,blockquote,hr {
+		margin-bottom: $margeBottom;
+	}
+	hr {
+		margin: $margeBottom 0;
+		height: 1px;
+		padding: 0;
+		color: $hrColor;
+		background-color: $hrColor;
+		border: 0;
+	}
+	@for $i from 1 through 6 {
+		h#{$i}{
+			font-size: (1+(($lineHeight - 1)/6) * (6- $i))*1em;
+		}
+	}
+	blockquote{
+		padding-left: 10px;
+		margin-left: 20px;
+		font-style: italic;
+	}
+	ul,ol {
+		list-style-type: square;
+		padding-left: 30px;
+		list-style-position: outside;
+	}
+	ol {
+		list-style-type: upper-roman;
+	}
+}
+@if $show-grid {
+	body {
+		@include background-size ( $Hligne !important);
+		@include background-image(linear-gradient(top,#fff, #fff 96%,#efefef 97%));
+		background-position: 0 6px;
+	}
+}

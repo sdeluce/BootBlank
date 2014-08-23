@@ -1,25 +1,27 @@
 // ===================================================
 // TYPEPLATE : Custom Sass Variables
 // ===================================================
-
+@import "compass/reset";
 
 // $BaseType
 // -------------------------------------//
 
 $font-weight: normal;
 $line-height: 1.65;
-$font-size: 112.5; // percentage value (16 * 112.5% = 18px)
+$font-size: 100; // percentage value (16 * 112.5% = 18px)
 $font-base: 16 * ($font-size/100); // converts our percentage to a pixel value
 $font-family: sans-serif; // Non-font-face font-stack
+$line-height-px: $font-base * $line-height * 1px;
 
-$custom-font-family: false; // Custom font-face stack, if set will be added to the $font-family
+$custom-font-family: true; // Custom font-face stack, if set will be added to the $font-family
+$show-grid: true; // Custom font-face stack, if set will be added to the $font-family
 
 
 // $Paragraphs
 // -------------------------------------//
 
 // Text Indentation Value
-$indent-val: 1.5em;
+$indent-val: $line-height*1em;
 
 // Paragraph Styling Boolean
 // 'false' means no vertical whitespace
@@ -114,3 +116,18 @@ $dropcap-padding: inherit;
 $dropcap-color: inherit;
 $dropcap-line-height: 1;
 $dropcap-bg: transparent;
+
+
+// $Grid
+// -------------------------------------//
+
+@mixin lignes( $line-height, $show-grid ) {
+	@if $show-grid {
+		body {
+			@include background-size ( $line-height-px, $line-height-px !important);
+			@include background-image(linear-gradient(top,#fff, #fff 96%,#efefef 97%));
+			background-position: 0 -5px;
+		}
+	}
+}
+@include lignes( $line-height, $show-grid );

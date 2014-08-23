@@ -1,5 +1,18 @@
 @import "compass";
 @import "libs";
 
+// $Fonts
+// -------------------------------------//
+@import url( http://fonts.googleapis.com/css?family=Indie+Flower|Lato );
+
+$titleFont:          'Indie Flower', cursive;
+$textFont:          'Lato', sans-serif;
+
 // $Style
 // -------------------------------------//
+body {
+	font-family: $textFont;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: $titleFont;
+}
