@@ -1,0 +1,53 @@
+@import "compass";
+@import "../ext_libs/susy/sass/susy";
+
+// $Variables Susy
+// -------------------------------------//
+$large		:	1200px;
+$medium 	:	960px;
+$small		:	768px;
+
+$susy: (
+	columns: 12,
+	gutters: 1/4,
+	math: fluid,
+	output: float,
+	gutter-position: inside,
+);
+
+$shorthand: 12 1/4 fluid float inside;
+
+// $Configuration Susy
+// -------------------------------------//
+$susy: (
+	global-box-sizing: border-box,
+	use-custom: (rem: true)
+);
+
+@include border-box-sizing;
+
+
+
+// $ExtraSmall
+// -------------------------------------//
+.container {
+	@include container;
+}
+
+
+
+// $Small
+// -------------------------------------//
+
+
+
+// $Medium
+// -------------------------------------//
+
+
+
+// $Large
+// -------------------------------------//
+.col-sm-3 {
+	@include span(3 of 12);
+}

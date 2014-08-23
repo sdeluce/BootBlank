@@ -46,7 +46,8 @@ module.exports = function (grunt) {
 					outputStyle: 'compressed',
 					httpPath: '/',
 					imagesPath: 'img',
-					javascriptsPath: 'js'
+					javascriptsPath: 'js',
+					require: 'susy'
 				}
 			},
 			dev: {
@@ -58,7 +59,8 @@ module.exports = function (grunt) {
 					outputStyle: 'nested',
 					httpPath: '/',
 					imagesPath: 'img',
-					javascriptsPath: 'js'
+					javascriptsPath: 'js',
+					require: 'susy'
 				}
 			}
 		},

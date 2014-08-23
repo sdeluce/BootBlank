@@ -39,7 +39,7 @@
 
 					<span itemprop="keywords" ><?php the_tags( __( 'Tags: ', 'bootblank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?></span>
 
-					<p><?php _e( 'Categorised in: ', 'bootblank' );. '<span itemprop="genre" >'.the_category(', ').'</span>'; // Separated by commas ?></p>
+					<p><?php _e( 'Categorised in: ', 'bootblank' ). " <span itemprop='genre' >".the_category(', ')."</span>"; // Separated by commas ?></p>
 
 					<p><?php _e( 'This post was written by ', 'bootblank' ); the_author(); ?></p>
 
