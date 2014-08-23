@@ -1,0 +1,18 @@
+@import "compass";
+
+/* Utiliser Typo
+// -------------------------------------*/
+@import "typo-config";
+
+
+
+/* Utiliser Bootstrap ou Susy
+// -------------------------------------*/
+@import "susy";
+// @import "bootstrap";
+
+
+
+div.clear {
+	clear: both;
+}

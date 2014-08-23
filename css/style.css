@@ -811,15 +811,37 @@ h3 {
 div.clear {
   clear: both; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/style\.scss}line{font-family:\0000314}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/style\.scss}line{font-family:\0000312}}
 body {
   font-family: sans-serif; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/style\.scss}line{font-family:\0000317}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/style\.scss}line{font-family:\0000315}}
 h1, h2, h3, h4, h5, h6 {
   font-family: "Lato", sans-serif; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/style\.scss}line{font-family:\0000321}}
+img[class*="align"], img[class*="wp-image-"], img[class*="attachment-"] {
+  height: auto; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/style\.scss}line{font-family:\0000324}}
+img.alignleft {
+  float: left;
+  margin: 0 1em 1em 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/style\.scss}line{font-family:\0000328}}
+img.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 1.5em auto; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/style\.scss}line{font-family:\0000335}}
+img.alignright {
+  float: right;
+  margin: 0 0 1em 1em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/style\.scss}line{font-family:\0000343}}
 blockquote {
   position: relative;
   padding: 1.5em 1.5em 0.01em 1.5em;
