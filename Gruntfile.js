@@ -10,7 +10,7 @@ module.exports = function (grunt) {
 				},
 				files: {
 					'assets/js/script.js': 'assets/coffee/script.coffee',
-					'assets/js/cookie.js': 'assets/coffee/cookie.coffee'
+					// 'assets/js/cookie.js': 'assets/coffee/cookie.coffee'
 				}
 			}
 		},
@@ -30,8 +30,8 @@ module.exports = function (grunt) {
 						'assets/ext_libs/conditionizr/src/conditionizr.js',
 						'assets/ext_libs/modernizr/modernizr.js',
 						'assets/ext_libs/jquery-placeholder/jquery.placeholder.js',
-						// 'assets/ext_libs/jquery-cookie/jquery.cookie.js',
-						// 'assets/js/cookie.js',
+						'assets/ext_libs/jquery-cookie/jquery.cookie.js',
+						'assets/js/cookie.js',
 						'assets/js/script.js'
 					],
 				},
