@@ -16,6 +16,7 @@
     "jquery-placeholder": "~2.0.8",
     "respond": "~1.4.2",
     "susy": "~2.1.3",
-    "gridlover-mixin": "https://github.com/sevenupcan/gridlover-mixin.git"
+    "gridlover-mixin": "https://github.com/sevenupcan/gridlover-mixin.git",
+    "jquery-cookie": "~1.4.1"
   }
 }
