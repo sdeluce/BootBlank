@@ -1,7 +1,7 @@
 jQuery( document ).ready(function() {
 	/* Système information sur les cookies
 	*  http://www.cnil.fr/vos-obligations/sites-web-cookies-et-autres-traceurs/que-dit-la-loi/ */
-	if( $.cookie('cookiecancel') === undefined ){
+	if( $.cookie('cookiecancel') != undefined ){
 		// Ajouter vos script ici
 		console.log('vous avez interdit les cookies.');
 	};

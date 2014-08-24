@@ -55,6 +55,37 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_cookie\.scss}line{font-family:\000033}}
+.cookiebar {
+  background: #efefef;
+  border-top: 1px solid #e2e2e2;
+  padding: .75em 3em;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 12px;
+  color: #666; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_cookie\.scss}line{font-family:\0000313}}
+.cookie_btn-ok, .cookie_btn-cancel {
+  display: inline;
+  padding: 5px 10px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  margin: 0 5px;
+  color: #fff;
+  cursor: pointer; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_cookie\.scss}line{font-family:\0000321}}
+.cookie_btn-ok {
+  background: #3498db; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_cookie\.scss}line{font-family:\0000324}}
+.cookie_btn-cancel {
+  background: #e74c3c; }
+
 /* Utiliser Typo
 // -------------------------------------*/
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_typo-config\.scss}line{font-family:\0000331}}
@@ -811,7 +842,7 @@ h3 {
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_libs\.scss}line{font-family:\0000316}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/_libs\.scss}line{font-family:\0000318}}
 div.clear {
   clear: both; }
 
