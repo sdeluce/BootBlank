@@ -41,7 +41,7 @@ $shorthand: 12 1/4 fluid float inside;
 
 // $Small
 // -------------------------------------//
-@media (min-width: $screen-sm-min) {
+@media screen and (min-width: $screen-sm-min) {
 	.container {
 		@include container(720px);
 	}
@@ -59,7 +59,7 @@ $shorthand: 12 1/4 fluid float inside;
 
 // $Medium
 // -------------------------------------//
-@media (min-width: $screen-md-min) {
+@media screen and (min-width: $screen-md-min) {
 	.container {
 		@include container(960px);
 	}
@@ -77,7 +77,7 @@ $shorthand: 12 1/4 fluid float inside;
 
 // $Large
 // -------------------------------------//
-@media (min-width: $screen-lg-min) {
+@media screen and (min-width: $screen-lg-min) {
 	.container {
 		@include container(1144px);
 	}
