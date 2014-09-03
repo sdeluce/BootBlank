@@ -10,16 +10,19 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 		<!--[if lt IE 9]>
-		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+			<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 		<![endif]-->
 		<?php wp_head(); ?>
+		<!--[if lt IE 9]>
+			<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/ie-style.css">
+		<![endif]-->
 		<script>
 			// conditionizr.com
 			// configure environment tests
-			conditionizr.config({
-				assets: '<?php echo get_template_directory_uri(); ?>',
-				tests: {}
-			});
+			// conditionizr.config({
+			// 	assets: '<?php echo get_template_directory_uri(); ?>',
+			// 	tests: {}
+			// });
 		</script>
 
 	</head>
