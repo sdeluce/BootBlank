@@ -1,19 +1,19 @@
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/adminbar\.scss}line{font-family:\000039}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/bootblank\/assets\/sass\/adminbar\.scss}line{font-family:\000039}}
 html {
   margin-top: 0px !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/adminbar\.scss}line{font-family:\0000311}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/bootblank\/assets\/sass\/adminbar\.scss}line{font-family:\0000311}}
   html body {
     margin: 0;
     padding: 0;
     padding-bottom: 32px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/adminbar\.scss}line{font-family:\0000316}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/bootblank\/assets\/sass\/adminbar\.scss}line{font-family:\0000316}}
     html body.admin-bar #wphead {
       padding-top: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/adminbar\.scss}line{font-family:\0000319}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/bootblank\/assets\/sass\/adminbar\.scss}line{font-family:\0000319}}
     html body.admin-bar #footer {
       padding-bottom: 28px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/adminbar\.scss}line{font-family:\0000326}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/bootblank\/assets\/sass\/adminbar\.scss}line{font-family:\0000326}}
 #wpadminbar {
   top: auto !important;
   bottom: 0;
@@ -29,47 +29,47 @@ html {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
   border-top: 1px solid #cbcbcb;
   color: #3c3c3c; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/adminbar\.scss}line{font-family:\0000334}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/bootblank\/assets\/sass\/adminbar\.scss}line{font-family:\0000334}}
   #wpadminbar .menupop .ab-sub-wrapper, #wpadminbar #wpadminbar .shortlink-input {
     bottom: 32px;
     -moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
     border: 1px solid #cbcbcb; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/adminbar\.scss}line{font-family:\0000339}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/bootblank\/assets\/sass\/adminbar\.scss}line{font-family:\0000339}}
   #wpadminbar a, #wpadminbar .ab-label, #wpadminbar .ab-awaiting-mod {
     color: #3c3c3c !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/adminbar\.scss}line{font-family:\0000341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/bootblank\/assets\/sass\/adminbar\.scss}line{font-family:\0000341}}
     #wpadminbar a:hover, #wpadminbar .ab-label:hover, #wpadminbar .ab-awaiting-mod:hover {
       color: #3c3c3c !important;
       background: #fefefe !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/adminbar\.scss}line{font-family:\0000346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/bootblank\/assets\/sass\/adminbar\.scss}line{font-family:\0000346}}
   #wpadminbar .menupop .ab-sub-wrapper {
     background: #e5e5e5; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/adminbar\.scss}line{font-family:\0000350}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/bootblank\/assets\/sass\/adminbar\.scss}line{font-family:\0000350}}
   #wpadminbar .ab-item:before, #wpadminbar .ab-icon:before {
     color: #777 !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/adminbar\.scss}line{font-family:\0000358}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/bootblank\/assets\/sass\/adminbar\.scss}line{font-family:\0000358}}
   #wpadminbar ul li.hover.menupop > a {
     color: #3c3c3c !important;
     background: #fefefe !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/adminbar\.scss}line{font-family:\0000361}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/bootblank\/assets\/sass\/adminbar\.scss}line{font-family:\0000361}}
     #wpadminbar ul li.hover.menupop > a a {
       color: #3c3c3c !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/adminbar\.scss}line{font-family:\0000363}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/bootblank\/assets\/sass\/adminbar\.scss}line{font-family:\0000363}}
       #wpadminbar ul li.hover.menupop > a a:hover {
         color: #3c3c3c !important;
         background: #fefefe !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/adminbar\.scss}line{font-family:\0000375}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/bootblank\/assets\/sass\/adminbar\.scss}line{font-family:\0000375}}
   #wpadminbar .menupop li.hover > .ab-sub-wrapper {
     margin-bottom: -32px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/adminbar\.scss}line{font-family:\0000380}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/bootblank\/assets\/sass\/adminbar\.scss}line{font-family:\0000380}}
   #wpadminbar .quicklinks .menupop ul.ab-sub-secondary, #wpadminbar .quicklinks .menupop ul.ab-sub-secondary .ab-submenu {
     background: #e5e5e5; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/adminbar\.scss}line{font-family:\0000383}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/bootblank\/assets\/sass\/adminbar\.scss}line{font-family:\0000383}}
   #wpadminbar .menupop .ab-item.ab-empty-item {
     color: #3c3c3c !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/BootBlank\/assets\/sass\/adminbar\.scss}line{font-family:\0000385}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/wordpress\/wp-content\/themes\/bootblank\/assets\/sass\/adminbar\.scss}line{font-family:\0000385}}
     #wpadminbar .menupop .ab-item.ab-empty-item:hover {
       color: #3c3c3c !important;
       background: #fefefe !important; }
