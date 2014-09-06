@@ -37,9 +37,22 @@ img.alignright {
 	margin: 0 0 1em 1em;
 }
 
+
+
+// $Variable
+// -------------------------------------//
+$vert: #bbd140;
+$bleu: #0396d9;
+$gris: #3d3e42;
+$blanc: #ffffff;
+
+
+
 // $Style
 // -------------------------------------//
-
+body {
+	background: $gris !important;
+}
 blockquote {
 	position: relative;
 	font-style: italic;

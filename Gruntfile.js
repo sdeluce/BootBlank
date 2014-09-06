@@ -3,6 +3,39 @@ module.exports = function (grunt) {
 	require('load-grunt-tasks')(grunt);
 
 	grunt.initConfig({
+		concurrent: {
+			clean: {
+				tasks: ['clean'],
+				options: {
+					logConcurrentOutput: true
+				}
+			},
+			sass: {
+				tasks: ['sass:dev'],
+				options: {
+					logConcurrentOutput: true
+				}
+			},
+			js: {
+				tasks: ['coffee', 'uglify', 'concat'],
+				options: {
+					logConcurrentOutput: true
+				}
+			},
+
+			img: {
+				tasks: ['multiresize', 'svg2png', 'imagemin', 'imagemin'],
+				options: {
+					logConcurrentOutput: true
+				}
+			},
+			build: {
+				tasks: ['clean', 'coffee', 'uglify', 'concat', 'multiresize', 'svg2png', 'svgmin', 'imagemin', 'sass:dist'],
+				options: {
+					logConcurrentOutput: true
+				}
+			}
+		},
 		coffee: {
 			compile: {
 				options: {
@@ -38,7 +71,7 @@ module.exports = function (grunt) {
 			},
 		},
 		clean: {
-			css: ["css/*.css"]
+			css: ["css/*.*"]
 		},
 		compass: {
 			dist: {
@@ -50,7 +83,7 @@ module.exports = function (grunt) {
 					httpPath: '/',
 					imagesPath: 'img',
 					javascriptsPath: 'js',
-					require: 'susy'
+					//require: 'susy'
 				}
 			},
 			dev: {
@@ -63,8 +96,40 @@ module.exports = function (grunt) {
 					httpPath: '/',
 					imagesPath: 'img',
 					javascriptsPath: 'js',
-					require: 'susy'
+					//require: 'susy'
 				}
+			}
+		},
+		sass: {
+			dist: {
+				options: {
+					style: 'compressed',
+					compass: true,
+					sourcemap: 'none'
+				},
+				files: [{
+					expand: true,
+					cwd: 'assets/sass',
+					src: ['*.scss'],
+					dest: 'css',
+					ext: '.css',
+
+				}]
+			},
+			dev: {
+				options: {
+					style: 'expanded',
+					compass: true,
+					lineNumbers: true
+				},
+				files: [{
+					expand: true,
+					cwd: 'assets/sass',
+					src: ['*.scss'],
+					dest: 'css',
+					ext: '.css',
+
+				}]
 			}
 		},
 		multiresize: {
@@ -101,7 +166,7 @@ module.exports = function (grunt) {
 		imagemin: {
 			dynamic: {
 				options: {
-					optimizationLevel: 7
+					optimizationLevel: 8
 				},
 				files: [{
 					expand: true,
@@ -155,7 +220,7 @@ module.exports = function (grunt) {
 			},
 			scss: {
 				files: ['assets/sass/*.scss','assets/**/*.scss'],
-				tasks: ['compass:dev'],
+				tasks: ['sass:dev'],
 				options: {
 					spawn: false,
 					livereload: true
@@ -163,13 +228,15 @@ module.exports = function (grunt) {
 			},
 		}
 	});
-	grunt.registerTask('dev', ['clean','coffee','concat','uglify','compass:dev','svg2png','multiresize','imagemin','svgmin']);
-	grunt.registerTask('build', ['clean','coffee','concat','uglify','compass:dist','svg2png','multiresize','imagemin','svgmin']);
+	grunt.registerTask('dev', ['coffee','concat','uglify','compass:dev','svg2png','multiresize','imagemin','svgmin']);
+	//grunt.registerTask('build', ['clean','coffee','concat','uglify','compass:dist','svg2png','multiresize','imagemin','svgmin']);
+	grunt.registerTask('build', ['concurrent:build']);
 
-	grunt.registerTask('default', ['dev', 'watch']);
+	// grunt.registerTask('default', ['dev', 'watch']);
+	grunt.registerTask('default', ['concurrent:sass', 'concurrent:js', 'concurrent:img', 'watch']);
 
-	grunt.registerTask('img', ['svg2png','imagemin','svgmin']);
-	grunt.registerTask('style', ['clean','compass:dist']);
-	grunt.registerTask('js', ['coffee','concat','uglify']);
+	grunt.registerTask('img', ['concurrent:img']);
+	grunt.registerTask('style', ['concurrent:sass']);
+	grunt.registerTask('js', ['concurrent:js']);
 	grunt.registerTask('icon', ['multiresize']);
 }
