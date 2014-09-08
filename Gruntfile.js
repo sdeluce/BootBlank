@@ -1,5 +1,6 @@
 module.exports = function (grunt) {
 	// load all grunt tasks matching the `grunt-*` pattern
+	require('time-grunt')(grunt);
 	require('load-grunt-tasks')(grunt);
 
 	grunt.initConfig({
@@ -77,7 +78,6 @@ module.exports = function (grunt) {
 			dist: {
 				options: {
 					style: 'compressed',
-					compass: true,
 					sourcemap: 'none'
 				},
 				files: [{
@@ -92,8 +92,7 @@ module.exports = function (grunt) {
 			dev: {
 				options: {
 					style: 'expanded',
-					compass: true,
-					lineNumbers: true
+					//sourcemap: 'none'
 				},
 				files: [{
 					expand: true,
@@ -191,8 +190,8 @@ module.exports = function (grunt) {
 					livereload: true
 				}
 			},
-			scss: {
-				files: ['assets/sass/*.{sass, scss}','assets/**/*.{sass, scss}'],
+			sass: {
+				files: ['assets/sass/*.sass'],
 				tasks: ['sass:dev'],
 				options: {
 					spawn: false,

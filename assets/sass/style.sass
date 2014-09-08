@@ -1,8 +1,8 @@
 // @import libs
 @import ../ext_libs/bourbon/dist/bourbon
 
-// $Fonts
-// -------------------------------------//
+/* $Fonts
+// -------------------------------------*/
 @import url(http://fonts.googleapis.com/css?family=Lato:700|PT+Sans)
 
 $titleFont: 'Lato', sans-serif
@@ -15,8 +15,8 @@ h1, h2, h3, h4, h5, h6
 	font-family: $titleFont
 
 
-// $Wordpress Alignement
-// -------------------------------------//
+/* $Wordpress Alignement
+// -------------------------------------*/
 img[class*="align"], img[class*="wp-image-"], img[class*="attachment-"]
 	height: auto
 
@@ -37,20 +37,19 @@ img.alignright
 
 
 
-
-// $Variable
-// -------------------------------------//
-$vert: 		#bbd140
-$bleu: 		#0396d9
-$gris: 		#3d3e42
-$blanc: 	#ffffff
-
+/* $Variable
+// -------------------------------------*/
+$vert: #bbd140
+$bleu: #0396d9
+$gris: #3d3e42
+$blanc: #ffffff
 
 
-// $Style
-// -------------------------------------//
+
+/* $Style
+// -------------------------------------*/
 body
-	//background: $blanc !important
+	background: $blanc !important
 
 
 blockquote
@@ -59,6 +58,6 @@ blockquote
 	padding: 1.5em 1.5em 0.01em 1.5em
 	margin-bottom: 1.49em
 	margin-left: 1.5em
-	border-left: 4px solid darken(white,10)
+	border-left: 4px solid darken($blanc,10)
 	display: block
-	background: darken(white,3)
+	background: darken($blanc,3)
