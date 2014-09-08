@@ -73,33 +73,6 @@ module.exports = function (grunt) {
 		clean: {
 			css: ["css/*.*"]
 		},
-		compass: {
-			dist: {
-				options: {
-					sassDir: 'assets/sass',
-					cssDir: 'css',
-					environment: 'production',
-					outputStyle: 'compressed',
-					httpPath: '/',
-					imagesPath: 'img',
-					javascriptsPath: 'js',
-					//require: 'susy'
-				}
-			},
-			dev: {
-				options: {
-					sassDir: 'assets/sass',
-					cssDir: 'css',
-					environment: 'development',
-					debugInfo: true,
-					outputStyle: 'nested',
-					httpPath: '/',
-					imagesPath: 'img',
-					javascriptsPath: 'js',
-					//require: 'susy'
-				}
-			}
-		},
 		sass: {
 			dist: {
 				options: {
@@ -110,7 +83,7 @@ module.exports = function (grunt) {
 				files: [{
 					expand: true,
 					cwd: 'assets/sass',
-					src: ['*.scss'],
+					src: ['*.sass'],
 					dest: 'css',
 					ext: '.css',
 
@@ -125,7 +98,7 @@ module.exports = function (grunt) {
 				files: [{
 					expand: true,
 					cwd: 'assets/sass',
-					src: ['*.scss'],
+					src: ['*.sass'],
 					dest: 'css',
 					ext: '.css',
 
@@ -219,7 +192,7 @@ module.exports = function (grunt) {
 				}
 			},
 			scss: {
-				files: ['assets/sass/*.scss','assets/**/*.scss'],
+				files: ['assets/sass/*.{sass, scss}','assets/**/*.{sass, scss}'],
 				tasks: ['sass:dev'],
 				options: {
 					spawn: false,
@@ -229,10 +202,8 @@ module.exports = function (grunt) {
 		}
 	});
 	grunt.registerTask('dev', ['coffee','concat','uglify','compass:dev','svg2png','multiresize','imagemin','svgmin']);
-	//grunt.registerTask('build', ['clean','coffee','concat','uglify','compass:dist','svg2png','multiresize','imagemin','svgmin']);
 	grunt.registerTask('build', ['concurrent:build']);
 
-	// grunt.registerTask('default', ['dev', 'watch']);
 	grunt.registerTask('default', ['concurrent:sass', 'concurrent:js', 'concurrent:img', 'watch']);
 
 	grunt.registerTask('img', ['concurrent:img']);

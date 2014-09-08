@@ -99,8 +99,8 @@ function bootblank_conditional_scripts()
 // Load BootBlank styles
 function bootblank_styles()
 {
-    /*wp_register_style('normalize', get_template_directory_uri() . '/normalize.css', array(), '1.0', 'all');
-    wp_enqueue_style('normalize'); // Enqueue it!*/
+    wp_register_style('grid', get_template_directory_uri() . '/css/grid.css', array(), '1.0', 'all');
+    wp_enqueue_style('grid'); // Enqueue it!
 
     wp_register_style('bootblank', get_template_directory_uri() . '/css/style.css', array(), '1.0', 'all');
     wp_enqueue_style('bootblank'); // Enqueue it!
