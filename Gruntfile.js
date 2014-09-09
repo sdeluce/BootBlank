@@ -1,3 +1,6 @@
+// https://www.npmjs.org/package/grunt-sass
+// if sass bug
+
 module.exports = function (grunt) {
 	// load all grunt tasks matching the `grunt-*` pattern
 	require('time-grunt')(grunt);
@@ -78,7 +81,7 @@ module.exports = function (grunt) {
 			dist: {
 				options: {
 					style: 'compressed',
-					sourcemap: 'none'
+					sourcemap: false
 				},
 				files: [{
 					expand: true,
@@ -91,8 +94,8 @@ module.exports = function (grunt) {
 			},
 			dev: {
 				options: {
-					style: 'expanded',
-					//sourcemap: 'none'
+					style: 'nested',
+					sourcemap: true
 				},
 				files: [{
 					expand: true,

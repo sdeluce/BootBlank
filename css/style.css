@@ -34,6 +34,10 @@ img.alignright {
 
 /* $Variable */
 /* $Style */
+body {
+  background: transparent !important;
+}
+
 blockquote {
   position: relative;
   font-style: italic;
