@@ -1,3 +1,4 @@
+/* $Mixins */
 /* $Fonts */
 @import url(http://fonts.googleapis.com/css?family=Lato:700|PT+Sans);
 body {
@@ -33,6 +34,10 @@ img.alignright {
 
 /* $Variable */
 /* $Style */
+body {
+  background: transparent !important;
+}
+
 blockquote {
   position: relative;
   font-style: italic;
