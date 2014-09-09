@@ -1,7 +1,11 @@
 /* $Mixins */
 /* $Fonts */
+<<<<<<< HEAD
 @import url(http://fonts.googleapis.com/css?family=Lato:700|PT+Sans);
 /* line 21, ../style.sass */
+=======
+/*@import url(http://fonts.googleapis.com/css?family=Lato:700|PT+Sans) */
+>>>>>>> bd884d84776b958a353091d92313d417bc555dd7
 body {
   font-family: "PT Sans", sans-serif; }
 

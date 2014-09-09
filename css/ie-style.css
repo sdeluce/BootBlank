@@ -3,13 +3,19 @@
   max-width: 960px;
   margin-left: auto;
   margin-right: auto; }
+<<<<<<< HEAD
   /* line 12, ../../../../../../../Applications/MAMP/htdocs/wordpress-beta/wp-content/themes/bootblank/assets/ext_libs/susy/sass/susy/output/support/_clearfix.scss */
+=======
+>>>>>>> bd884d84776b958a353091d92313d417bc555dd7
   .container:after {
     content: " ";
     display: block;
     clear: both; }
 
+<<<<<<< HEAD
 /* line 12, ../ie-style.sass */
+=======
+>>>>>>> bd884d84776b958a353091d92313d417bc555dd7
 .col-xs-1, .col-sm-1, .col-md-1 {
   width: 6.77966%;
   float: left;
@@ -21,13 +27,19 @@
   float: left;
   margin-left: 0;
   margin-right: 0; }
+<<<<<<< HEAD
   /* line 15, ../../../../../../../Applications/MAMP/htdocs/wordpress-beta/wp-content/themes/bootblank/assets/ext_libs/bourbon/dist/addons/_clearfix.scss */
+=======
+>>>>>>> bd884d84776b958a353091d92313d417bc555dd7
   .col-lg-1:after {
     content: "";
     display: table;
     clear: both; }
 
+<<<<<<< HEAD
 /* line 12, ../ie-style.sass */
+=======
+>>>>>>> bd884d84776b958a353091d92313d417bc555dd7
 .col-xs-2, .col-sm-2, .col-md-2 {
   width: 15.25424%;
   float: left;
@@ -39,13 +51,19 @@
   float: left;
   margin-left: 0;
   margin-right: 0; }
+<<<<<<< HEAD
   /* line 15, ../../../../../../../Applications/MAMP/htdocs/wordpress-beta/wp-content/themes/bootblank/assets/ext_libs/bourbon/dist/addons/_clearfix.scss */
+=======
+>>>>>>> bd884d84776b958a353091d92313d417bc555dd7
   .col-lg-2:after {
     content: "";
     display: table;
     clear: both; }
 
+<<<<<<< HEAD
 /* line 12, ../ie-style.sass */
+=======
+>>>>>>> bd884d84776b958a353091d92313d417bc555dd7
 .col-xs-3, .col-sm-3, .col-md-3 {
   width: 23.72881%;
   float: left;
@@ -57,13 +75,19 @@
   float: left;
   margin-left: 0;
   margin-right: 0; }
+<<<<<<< HEAD
   /* line 15, ../../../../../../../Applications/MAMP/htdocs/wordpress-beta/wp-content/themes/bootblank/assets/ext_libs/bourbon/dist/addons/_clearfix.scss */
+=======
+>>>>>>> bd884d84776b958a353091d92313d417bc555dd7
   .col-lg-3:after {
     content: "";
     display: table;
     clear: both; }
 
+<<<<<<< HEAD
 /* line 12, ../ie-style.sass */
+=======
+>>>>>>> bd884d84776b958a353091d92313d417bc555dd7
 .col-xs-4, .col-sm-4, .col-md-4 {
   width: 32.20339%;
   float: left;
@@ -75,13 +99,19 @@
   float: left;
   margin-left: 0;
   margin-right: 0; }
+<<<<<<< HEAD
   /* line 15, ../../../../../../../Applications/MAMP/htdocs/wordpress-beta/wp-content/themes/bootblank/assets/ext_libs/bourbon/dist/addons/_clearfix.scss */
+=======
+>>>>>>> bd884d84776b958a353091d92313d417bc555dd7
   .col-lg-4:after {
     content: "";
     display: table;
     clear: both; }
 
+<<<<<<< HEAD
 /* line 12, ../ie-style.sass */
+=======
+>>>>>>> bd884d84776b958a353091d92313d417bc555dd7
 .col-xs-5, .col-sm-5, .col-md-5 {
   width: 40.67797%;
   float: left;
@@ -93,13 +123,19 @@
   float: left;
   margin-left: 0;
   margin-right: 0; }
+<<<<<<< HEAD
   /* line 15, ../../../../../../../Applications/MAMP/htdocs/wordpress-beta/wp-content/themes/bootblank/assets/ext_libs/bourbon/dist/addons/_clearfix.scss */
+=======
+>>>>>>> bd884d84776b958a353091d92313d417bc555dd7
   .col-lg-5:after {
     content: "";
     display: table;
     clear: both; }
 
+<<<<<<< HEAD
 /* line 12, ../ie-style.sass */
+=======
+>>>>>>> bd884d84776b958a353091d92313d417bc555dd7
 .col-xs-6, .col-sm-6, .col-md-6 {
   width: 49.15254%;
   float: left;
@@ -111,13 +147,19 @@
   float: left;
   margin-left: 0;
   margin-right: 0; }
+<<<<<<< HEAD
   /* line 15, ../../../../../../../Applications/MAMP/htdocs/wordpress-beta/wp-content/themes/bootblank/assets/ext_libs/bourbon/dist/addons/_clearfix.scss */
+=======
+>>>>>>> bd884d84776b958a353091d92313d417bc555dd7
   .col-lg-6:after {
     content: "";
     display: table;
     clear: both; }
 
+<<<<<<< HEAD
 /* line 12, ../ie-style.sass */
+=======
+>>>>>>> bd884d84776b958a353091d92313d417bc555dd7
 .col-xs-7, .col-sm-7, .col-md-7 {
   width: 57.62712%;
   float: left;
@@ -129,13 +171,19 @@
   float: left;
   margin-left: 0;
   margin-right: 0; }
+<<<<<<< HEAD
   /* line 15, ../../../../../../../Applications/MAMP/htdocs/wordpress-beta/wp-content/themes/bootblank/assets/ext_libs/bourbon/dist/addons/_clearfix.scss */
+=======
+>>>>>>> bd884d84776b958a353091d92313d417bc555dd7
   .col-lg-7:after {
     content: "";
     display: table;
     clear: both; }
 
+<<<<<<< HEAD
 /* line 12, ../ie-style.sass */
+=======
+>>>>>>> bd884d84776b958a353091d92313d417bc555dd7
 .col-xs-8, .col-sm-8, .col-md-8 {
   width: 66.10169%;
   float: left;
@@ -147,13 +195,19 @@
   float: left;
   margin-left: 0;
   margin-right: 0; }
+<<<<<<< HEAD
   /* line 15, ../../../../../../../Applications/MAMP/htdocs/wordpress-beta/wp-content/themes/bootblank/assets/ext_libs/bourbon/dist/addons/_clearfix.scss */
+=======
+>>>>>>> bd884d84776b958a353091d92313d417bc555dd7
   .col-lg-8:after {
     content: "";
     display: table;
     clear: both; }
 
+<<<<<<< HEAD
 /* line 12, ../ie-style.sass */
+=======
+>>>>>>> bd884d84776b958a353091d92313d417bc555dd7
 .col-xs-9, .col-sm-9, .col-md-9 {
   width: 74.57627%;
   float: left;
@@ -165,13 +219,19 @@
   float: left;
   margin-left: 0;
   margin-right: 0; }
+<<<<<<< HEAD
   /* line 15, ../../../../../../../Applications/MAMP/htdocs/wordpress-beta/wp-content/themes/bootblank/assets/ext_libs/bourbon/dist/addons/_clearfix.scss */
+=======
+>>>>>>> bd884d84776b958a353091d92313d417bc555dd7
   .col-lg-9:after {
     content: "";
     display: table;
     clear: both; }
 
+<<<<<<< HEAD
 /* line 12, ../ie-style.sass */
+=======
+>>>>>>> bd884d84776b958a353091d92313d417bc555dd7
 .col-xs-10, .col-sm-10, .col-md-10 {
   width: 83.05085%;
   float: left;
@@ -183,13 +243,19 @@
   float: left;
   margin-left: 0;
   margin-right: 0; }
+<<<<<<< HEAD
   /* line 15, ../../../../../../../Applications/MAMP/htdocs/wordpress-beta/wp-content/themes/bootblank/assets/ext_libs/bourbon/dist/addons/_clearfix.scss */
+=======
+>>>>>>> bd884d84776b958a353091d92313d417bc555dd7
   .col-lg-10:after {
     content: "";
     display: table;
     clear: both; }
 
+<<<<<<< HEAD
 /* line 12, ../ie-style.sass */
+=======
+>>>>>>> bd884d84776b958a353091d92313d417bc555dd7
 .col-xs-11, .col-sm-11, .col-md-11 {
   width: 91.52542%;
   float: left;
@@ -201,13 +267,19 @@
   float: left;
   margin-left: 0;
   margin-right: 0; }
+<<<<<<< HEAD
   /* line 15, ../../../../../../../Applications/MAMP/htdocs/wordpress-beta/wp-content/themes/bootblank/assets/ext_libs/bourbon/dist/addons/_clearfix.scss */
+=======
+>>>>>>> bd884d84776b958a353091d92313d417bc555dd7
   .col-lg-11:after {
     content: "";
     display: table;
     clear: both; }
 
+<<<<<<< HEAD
 /* line 12, ../ie-style.sass */
+=======
+>>>>>>> bd884d84776b958a353091d92313d417bc555dd7
 .col-xs-12, .col-sm-12, .col-md-12 {
   width: 100%;
   float: left;
@@ -220,7 +292,10 @@
   float: left;
   margin-left: 0;
   margin-right: 0; }
+<<<<<<< HEAD
   /* line 15, ../../../../../../../Applications/MAMP/htdocs/wordpress-beta/wp-content/themes/bootblank/assets/ext_libs/bourbon/dist/addons/_clearfix.scss */
+=======
+>>>>>>> bd884d84776b958a353091d92313d417bc555dd7
   .col-lg-12:after {
     content: "";
     display: table;

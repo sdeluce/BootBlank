@@ -1,15 +1,23 @@
 /* line 9, ../adminbar.sass */
 html {
   margin-top: 0px !important; }
+<<<<<<< HEAD
   /* line 11, ../adminbar.sass */
+=======
+>>>>>>> bd884d84776b958a353091d92313d417bc555dd7
   html body {
     margin: 0;
     padding: 0;
     padding-bottom: 32px; }
+<<<<<<< HEAD
     /* line 16, ../adminbar.sass */
     html body.admin-bar #wphead {
       padding-top: 0; }
     /* line 19, ../adminbar.sass */
+=======
+    html body.admin-bar #wphead {
+      padding-top: 0; }
+>>>>>>> bd884d84776b958a353091d92313d417bc555dd7
     html body.admin-bar #footer {
       padding-bottom: 28px; }
 
@@ -23,11 +31,15 @@ html {
   box-shadow: none;
   border-top: 1px solid #cbcbcb;
   color: #3c3c3c; }
+<<<<<<< HEAD
   /* line 32, ../adminbar.sass */
+=======
+>>>>>>> bd884d84776b958a353091d92313d417bc555dd7
   #wpadminbar .menupop .ab-sub-wrapper, #wpadminbar #wpadminbar .shortlink-input {
     bottom: 32px;
     box-shadow: none !important;
     border: 1px solid #cbcbcb; }
+<<<<<<< HEAD
   /* line 37, ../adminbar.sass */
   #wpadminbar a, #wpadminbar .ab-label, #wpadminbar .ab-awaiting-mod {
     color: #3c3c3c !important; }
@@ -62,6 +74,31 @@ html {
   #wpadminbar .menupop .ab-item.ab-empty-item {
     color: #3c3c3c !important; }
     /* line 71, ../adminbar.sass */
+=======
+  #wpadminbar a, #wpadminbar .ab-label, #wpadminbar .ab-awaiting-mod {
+    color: #3c3c3c !important; }
+    #wpadminbar a:hover, #wpadminbar .ab-label:hover, #wpadminbar .ab-awaiting-mod:hover {
+      color: #3c3c3c !important;
+      background: #fefefe !important; }
+  #wpadminbar .menupop .ab-sub-wrapper {
+    background: #e5e5e5; }
+  #wpadminbar .ab-item:before, #wpadminbar .ab-icon:before {
+    color: #777 !important; }
+  #wpadminbar ul li.hover.menupop > a {
+    color: #3c3c3c !important;
+    background: #fefefe !important; }
+    #wpadminbar ul li.hover.menupop > a a {
+      color: #3c3c3c !important; }
+      #wpadminbar ul li.hover.menupop > a a:hover {
+        color: #3c3c3c !important;
+        background: #fefefe !important; }
+  #wpadminbar .menupop li.hover > .ab-sub-wrapper {
+    margin-bottom: -32px; }
+  #wpadminbar .quicklinks .menupop ul.ab-sub-secondary, #wpadminbar .quicklinks .menupop ul.ab-sub-secondary .ab-submenu {
+    background: #e5e5e5; }
+  #wpadminbar .menupop .ab-item.ab-empty-item {
+    color: #3c3c3c !important; }
+>>>>>>> bd884d84776b958a353091d92313d417bc555dd7
     #wpadminbar .menupop .ab-item.ab-empty-item:hover {
       color: #3c3c3c !important;
       background: #fefefe !important; }
