@@ -81,7 +81,7 @@ module.exports = function (grunt) {
 			dist: {
 				options: {
 					style: 'compressed',
-					sourcemap: false
+					sourcemap: 'none'
 				},
 				files: [{
 					expand: true,
@@ -95,7 +95,7 @@ module.exports = function (grunt) {
 			dev: {
 				options: {
 					style: 'nested',
-					sourcemap: true
+					sourcemap: 'auto'
 				},
 				files: [{
 					expand: true,
@@ -137,7 +137,6 @@ module.exports = function (grunt) {
 				]
 			}
 		},
-
 		imagemin: {
 			dynamic: {
 				options: {
