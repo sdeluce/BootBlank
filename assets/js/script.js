@@ -1,4 +1,1 @@
-(function() {
-  (function($) {})(jQuery);
-
-}).call(this);
+(function($) {})(jQuery);
