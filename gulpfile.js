@@ -128,6 +128,13 @@ gulp.task('img', ['svgmin','svg2png'], function () {
 
 /*	Other
 *******************************************/
+gulp.task('cleanico', function() {
+	return gulp.src("img/icones/**/*")
+		.pipe(clean({
+			force: true
+		}));
+})
+
 gulp.task('cleancss', function() {
 	return gulp.src("css/**/*")
 		.pipe(clean({
@@ -204,7 +211,7 @@ gulp.task('watch', function() {
 //////////     TACHES
 //////////
 ////////////////////////////////////////////////////////////////////////////////
-gulp.task('favicons',  function() {
+gulp.task('favicons', ['cleanico'], function() {
 	gulp.src("assets/img/rawico/favico-32.png")
 		.pipe(imageResize({ width : 32 }))
 		.pipe(rename({
