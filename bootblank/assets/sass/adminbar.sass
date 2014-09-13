@@ -1,0 +1,73 @@
+@import compass
+
+$bg:#fefefe
+$color:red
+$hover:blue
+$link: #3c3c3c
+$ico: #777
+
+html
+	margin-top: 0px !important
+	body
+		margin: 0
+		padding: 0
+		padding-bottom: 32px
+		&.admin-bar
+			#wphead
+				padding-top: 0
+
+			#footer
+				padding-bottom: 28px
+
+
+
+#wpadminbar
+	top: auto !important
+	bottom: 0
+	background: $bg
+	@include background-image(linear-gradient(darken($bg,10), $bg))
+	box-shadow: none
+	border-top: 1px solid darken($bg,20)
+	color: $link
+	.menupop .ab-sub-wrapper, #wpadminbar .shortlink-input
+		bottom: 32px
+		box-shadow: none !important
+		border: 1px solid darken($bg,20)
+
+	a, .ab-label, .ab-awaiting-mod
+		color: $link !important
+		&:hover
+			color: $link !important
+			background: $bg !important
+
+	.menupop .ab-sub-wrapper
+		background: darken($bg,10)
+
+	.ab-item, .ab-icon
+		&:before
+			color: $ico !important
+
+	ul
+		li
+			&.hover.menupop
+				> a
+					color: $link !important
+					background: $bg !important
+					a
+						color: $link !important
+						&:hover
+							color: $link !important
+							background: $bg !important
+
+	.menupop
+		li.hover>.ab-sub-wrapper
+			margin-bottom: -32px
+
+	.quicklinks .menupop ul.ab-sub-secondary,  .quicklinks .menupop ul.ab-sub-secondary .ab-submenu
+		background: darken($bg,10)
+
+	.menupop .ab-item.ab-empty-item
+		color: $link !important
+		&:hover
+			color: $link !important
+			background: $bg !important

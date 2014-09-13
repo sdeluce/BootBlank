@@ -1,0 +1,21 @@
+@import compass
+@import ../ext_libs/susy/sass/susy
+
+// $Grid IE Susy
+// -------------------------------------//
+$columns	: 	12
+
+.container
+	@include container(960px)
+
+@for $i from 1 through $columns
+	.col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}
+		@include span($i of $columns)
+
+	.col-lg-#{$i}
+		@include span($columns of $columns)
+		@include clearfix
+
+
+// http://uncorkedstudios.com/blog/how-to-fix-the-ie7-and-inlineblock-css-bug
+// http://www.alsacreations.com/article/lire/1209-display-inline-block.html

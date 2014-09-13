@@ -1,0 +1,72 @@
+@import ../ext_libs/susy/sass/susy
+
+// $Variables Susy
+// -------------------------------------//
+$screen-lg-min: 1200px
+$screen-md-min: 992px
+$screen-sm-min: 768px
+
+$columns:  12
+
+$susy:  (columns: 12, gutters: 1/4, math: fluid, output: float, gutter-position: inside, global-box-sizing: border-box, use-custom: (rem: true))
+
+$shorthand: 12 1/4 fluid float inside
+@include border-box-sizing
+
+// $ExtraSmall
+// -------------------------------------//
+.container
+	@include container(95%)
+	@include clearfix
+
+@for $i from 1 through $columns
+	.col-xs-#{$i}
+		@include span($i of $columns)
+
+	.col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}
+		@include span($columns of $columns)
+		@include clearfix
+
+
+// $Small
+// -------------------------------------//
+@media screen and (min-width: $screen-sm-min)
+	.container
+		@include container(720px)
+
+	@for $i from 1 through $columns
+		.col-xs-#{$i}, .col-sm-#{$i}
+			@include span($i of $columns)
+
+		.col-md-#{$i}, .col-lg-#{$i}
+			@include span($columns of $columns)
+			@include clearfix
+
+
+
+// $Medium
+// -------------------------------------//
+@media screen and (min-width: $screen-md-min)
+	.container
+		@include container(960px)
+
+	@for $i from 1 through $columns
+		.col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}
+			@include span($i of $columns)
+
+		.col-lg-#{$i}
+			@include span($columns of $columns)
+			@include clearfix
+
+
+
+// $Large
+// -------------------------------------//
+@media screen and (min-width: $screen-lg-min)
+	.container
+		@include container(1144px)
+
+	@for $i from 1 through $columns
+		.col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}
+			@include span($i of $columns)
+
