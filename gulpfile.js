@@ -18,6 +18,8 @@ var 	gulp = require('gulp'),
 	notify = require("gulp-notify"),
 	minifyCSS = require('gulp-minify-css');
 	useref = require('gulp-useref'),
+	rename = require("gulp-rename"),
+	imageResize = require('gulp-image-resize'),
 	zip = require('gulp-zip');
 
 var jsFilter = filter('js/*.js');
@@ -202,6 +204,142 @@ gulp.task('watch', function() {
 //////////     TACHES
 //////////
 ////////////////////////////////////////////////////////////////////////////////
+gulp.task('favicons',  function() {
+	gulp.src("assets/img/rawico/favico-32.png")
+		.pipe(imageResize({ width : 32 }))
+		.pipe(rename({
+			dirname: "",
+			basename: "favicon",
+			prefix: "",
+			suffix: "-32",
+			extname: ".png"
+	    	}))
+		.pipe(gulp.dest('assets/img/icones/'))
+		.pipe(imageResize({ width : 16 }))
+		.pipe(rename({
+			dirname: "",
+			basename: "favicon",
+			prefix: "",
+			suffix: "-16",
+			extname: ".png"
+	    	}))
+		.pipe(gulp.dest('assets/img/icones/'))
+
+	gulp.src("assets/img/rawico/favico.png")
+		.pipe(imageResize({ width : 196 }))
+		.pipe(rename({
+			dirname: "",
+			basename: "favicon",
+			prefix: "",
+			suffix: "-196",
+			extname: ".png"
+	    	}))
+		.pipe(gulp.dest('assets/img/icones/'))
+		.pipe(imageResize({ width : 160 }))
+		.pipe(rename({
+			dirname: "",
+			basename: "favicon",
+			prefix: "",
+			suffix: "-160",
+			extname: ".png"
+	    	}))
+		.pipe(gulp.dest('assets/img/icones/'))
+		.pipe(imageResize({ width : 96 }))
+		.pipe(rename({
+			dirname: "",
+			basename: "favicon",
+			prefix: "",
+			suffix: "-96",
+			extname: ".png"
+	    	}))
+		.pipe(gulp.dest('assets/img/icones/'))
+
+	gulp.src("assets/img/rawico/winico.png")
+		.pipe(imageResize({ width : 144 }))
+		.pipe(rename({
+			dirname: "",
+			basename: "msie",
+			prefix: "",
+			suffix: "-144",
+			extname: ".png"
+	    	}))
+		.pipe(gulp.dest('assets/img/icones/'))
+
+	gulp.src("assets/img/rawico/touchico.png")
+		.pipe(imageResize({ width : 152 }))
+		.pipe(rename({
+			dirname: "",
+			basename: "touch",
+			prefix: "",
+			suffix: "-152",
+			extname: ".png"
+	    	}))
+		.pipe(gulp.dest('assets/img/icones/'))
+		.pipe(imageResize({ width : 144 }))
+		.pipe(rename({
+			dirname: "",
+			basename: "touch",
+			prefix: "",
+			suffix: "-144",
+			extname: ".png"
+	    	}))
+		.pipe(gulp.dest('assets/img/icones/'))
+		.pipe(imageResize({ width : 120 }))
+		.pipe(rename({
+			dirname: "",
+			basename: "touch",
+			prefix: "",
+			suffix: "-120",
+			extname: ".png"
+	    	}))
+		.pipe(gulp.dest('assets/img/icones/'))
+		.pipe(imageResize({ width : 114 }))
+		.pipe(rename({
+			dirname: "",
+			basename: "touch",
+			prefix: "",
+			suffix: "-114",
+			extname: ".png"
+	    	}))
+		.pipe(gulp.dest('assets/img/icones/'))
+		.pipe(imageResize({ width : 76 }))
+		.pipe(rename({
+			dirname: "",
+			basename: "touch",
+			prefix: "",
+			suffix: "-76",
+			extname: ".png"
+	    	}))
+		.pipe(gulp.dest('assets/img/icones/'))
+		.pipe(imageResize({ width : 72 }))
+		.pipe(rename({
+			dirname: "",
+			basename: "touch",
+			prefix: "",
+			suffix: "-72",
+			extname: ".png"
+	    	}))
+		.pipe(gulp.dest('assets/img/icones/'))
+		.pipe(imageResize({ width : 60 }))
+		.pipe(rename({
+			dirname: "",
+			basename: "touch",
+			prefix: "",
+			suffix: "-60",
+			extname: ".png"
+	    	}))
+		.pipe(gulp.dest('assets/img/icones/'))
+		.pipe(imageResize({ width : 57 }))
+		.pipe(rename({
+			dirname: "",
+			basename: "touch",
+			prefix: "",
+			suffix: "-57",
+			extname: ".png"
+	    	}))
+		.pipe(gulp.dest('assets/img/icones/'))
+})
+
 gulp.task('default', ['img', 'uglify', 'compass', 'watch'], function() {
 
 })
@@ -247,9 +385,10 @@ gulp.task('copy', function(){
 
 })
 gulp.task('zip', ['clean', 'build', 'copy'], function() {
-	return gulp.src('dist/*')
+	return gulp.src('dist/**/*')
 		.pipe(zip('bootblank.zip'))
-		.pipe(gulp.dest(''));
+		.pipe(gulp.dest(''))
+		.pipe(notify("Archive Zip : <%= file.relative %>!"));
 
 })
 gulp.task('dist', ['zip' ,'cleandist'], function() {

@@ -34,6 +34,10 @@ img.alignright {
 
 /* $Variable */
 /* $Style */
+/* line 61, ../assets/sass/style.sass */
+body {
+  background: #ffffff; }
+
 /* line 65, ../assets/sass/style.sass */
 blockquote {
   position: relative;

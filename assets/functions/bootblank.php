@@ -49,8 +49,8 @@ add_filter( 'embed_oembed_html', 'standard_wrap_embeds', 10, 3 ) ; // Video resp
 $post_formats = array( 'aside', 'chat', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio' );
 
 function favicons() {
-	$icosource = file_get_contents( get_template_directory_uri().'/assets/icons/icons.html' , "r");
-	$head_ico = str_replace("%url%",  get_template_directory_uri(), $icosource);
+	$icosource = file_get_contents( get_template_directory_uri().'/assets/icons/favico.html' , "r");
+	$head_ico = str_replace("%%URL%%",  get_template_directory_uri(), $icosource);
 	echo $head_ico;
 }
 add_action('wp_head', 'favicons');
