@@ -72,11 +72,11 @@ function bootblank_nav()
 // Load BootBlank scripts (header.php)
 function bootblank_header_scripts()
 {
-    if ($GLOBALS['pagenow'] != 'wp-login.php' || !is_admin()) {
+    if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
-        // wp_deregister_script('jquery');
+        wp_deregister_script('jquery');
 
-        wp_register_script('bootblankscripts', get_template_directory_uri() . '/js/script.min.js', array(), '1.0.0'); // Custom scripts
+        wp_register_script('bootblankscripts', get_template_directory_uri() . '/assets/js/script.min.js', array(), '1.0.0'); // Custom scripts
         wp_enqueue_script('bootblankscripts'); // Enqueue it!
     }
 }

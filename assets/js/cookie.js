@@ -1,6 +1,7 @@
-jQuery( document ).ready(function() {
-	/* Système information sur les cookies
-	*  http://www.cnil.fr/vos-obligations/sites-web-cookies-et-autres-traceurs/que-dit-la-loi/ */
+jQuery.noConflict();
+jQuery(document).ready(function($) {
+	// Système information sur les cookies
+	// http://www.cnil.fr/vos-obligations/sites-web-cookies-et-autres-traceurs/que-dit-la-loi/
 	if( $.cookie('cookiecancel') != undefined ){
 		// Ajouter vos script ici
 		console.log('vous avez interdit les cookies.');
@@ -11,7 +12,7 @@ jQuery( document ).ready(function() {
 		var btn_cookie_ok = 'Ok';
 		var btn_cookie_cancel = 'Annuler';
 
-		$('body').append('<div class="cookiebar" id="cookiebar">'+cookie_content +'<div id="cookie_ok" class="cookie_btn-ok">'+btn_cookie_ok+'</div>'+'<div id="cookie_cancel"  class="cookie_btn-cancel">'+btn_cookie_cancel+'</div>'+'</div>');
+		$('body.home').append('<div class="cookiebar" id="cookiebar">'+cookie_content +'<div id="cookie_ok" class="cookie_btn-ok">'+btn_cookie_ok+'</div>'+'<div id="cookie_cancel"  class="cookie_btn-cancel">'+btn_cookie_cancel+'</div>'+'</div>');
 
 		$('#cookie_ok').click(function(e){
 			e.preventDefault();

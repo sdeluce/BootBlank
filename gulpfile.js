@@ -39,15 +39,15 @@ gulp.task('coffee', function() {
 
 });
 gulp.task('js', ['coffee'], function() {
-	return gulp.src(
-		// 'assets/ext_libs/jquery/dist/jquery.js',
-		// 'assets/ext_libs/conditionizr/src/conditionizr.js',
-		// 'assets/ext_libs/modernizr/modernizr.js',
-		// 'assets/ext_libs/jquery-placeholder/jquery.placeholder.js',
-		// 'assets/ext_libs/jquery-cookie/jquery.cookie.js',
-		// 'assets/js/cookie.js',
-		'assets/js/script.js'
-	)
+	return gulp.src([
+		'assets/ext_libs/jquery/dist/jquery.js',
+		//'assets/ext_libs/conditionizr/src/conditionizr.js',
+		'assets/ext_libs/modernizr/modernizr.js',
+		'assets/ext_libs/jquery-placeholder/jquery.placeholder.js',
+		'assets/ext_libs/jquery-cookie/jquery.cookie.js',
+		'assets/js/cookie.js',
+		'assets/js/app.js'
+	])
 		.pipe(plumber())
 		.pipe(concat('script.min.js'))
 		.pipe(plumber.stop())
@@ -102,11 +102,9 @@ gulp.task('css', ['compass'], function() {
 /*	Images
 *******************************************/
 gulp.task('svg2png', function () {
-	return gulp.src('assets/img/svg/*.svg')
-		.pipe(svg2png({
-			verbose: true
-		}))
-		.pipe(gulp.dest('img/svg'));
+	return gulp.src('assets/img/svg/**/*.svg')
+		.pipe(svg2png())
+		.pipe(gulp.dest('img/svg/'));
 });
 
 gulp.task('svgmin', function () {
