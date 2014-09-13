@@ -2,7 +2,8 @@ var 	gulp = require('gulp'),
 	watch = require('gulp-watch'),
 	plumber = require('gulp-plumber'),
 	livereload = require('gulp-livereload'),
-	sass = require('gulp-ruby-sass'),
+	// sass = require('gulp-ruby-sass'),
+	compass = require('gulp-compass'),
 	autoprefixer = require('gulp-autoprefixer'),
 	clean = require('gulp-clean'),
 	coffee = require('gulp-coffee'),
@@ -62,19 +63,33 @@ gulp.task('uglify', ['js'], function() {
 
 /*	Style
 *******************************************/
-gulp.task('sass', function() {
+// gulp.task('sass', function() {
+// 	return gulp.src('assets/sass/*.sass')
+// 		.pipe(plumber())
+// 		.pipe(sass({
+// 			lineNumbers: true,
+// 			sourcemapPath: 'css/sass',
+// 			style: 'nested'
+// 		}))
+// 		.pipe(plumber.stop())
+// 		.pipe(gulp.dest('css'));
+// });
+
+gulp.task('compass', function() {
 	return gulp.src('assets/sass/*.sass')
 		.pipe(plumber())
-		.pipe(sass({
-			lineNumbers: true,
-			sourcemapPath: 'css/sass',
-			style: 'nested'
+		.pipe(compass({
+			css: 'css',
+			sass: 'assets/sass',
+			image: 'img',
+			style: 'nested',
+			sourcemap: true
 		}))
 		.pipe(plumber.stop())
 		.pipe(gulp.dest('css'));
-
 });
-gulp.task('css', ['sass'], function() {
+
+gulp.task('css', ['compass'], function() {
 	return gulp.src('assets/css/*.css')
 		.pipe(plumber())
 		.pipe(autoprefixer())
@@ -162,7 +177,13 @@ gulp.task('watch', function() {
 	var server = livereload();
 
 	watch('assets/sass/*.sass', function(files) {
-		return files.pipe(sass())
+		return files.pipe(compass({
+			css: 'css',
+			sass: 'assets/sass',
+			image: 'img',
+			style: 'nested',
+			sourcemap: true
+		}))
 		.pipe(gulp.dest('css/'))
 		.pipe(notify("Le fichier <%= file.relative %> à été généré !"))
 	});
@@ -181,17 +202,19 @@ gulp.task('watch', function() {
 //////////     TACHES
 //////////
 ////////////////////////////////////////////////////////////////////////////////
-gulp.task('default', ['img', 'uglify', 'sass', 'watch'], function() {
+gulp.task('default', ['img', 'uglify', 'compass', 'watch'], function() {
 
 })
 
 gulp.task('build', ['clean', 'uglify', 'img'], function() {
 
 	return gulp.src('assets/sass/*.sass')
-		.pipe(sass({
-			lineNumbers: false,
-			sourceComments: false,
-			style: 'compressed'
+		pipe(compass({
+			css: 'css',
+			sass: 'assets/sass',
+			image: 'img',
+			style: 'compressed',
+			sourcemap: false
 		}))
 		.pipe(gulp.dest('css'));
 
@@ -203,6 +226,8 @@ gulp.task('copy', function(){
 	var filesToMove = [
 		'./*.php',
 		'./style.css',
+		'./.bowerrc',
+		'./bower.json',
 		'./css/**/*.*',
 		'./js/**/*.*',
 		'./languages/*.*',
@@ -221,13 +246,13 @@ gulp.task('copy', function(){
 		.pipe(gulp.dest('dist'));
 
 })
-gulp.task('zip', ['build', 'copy', 'cleandist'], function() {
+gulp.task('zip', ['clean', 'build', 'copy'], function() {
 	return gulp.src('dist/*')
 		.pipe(zip('bootblank.zip'))
 		.pipe(gulp.dest(''));
 
 })
-gulp.task('dist', ['build', 'copy', 'zip' ,'cleandist'], function() {
+gulp.task('dist', ['zip' ,'cleandist'], function() {
 
 
 

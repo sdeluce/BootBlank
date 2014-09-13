@@ -1,0 +1,73 @@
+/* line 10, ../assets/sass/adminbar.sass */
+html {
+  margin-top: 0px !important; }
+  /* line 12, ../assets/sass/adminbar.sass */
+  html body {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 32px; }
+    /* line 17, ../assets/sass/adminbar.sass */
+    html body.admin-bar #wphead {
+      padding-top: 0; }
+    /* line 20, ../assets/sass/adminbar.sass */
+    html body.admin-bar #footer {
+      padding-bottom: 28px; }
+
+/* line 25, ../assets/sass/adminbar.sass */
+#wpadminbar {
+  top: auto !important;
+  bottom: 0;
+  background: #fefefe;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U1ZTVlNSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZlZmVmZSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e5e5e5), color-stop(100%, #fefefe));
+  background-image: -moz-linear-gradient(#e5e5e5, #fefefe);
+  background-image: -webkit-linear-gradient(#e5e5e5, #fefefe);
+  background-image: linear-gradient(#e5e5e5, #fefefe);
+  box-shadow: none;
+  border-top: 1px solid #cbcbcb;
+  color: #3c3c3c; }
+  /* line 33, ../assets/sass/adminbar.sass */
+  #wpadminbar .menupop .ab-sub-wrapper, #wpadminbar #wpadminbar .shortlink-input {
+    bottom: 32px;
+    box-shadow: none !important;
+    border: 1px solid #cbcbcb; }
+  /* line 38, ../assets/sass/adminbar.sass */
+  #wpadminbar a, #wpadminbar .ab-label, #wpadminbar .ab-awaiting-mod {
+    color: #3c3c3c !important; }
+    /* line 40, ../assets/sass/adminbar.sass */
+    #wpadminbar a:hover, #wpadminbar .ab-label:hover, #wpadminbar .ab-awaiting-mod:hover {
+      color: #3c3c3c !important;
+      background: #fefefe !important; }
+  /* line 44, ../assets/sass/adminbar.sass */
+  #wpadminbar .menupop .ab-sub-wrapper {
+    background: #e5e5e5; }
+  /* line 48, ../assets/sass/adminbar.sass */
+  #wpadminbar .ab-item:before, #wpadminbar .ab-icon:before {
+    color: #777 !important; }
+  /* line 54, ../assets/sass/adminbar.sass */
+  #wpadminbar ul li.hover.menupop > a {
+    color: #3c3c3c !important;
+    background: #fefefe !important; }
+    /* line 57, ../assets/sass/adminbar.sass */
+    #wpadminbar ul li.hover.menupop > a a {
+      color: #3c3c3c !important; }
+      /* line 59, ../assets/sass/adminbar.sass */
+      #wpadminbar ul li.hover.menupop > a a:hover {
+        color: #3c3c3c !important;
+        background: #fefefe !important; }
+  /* line 64, ../assets/sass/adminbar.sass */
+  #wpadminbar .menupop li.hover > .ab-sub-wrapper {
+    margin-bottom: -32px; }
+  /* line 67, ../assets/sass/adminbar.sass */
+  #wpadminbar .quicklinks .menupop ul.ab-sub-secondary, #wpadminbar .quicklinks .menupop ul.ab-sub-secondary .ab-submenu {
+    background: #e5e5e5; }
+  /* line 70, ../assets/sass/adminbar.sass */
+  #wpadminbar .menupop .ab-item.ab-empty-item {
+    color: #3c3c3c !important; }
+    /* line 72, ../assets/sass/adminbar.sass */
+    #wpadminbar .menupop .ab-item.ab-empty-item:hover {
+      color: #3c3c3c !important;
+      background: #fefefe !important; }
+
+/*# sourceMappingURL=adminbar.css.map */
