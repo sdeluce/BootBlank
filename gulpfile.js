@@ -16,7 +16,8 @@ var 	gulp = require('gulp'),
 	browserSync = require("browser-sync"),
 	notify = require("gulp-notify"),
 	minifyCSS = require('gulp-minify-css');
-	useref = require('gulp-useref');
+	useref = require('gulp-useref'),
+	zip = require('gulp-zip');
 
 var jsFilter = filter('js/*.js');
 var cssFilter = filter('css/*.css');
@@ -62,7 +63,7 @@ gulp.task('uglify', ['js'], function() {
 /*	Style
 *******************************************/
 gulp.task('sass', function() {
-	gulp.src('assets/sass/*.sass')
+	return gulp.src('assets/sass/*.sass')
 		.pipe(plumber())
 		.pipe(sass({
 			lineNumbers: true,
@@ -110,18 +111,46 @@ gulp.task('img', ['svgmin','svg2png'], function () {
 
 /*	Other
 *******************************************/
-gulp.task('clean', function() {
-	gulp.src("css/*")
+gulp.task('cleancss', function() {
+	return gulp.src("css/**/*")
+		.pipe(clean({
+			force: true
+		}));
+})
+
+gulp.task('cleanimg', function() {
+	return gulp.src("img/**/*")
+		.pipe(clean({
+			force: true
+		}));
+})
+
+gulp.task('cleandist', function() {
+	return gulp.src("dist")
+		.pipe(clean({
+			force: true
+		}));
+})
+
+gulp.task('clean', ['cleandist', 'cleanimg', 'cleancss'],function() {
+	gulp.src("css/**/*")
 		.pipe(clean({
 			force: true
 		}));
 
-	gulp.src("img/**/*")
+	gulp.src("bootblank.zip")
 		.pipe(clean({
 			force: true
 		}));
 
-	gulp.src("dist/**/*")
+	return gulp.src("img/**/*")
+		.pipe(clean({
+			force: true
+		}));
+})
+
+gulp.task('cleandist', function() {
+	return gulp.src("dist")
 		.pipe(clean({
 			force: true
 		}));
@@ -145,6 +174,8 @@ gulp.task('watch', function() {
 	})
 })
 
+
+
 ////////////////////////////////////////////////////////////////////////////////
 //////////
 //////////     TACHES
@@ -164,34 +195,40 @@ gulp.task('build', ['clean', 'uglify', 'img'], function() {
 		}))
 		.pipe(gulp.dest('css'));
 
-});
+})
 
-gulp.task('dist', ['build'], function() {
+gulp.task('copy', function(){
 
 	var assets = useref.assets();
+	var filesToMove = [
+		'./*.php',
+		'./style.css',
+		'./css/**/*.*',
+		'./js/**/*.*',
+		'./languages/*.*',
+		'./fonts/**/*.*',
+		'./package.json',
+		'./gulpfile.js',
+		'./assets/coffee/*.*',
+		'./assets/functions/*.*',
+		'./assets/icons/*.*',
+		'./assets/img/*.*',
+		'./assets/js/*.*',
+		'./assets/sass/*.*'
+	];
 
-	gulp.src('assets/img/**/*')
-		.pipe(imagemin({
-			progressive: true,
-			svgoPlugins: [{removeViewBox: false}],
-			use: [pngcrush()],
-			number: 4
-		}))
-		.pipe(gulp.dest('dist/img'));
-
-	gulp.src('*.php')
+	return gulp.src(filesToMove, { base: './' })
 		.pipe(gulp.dest('dist'));
 
-	return gulp.src('*.php')
-		.pipe(useref.assets())
-		.pipe(jsFilter)
-		.pipe(uglify())
-		.pipe(jsFilter.restore())
-		.pipe(cssFilter())
-		.pipe(minifyCSS())
-		.pipe(cssFilter.restore())
-		.pipe(useref.restore())
-		.pipe(useref())
-		.pipe(gulp.dest('dist'));
+})
+gulp.task('zip', ['build', 'copy', 'cleandist'], function() {
+	return gulp.src('dist/*')
+		.pipe(zip('bootblank.zip'))
+		.pipe(gulp.dest(''));
+
+})
+gulp.task('dist', ['build', 'copy', 'zip' ,'cleandist'], function() {
+
+
 
 });
