@@ -30,9 +30,11 @@
 		</p>
 		<!-- /post details -->
 
-		<?php bootblank_excerpt('bootblank_index'); // Build your custom callback length in functions.php ?>
+		<?php //bootblank_excerpt('bootblank_index'); // Build your custom callback length in functions.php ?>
+		<p><?php the_excerpt(); ?></p>
+		<a href="<?php echo get_permalink(); ?>"> <?php echo __( 'Lire la suite','bootblak'); ?></a>
 
-		<?php edit_post_link(); ?>
+		<p><?php edit_post_link(); ?></p>
 
 	</article>
 	<!-- /article -->

@@ -102,7 +102,7 @@ gulp.task('css', ['compass'], function() {
 gulp.task('svg2png', function () {
 	return gulp.src('assets/svg/*.svg')
 		.pipe(svg2png())
-		.pipe(gulp.dest('assets/img'));
+		.pipe(gulp.dest('assets/svg/img'));
 });
 
 gulp.task('svgmin', function () {
