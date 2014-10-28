@@ -1,0 +1,73 @@
+// @import grid
+@import compass
+
+/* $Mixins
+// -------------------------------------*/
+=inlineblock($e)
+	display: inline-block
+	vertical-align: middle
+	*vertical-align: auto
+	*zoom: 1
+	*display: inline
+
+
+/* $Fonts
+// -------------------------------------*/
+@import url(http://fonts.googleapis.com/css?family=Lato:700|PT+Sans)
+
+$titleFont: 'Lato', sans-serif
+$textFont: 'PT Sans', sans-serif
+
+body
+	font-family: $textFont
+
+h1, h2, h3, h4, h5, h6
+	font-family: $titleFont
+
+
+/* $Wordpress Alignement
+// -------------------------------------*/
+img[class*="align"], img[class*="wp-image-"], img[class*="attachment-"]
+	height: auto
+
+img.alignleft
+	float: left
+	margin: 0 1em 1em 0
+
+img.aligncenter
+	clear: both
+	display: block
+	margin-left: auto
+	margin-right: auto
+	margin: 1.5em auto
+
+img.alignright
+	float: right
+	margin: 0 0 1em 1em
+
+
+
+/* $Variable
+// -------------------------------------*/
+$vert: #bbd140
+$bleu: #0396d9
+$gris: #3d3e42
+$blanc: #ffffff
+
+
+
+/* $Style
+// -------------------------------------*/
+body
+	background: $blanc
+
+
+blockquote
+	position: relative
+	font-style: italic
+	padding: 1.5em 1.5em 0.01em 1.5em
+	margin-bottom: 1.49em
+	margin-left: 1.5em
+	border-left: 4px solid darken($blanc,10)
+	display: block
+	background: darken($blanc,3)

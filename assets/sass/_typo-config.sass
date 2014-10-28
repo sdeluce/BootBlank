@@ -1,0 +1,33 @@
+// Configs
+$body-font-size: 14px
+$body-line-height: 1.5
+$scale-factor: 1.125
+$computed-line-height: $body-line-height * $body-font-size
+
+@import ../ext_libs/gridlover-mixin/sass/rhythm.sass
+
+=bg-grid($color, $bg-color, $lh)
+	background-color: $bg-color
+	background-image: linear-gradient(0deg, transparent 49%, $color 50%, $color 52%, transparent 53%, transparent), linear-gradient(90deg, transparent 49%, $color 50%, $color 52%, transparent 53%, transparent)
+	background-position: .5em .5em
+	background-size:  300% ($lh * 1em)
+
+body
+	@include rhythm(0)
+	// @include bg-grid(#ebf0f9, transparent, $body-line-height)
+
+p, ul, ol
+	@include rhythm(0, 0, 1)
+
+
+h1
+	@include rhythm(4, 1, 1)
+	font-weight: bold
+
+h2
+	@include rhythm(3, 1, 1)
+	font-weight: bold
+
+h3
+	@include rhythm(2, 1, 1)
+	font-weight: bold
